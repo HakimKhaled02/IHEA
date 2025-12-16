@@ -276,15 +276,218 @@
     pointer-events: auto;
 }
 </style>
+@endpush
 
-<!-- AOS Library -->
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+@section('content')
+<!-- Grand Hero Section -->
+<div class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-halal-dark to-gray-900 py-32">
+    <div class="max-w-4xl mx-auto px-8 text-center">
+        <div class="animate-fade-in-up">
+            <div class="hero-badge inline-block mb-12">
+                International Halal Awards 2026
+            </div>
+            <h1 class="hero-title serif-heading mb-8">
+                <span class="hero-gradient">Judging Criteria</span><br>
+                <span class="text-white">& Framework</span>
+            </h1>
+            <p class="hero-subtitle">
+                The Awards evaluate performance using a comprehensive multi-dimensional scoring system tailored to Halal ethics, industry excellence, and global impact
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Grand Criteria Sections -->
+<div class="max-w-4xl mx-auto px-8 py-24">
+    <div class="space-y-24">
+        
+        <!-- Halal Integrity & Compliance -->
+        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.1s;">
+            <div class="flex items-start gap-8 mb-8">
+                <div class="section-number">01</div>
+                <div class="flex-1">
+                    <h2 class="section-title serif-heading mb-2">HALAL INTEGRITY & COMPLIANCE</h2>
+                    <p class="section-subtitle mb-2">WEIGHT: 25%</p>
+                    <div class="content-area">
+                        <div class="space-y-4">
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Alignment with recognized Halal standards</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Transparency in certification and supply chain</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Ethical and Shariah-compliant practices</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Traceability & risk management</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Innovation & Transformation -->
+        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.2s;">
+            <div class="flex items-start gap-8 mb-8">
+                <div class="section-number">02</div>
+                <div class="flex-1">
+                    <h2 class="section-title serif-heading mb-2">INNOVATION & TRANSFORMATION</h2>
+                    <p class="section-subtitle mb-2">WEIGHT: 20%</p>
+                    <div class="content-area">
+                        <div class="space-y-4">
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Introduction of new technologies, processes, or business models</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Creativity in solving industry challenges</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Enhancements to user or stakeholder experience</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Pioneering approaches in Halal markets</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Market Performance & Impact -->
+        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.3s;">
+            <div class="flex items-start gap-8 mb-8">
+                <div class="section-number">03</div>
+                <div class="flex-1">
+                    <h2 class="section-title serif-heading mb-2">MARKET PERFORMANCE & IMPACT</h2>
+                    <p class="section-subtitle mb-2">WEIGHT: 20%</p>
+                    <div class="content-area">
+                        <div class="space-y-4">
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Measurable business outcomes</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Revenue or export growth</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Market expansion or penetration</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Contribution to industry competitiveness</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sustainability & ESG Contribution -->
+        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.4s;">
+            <div class="flex items-start gap-8 mb-8">
+                <div class="section-number">04</div>
+                <div class="flex-1">
+                    <h2 class="section-title serif-heading mb-2">SUSTAINABILITY & ESG CONTRIBUTION</h2>
+                    <p class="section-subtitle mb-2">WEIGHT: 15%</p>
+                    <div class="content-area">
+                        <div class="space-y-4">
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Environmental stewardship</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Social impact and community development</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Responsible governance practices</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Long-term positive outcomes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strategic Execution & Effectiveness -->
+        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.5s;">
+            <div class="flex items-start gap-8 mb-8">
+                <div class="section-number">05</div>
+                <div class="flex-1">
+                    <h2 class="section-title serif-heading mb-2">STRATEGIC EXECUTION & EFFECTIVENESS</h2>
+                    <p class="section-subtitle mb-2">WEIGHT: 20%</p>
+                    <div class="content-area">
+                        <div class="space-y-4">
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Clarity of objectives</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Strength of strategy</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Quality of implementation</span>
+                            </div>
+                            <div class="list-item">
+                                <span class="list-bullet">•</span>
+                                <span>Evidence of success against goals</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Grand Footer -->
+    <div class="mt-32 text-center">
+        <div class="footer-grand inline-block">
+            <p class="text-white font-medium text-lg">
+                Our <span class="text-halal-gold font-semibold">structured judging rubric</span> ensures fair and comprehensive evaluation
+            </p>
+        </div>
+    </div>
+</div>
+
 <script>
-    AOS.init({
-        duration: 800,
-        once: true,
-        offset: 100
+    // Add staggered animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.animate-fade-in-up').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.6s ease-out';
+        observer.observe(el);
     });
 </script>
 @endsection
