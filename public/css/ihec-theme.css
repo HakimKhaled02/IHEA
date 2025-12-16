@@ -1,0 +1,492 @@
+/* IHEC Color Theme - Based on https://ihec.islamic-economy.org/ */
+
+:root {
+    /* IHEC Primary Colors */
+    --ihec-teal: #00A896;
+    --ihec-teal-dark: #008B7A;
+    --ihec-teal-light: #00BFA5;
+    --ihec-gold: #D4AF37;
+    --ihec-gold-light: #F4D03F;
+    --ihec-dark: #0a0e27;
+    --ihec-dark-secondary: #1a1f3a;
+    --ihec-dark-tertiary: #2a2f4a;
+    
+    /* Text Colors */
+    --ihec-text-primary: #ffffff;
+    --ihec-text-secondary: #e0e0e0;
+    --ihec-text-muted: #b0b0b0;
+    
+    /* Background Colors */
+    --ihec-bg-primary: #0a0e27;
+    --ihec-bg-secondary: #1a1f3a;
+    --ihec-bg-card: #1f2438;
+    
+    /* Gradients */
+    --ihec-gradient: linear-gradient(135deg, #00A896 0%, #008B7A 50%, #0a0e27 100%);
+    --ihec-gradient-teal: linear-gradient(135deg, #00A896 0%, #00BFA5 100%);
+    --ihec-gradient-dark: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+}
+
+/* Override Tailwind classes for IHEC theme */
+.bg-bg-primary,
+.bg-bg-secondary,
+.bg-bg-tertiary {
+    background-color: var(--ihec-bg-card) !important;
+}
+
+.text-text-primary {
+    color: var(--ihec-text-primary) !important;
+}
+
+.text-text-secondary {
+    color: var(--ihec-text-secondary) !important;
+}
+
+.bg-primary {
+    background: var(--ihec-gradient-teal) !important;
+}
+
+.from-primary {
+    --tw-gradient-from: var(--ihec-teal) !important;
+}
+
+.to-secondary {
+    --tw-gradient-to: var(--ihec-teal-light) !important;
+}
+
+.bg-gradient-to-r.from-primary.to-secondary {
+    background: var(--ihec-gradient-teal) !important;
+}
+
+/* Global Overrides */
+body {
+    background: var(--ihec-bg-primary);
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(0, 168, 150, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+    color: var(--ihec-text-primary);
+    min-height: 100vh;
+}
+
+/* Navigation Bar - IHEC Style */
+.navbar {
+    background: var(--ihec-gradient-dark);
+    border-bottom: 2px solid var(--ihec-teal);
+    box-shadow: 0 4px 20px rgba(0, 168, 150, 0.2);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-brand-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-brand-link:hover {
+    transform: scale(1.05);
+}
+
+.nav-logo {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0, 168, 150, 0.3));
+    transition: all 0.3s ease;
+}
+
+.nav-brand-link:hover .nav-logo {
+    filter: drop-shadow(0 4px 12px rgba(0, 191, 165, 0.5));
+}
+
+.nav-brand h1 {
+    background: var(--ihec-gradient-teal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 20px rgba(0, 168, 150, 0.3);
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: var(--ihec-text-primary);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--ihec-teal-light);
+    text-shadow: 0 0 10px rgba(0, 191, 165, 0.5);
+}
+
+.nav-link.btn-primary {
+    background: var(--ihec-gradient-teal);
+    border: 1px solid var(--ihec-teal);
+    color: var(--ihec-text-primary);
+    box-shadow: 0 4px 15px rgba(0, 168, 150, 0.3);
+}
+
+.nav-link.btn-primary:hover {
+    background: var(--ihec-teal-light);
+    box-shadow: 0 6px 20px rgba(0, 191, 165, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Main Content */
+.main-content {
+    background: transparent;
+}
+
+.container {
+    color: var(--ihec-text-primary);
+}
+
+/* Alerts */
+.alert-success {
+    background: rgba(0, 168, 150, 0.15);
+    border-left: 4px solid var(--ihec-teal);
+    color: var(--ihec-teal-light);
+    backdrop-filter: blur(10px);
+}
+
+.alert-error {
+    background: rgba(239, 68, 68, 0.15);
+    border-left: 4px solid #ef4444;
+    color: #ff6b6b;
+    backdrop-filter: blur(10px);
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.page-header-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.header-logo {
+    height: 120px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 20px rgba(0, 168, 150, 0.4));
+    animation: logoGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+    0% {
+        filter: drop-shadow(0 4px 20px rgba(0, 168, 150, 0.4));
+    }
+    100% {
+        filter: drop-shadow(0 6px 30px rgba(0, 191, 165, 0.6));
+    }
+}
+
+.page-header h2 {
+    color: var(--ihec-text-primary);
+    text-shadow: 0 2px 10px rgba(0, 168, 150, 0.3);
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: var(--ihec-text-secondary);
+}
+
+/* Award Cards */
+.award-card {
+    background: var(--ihec-bg-card);
+    border: 1px solid rgba(0, 168, 150, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--ihec-teal);
+    box-shadow: 0 12px 40px rgba(0, 168, 150, 0.4);
+}
+
+.award-card-header {
+    background: var(--ihec-gradient-teal);
+    position: relative;
+    overflow: hidden;
+}
+
+.award-card-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.award-category {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--ihec-text-primary);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.award-card-body {
+    background: var(--ihec-bg-card);
+}
+
+.award-title {
+    color: var(--ihec-text-primary);
+}
+
+.award-description {
+    color: var(--ihec-text-secondary);
+}
+
+.award-meta {
+    border-top: 1px solid rgba(0, 168, 150, 0.2);
+}
+
+.award-recipient .label,
+.award-date .label {
+    color: var(--ihec-text-muted);
+}
+
+.award-recipient .value,
+.award-date .value {
+    color: var(--ihec-teal-light);
+}
+
+.award-card-footer {
+    background: var(--ihec-bg-secondary);
+    border-top: 1px solid rgba(0, 168, 150, 0.2);
+}
+
+/* Buttons */
+.btn-primary,
+.btn-view {
+    background: var(--ihec-gradient-teal);
+    color: var(--ihec-text-primary);
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 168, 150, 0.3);
+}
+
+.btn-primary:hover,
+.btn-view:hover {
+    background: var(--ihec-teal-light);
+    box-shadow: 0 6px 20px rgba(0, 191, 165, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-edit {
+    background: linear-gradient(135deg, var(--ihec-gold) 0%, var(--ihec-gold-light) 100%);
+    color: var(--ihec-dark);
+}
+
+.btn-edit:hover {
+    background: var(--ihec-gold-light);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+.btn-delete,
+.btn-danger {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+}
+
+.btn-delete:hover,
+.btn-danger:hover {
+    background: #dc2626;
+    box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
+}
+
+.btn-secondary {
+    background: var(--ihec-bg-secondary);
+    color: var(--ihec-text-primary);
+    border: 1px solid rgba(0, 168, 150, 0.3);
+}
+
+.btn-secondary:hover {
+    background: var(--ihec-bg-tertiary);
+    border-color: var(--ihec-teal);
+}
+
+/* Empty State */
+.empty-state {
+    background: var(--ihec-bg-card);
+    border: 2px dashed rgba(0, 168, 150, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.empty-state h3 {
+    color: var(--ihec-text-primary);
+}
+
+.empty-state p {
+    color: var(--ihec-text-secondary);
+}
+
+/* Award Detail Page */
+.award-detail-card {
+    background: var(--ihec-bg-card);
+    border: 1px solid rgba(0, 168, 150, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.award-detail-header {
+    background: var(--ihec-gradient-teal);
+    position: relative;
+    overflow: hidden;
+}
+
+.award-detail-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.award-detail-category {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--ihec-text-primary);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.award-detail-title {
+    color: var(--ihec-text-primary);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.award-detail-body {
+    background: var(--ihec-bg-card);
+}
+
+.award-detail-section h3 {
+    color: var(--ihec-teal-light);
+}
+
+.award-detail-section p {
+    color: var(--ihec-text-secondary);
+}
+
+.award-detail-meta {
+    border-top: 2px solid rgba(0, 168, 150, 0.3);
+}
+
+.meta-label {
+    color: var(--ihec-text-muted);
+}
+
+.meta-value {
+    color: var(--ihec-teal-light);
+}
+
+.status-badge.status-active {
+    background: rgba(0, 168, 150, 0.2);
+    color: var(--ihec-teal-light);
+    border: 1px solid var(--ihec-teal);
+}
+
+.status-badge.status-inactive {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ff6b6b;
+    border: 1px solid #ef4444;
+}
+
+.award-detail-actions {
+    background: var(--ihec-bg-secondary);
+    border-top: 1px solid rgba(0, 168, 150, 0.2);
+}
+
+/* Form Page */
+.form-card {
+    background: var(--ihec-bg-card);
+    border: 1px solid rgba(0, 168, 150, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.form-group label {
+    color: var(--ihec-text-primary);
+}
+
+.form-control {
+    background: var(--ihec-bg-secondary);
+    border: 1px solid rgba(0, 168, 150, 0.3);
+    color: var(--ihec-text-primary);
+}
+
+.form-control:focus {
+    border-color: var(--ihec-teal);
+    box-shadow: 0 0 0 3px rgba(0, 168, 150, 0.2);
+    background: var(--ihec-bg-tertiary);
+}
+
+.form-control::placeholder {
+    color: var(--ihec-text-muted);
+}
+
+.form-actions {
+    border-top: 1px solid rgba(0, 168, 150, 0.2);
+}
+
+/* Footer */
+.footer {
+    background: var(--ihec-gradient-dark);
+    border-top: 2px solid var(--ihec-teal);
+    color: var(--ihec-text-secondary);
+}
+
+.footer p {
+    color: var(--ihec-text-muted);
+}
+
+/* Back Link */
+.back-link {
+    color: var(--ihec-teal-light);
+}
+
+.back-link:hover {
+    color: var(--ihec-teal);
+    text-shadow: 0 0 10px rgba(0, 191, 165, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .award-card {
+        border-color: rgba(0, 168, 150, 0.3);
+    }
+    
+    .nav-logo {
+        height: 40px;
+    }
+    
+    .nav-brand h1 {
+        font-size: 1.25rem;
+    }
+    
+    .header-logo {
+        height: 80px;
+    }
+    
+    .page-header {
+        margin-bottom: 2rem;
+    }
+}
+
