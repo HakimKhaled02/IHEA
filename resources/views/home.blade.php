@@ -13,7 +13,7 @@
         
         <div class="video-overlay"></div>
         
-        <!-- Top Navigation Buttons -->
+        <!-- Top Navigation Buttons (Desktop) -->
         <div class="top-nav-buttons">
             <a href="#" class="btn btn-secondary btn-large btn-view">
                 <i class="fas fa-download btn-icon"></i>
@@ -27,6 +27,27 @@
                 <i class="fas fa-envelope btn-icon"></i>
                 <span class="btn-text">CONTACT US</span>
             </a>
+        </div>
+        
+        <!-- Top Navigation Dropdown (Mobile Only) -->
+        <div class="top-nav-dropdown">
+            <button class="dropdown-toggle" id="topNavDropdown">
+                <i class="fas fa-chevron-down dropdown-icon"></i>
+            </button>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#" class="dropdown-item">
+                    <i class="fas fa-download btn-icon"></i>
+                    <span class="btn-text">DOWNLOAD MODULE</span>
+                </a>
+                <a href="{{ route('how-to-enter') }}" class="dropdown-item">
+                    <i class="fas fa-user-check btn-icon"></i>
+                    <span class="btn-text">REGISTER</span>
+                </a>
+                <a href="{{ route('contact') }}" class="dropdown-item">
+                    <i class="fas fa-envelope btn-icon"></i>
+                    <span class="btn-text">CONTACT US</span>
+                </a>
+            </div>
         </div>
         
         <div class="hero-content">
@@ -186,6 +207,26 @@
             console.log('Video loading error, applying fallback background');
             document.querySelector('.hero-section').style.background = 'linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%)';
         });
+        
+        // Dropdown menu toggle
+        const dropdownToggle = document.getElementById('topNavDropdown');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        
+        if (dropdownToggle && dropdownMenu) {
+            dropdownToggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                dropdownToggle.classList.toggle('active');
+                dropdownMenu.classList.toggle('active');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                    dropdownToggle.classList.remove('active');
+                    dropdownMenu.classList.remove('active');
+                }
+            });
+        }
     });
 </script>
 @endpush
