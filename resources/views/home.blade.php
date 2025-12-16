@@ -45,11 +45,11 @@
             <!-- Center Boxes -->
             <div class="center-boxes">
                 <a href="{{ route('how-to-enter') }}" class="center-box">
-                    <h3 class="box-title">How to Join</h3>
+                    <h3 class="box-title">HOW TO JOIN</h3>
                 </a>
                 
                 <a href="{{ route('eligibility') }}" class="center-box">
-                    <h3 class="box-title">Am I Eligible?</h3>
+                    <h3 class="box-title">AM I ELIGIBLE?</h3>
                 </a>
             </div>
         </div>
