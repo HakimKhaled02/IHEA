@@ -9,3 +9,6 @@ Route::get('/', function () {
 
 Route::resource('awards', AwardController::class);
 
+Route::view('winner-faqs-awards', 'winnerFAQsAwards.winnerFAQsAward')
+    ->name('winnerFAQsAwards.index');
+
