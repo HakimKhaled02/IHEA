@@ -76,7 +76,6 @@
         padding: 2px;
         background: linear-gradient(45deg, #059669, #d4af37, #059669, #d4af37);
         background-size: 300% 300%;
-        animation: gradient-shift 4s ease infinite;
         border-radius: inherit;
         mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         mask-composite: xor;
@@ -97,7 +96,6 @@
         width: 100%;
         height: 100%;
         background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
-        animation: shine-sweep 3s infinite;
     }
     
     .faq-accordion:hover {
@@ -132,13 +130,11 @@
     .gold-shimmer {
         background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.4), transparent);
         background-size: 200% 100%;
-        animation: shimmer-gold 2s infinite;
     }
     
     .text-gradient-gold {
         background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37, #b8941f);
         background-size: 200% 200%;
-        animation: gradient-shift 3s ease infinite;
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
