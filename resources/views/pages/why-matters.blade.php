@@ -15,238 +15,266 @@
             <span>Why The International Halal Awards Matter</span>
         </div>
         <h1 class="header-title">Why The International Halal Awards Matter</h1>
-        <p class="header-mission">Our mission is to drive progress and enhance the lives of our customers by delivering superior products and services that exceed expectations and set new standards in the global Halal economy.</p>
+        <p class="header-mission">In today's interconnected marketplace, Halal is no longer restricted to food—it represents a global movement toward ethics, sustainability, transparency, and trust. The International Halal Awards 2026 provides:</p>
     </div>
 
     <!-- Content Cards Grid -->
     <div class="why-cards-grid">
-        <!-- Row 1 -->
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">30+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
+        <!-- Card A -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3 class="card-title">UNMATCHED GLOBAL RECOGNITION</h3>
+                            <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
-                    <p class="stat-label">Happy Clients</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">A. UNMATCHED GLOBAL RECOGNITION</h3>
+                    <p class="card-description">Winning at the International Halal Awards sets a powerful standard of excellence, strengthening your organization's global reputation and credibility among buyers, investors, regulators, and consumers.</p>
                 </div>
             </div>
         </div>
 
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">15+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
+        <!-- Card B -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="card-title">A BENCHMARK FOR HALAL EXCELLENCE</h3>
+                            <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
-                    <p class="stat-label">Your Growth Partner</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">B. A BENCHMARK FOR HALAL EXCELLENCE</h3>
+                    <p class="card-description">The Awards function as a prestigious benchmark for:</p>
+                    <ul class="card-list">
+                        <li>Halal compliance</li>
+                        <li>Ethical governance</li>
+                        <li>Sustainability</li>
+                        <li>Quality control</li>
+                        <li>Innovation and impact</li>
+                    </ul>
+                    <p class="card-description">This demonstrates that your organization meets — and exceeds — global expectations</p>
                 </div>
             </div>
         </div>
 
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">35+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
+        <!-- Card C -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <h3 class="card-title">STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
+                            <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
-                    <p class="stat-label">Happy Clients</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">C. STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
+                    <p class="card-description">In a world where trust drives decisions, receiving an International Halal Award signals:</p>
+                    <ul class="card-list">
+                        <li>Integrity</li>
+                        <li>Reliability</li>
+                        <li>Authenticity</li>
+                        <li>Consistent Halal Compliance</li>
+                        <li>Excellence In Delivery</li>
+                    </ul>
+                    <p class="card-description">Trust is a competitive advantage, and winners gain it instantly</p>
                 </div>
             </div>
         </div>
 
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">18+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
+        <!-- Card D -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="card-title">COMPETITIVE DIFFERENTIATION</h3>
+                            <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
-                    <p class="stat-label">Your Growth Partner</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">D. COMPETITIVE DIFFERENTIATION</h3>
+                    <p class="card-description">Award recipients stand apart from competitors with:</p>
+                    <ul class="card-list">
+                        <li>Superior Visibility</li>
+                        <li>Market Differentiation</li>
+                        <li>Enhanced Brand Authority</li>
+                    </ul>
+                    <p class="card-description">A Halal award win strengthens your unique value proposition domestically and internationally</p>
                 </div>
             </div>
         </div>
 
-        <!-- Row 2 -->
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">25+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
+        <!-- Card E -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <h3 class="card-title">GAIN ACCESS TO GLOBAL MARKETS</h3>
+                            <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
-                    <p class="stat-label">Award Winners</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">E. GAIN ACCESS TO GLOBAL MARKETS</h3>
+                    <p class="card-description">Winning attracts:</p>
+                    <ul class="card-list">
+                        <li>Distributors</li>
+                        <li>Export Partners</li>
+                        <li>International Agencies</li>
+                        <li>GCC, ASEAN, Africa, and EU buyers</li>
+                    </ul>
+                    <p class="card-description">Doors open for new market expansion once your brand carries globally recognized Halal excellence credentials</p>
                 </div>
             </div>
         </div>
 
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">50+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
+        <!-- Card F -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h3 class="card-title">ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
+                            <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
-                    <p class="stat-label">Global Partners</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">F. ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
+                    <p class="card-description">Investors trust brands with:</p>
+                    <ul class="card-list">
+                        <li>Verified Halal Integrity</li>
+                        <li>Ethical And Sustainable Operations</li>
+                        <li>Proven Market Performance</li>
+                    </ul>
+                    <p class="card-description">Winning helps secure capital, partnerships, and long-term investment growth</p>
                 </div>
             </div>
         </div>
 
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">100+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
+        <!-- Card G -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="card-title">TALENT ATTRACTION & EMPLOYER BRANDING</h3>
+                            <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
-                    <p class="stat-label">Countries</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">G. TALENT ATTRACTION & EMPLOYER BRANDING</h3>
+                    <p class="card-description">Recognized organizations attract:</p>
+                    <ul class="card-list">
+                        <li>Higher-Quality Talent</li>
+                        <li>More Committed Employees</li>
+                        <li>Strong Organizational Reputation</li>
+                    </ul>
+                    <p class="card-description">Employees feel proud to work for an award-winning institution</p>
                 </div>
             </div>
         </div>
 
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">200+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
+        <!-- Card H -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <h3 class="card-title">MEDIA VISIBILITY & BRAND ELEVATION</h3>
+                            <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
-                    <p class="stat-label">Participants</p>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">H. MEDIA VISIBILITY & BRAND ELEVATION</h3>
+                    <p class="card-description">Winners receive extensive publicity through:</p>
+                    <ul class="card-list">
+                        <li>press releases</li>
+                        <li>media interviews</li>
+                        <li>social media campaigns</li>
+                        <li>partnerships with Halal networks</li>
+                    </ul>
+                    <p class="card-description">Your story becomes part of the global Halal narrative</p>
                 </div>
             </div>
         </div>
 
-        <!-- Row 3 -->
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">40+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
+        <!-- Card I -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h3 class="card-title">LEGACY & LONG-TERM VALUE</h3>
+                            <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
-                    <p class="stat-label">Categories</p>
                 </div>
-            </div>
-        </div>
-
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">60+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                    </div>
-                    <p class="stat-label">Industries</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">500+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                    </div>
-                    <p class="stat-label">Submissions</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">10+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                    </div>
-                    <p class="stat-label">Years Experience</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Row 4 -->
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">80+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                    </div>
-                    <p class="stat-label">Expert Judges</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">150+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                    </div>
-                    <p class="stat-label">Media Partners</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">300+</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                    </div>
-                    <p class="stat-label">Success Stories</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="why-card">
-            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
-                <div class="card-overlay">
-                    <div class="card-stat">
-                        <span class="stat-number">95%</span>
-                        <div class="stat-icon">
-                            <i class="fas fa-crown"></i>
-                        </div>
-                    </div>
-                    <p class="stat-label">Satisfaction Rate</p>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">I. LEGACY & LONG-TERM VALUE</h3>
+                    <p class="card-description">Winners are permanently listed in:</p>
+                    <ul class="card-list">
+                        <li>The International Halal Awards Archive</li>
+                        <li>Digital Platforms</li>
+                        <li>Global Publications</li>
+                        <li>IHEC Promotional Materials</li>
+                    </ul>
+                    <p class="card-description">This establishes a legacy of excellence that strengthens your organization for years to come</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const flipCards = document.querySelectorAll('.flip-card');
+    
+    flipCards.forEach(card => {
+        card.addEventListener('click', function() {
+            this.classList.toggle('flipped');
+        });
+    });
+});
+</script>
 @endsection
