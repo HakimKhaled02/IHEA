@@ -19,7 +19,7 @@
                 <i class="fas fa-download btn-icon"></i>
                 <span class="btn-text">DOWNLOAD MODULE</span>
             </a>
-            <a href="{{ route('how-to-enter') }}" class="btn btn-secondary btn-large btn-view">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCURjiSDPnTe07wafiEtYrgO1YSytYcXkjtI2sKrfEnoZ-mg/viewform" target="_blank" class="btn btn-secondary btn-large btn-view">
                 <i class="fas fa-user-check btn-icon"></i>
                 <span class="btn-text">REGISTER</span>
             </a>
