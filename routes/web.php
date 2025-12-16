@@ -61,6 +61,10 @@ Route::get('/fees-packages', function () {
     return view('pages.fees-packages');
 })->name('fees-packages');
 
+Route::get('/contact', function () {
+    return view('pages.contact');
+})->name('contact');
+
 // Awards Management (Admin)
 Route::resource('awards', AwardController::class);
 

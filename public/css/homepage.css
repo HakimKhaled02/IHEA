@@ -181,6 +181,50 @@
     overflow: hidden;
 }
 
+.download-module-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.875rem 1.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: 8px;
+    background: rgba(26, 31, 58, 0.8);
+    color: var(--ihec-text-primary);
+    border: 1px solid var(--ihec-teal);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    backdrop-filter: blur(8px);
+    z-index: 100;
+}
+
+.download-module-btn:hover {
+    background: rgba(26, 31, 58, 0.95);
+    border-color: var(--ihec-teal);
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
+    transform: translateY(-2px);
+}
+
+.download-module-btn .btn-icon {
+    font-size: 0.9375rem;
+    transition: transform 0.2s ease;
+    font-weight: 900;
+}
+
+.download-module-btn:hover .btn-icon {
+    transform: translateY(2px);
+}
+
+.download-module-btn .btn-text {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8125rem;
+}
+
 /* Animated Background Orbs */
 .hero-background {
     position: absolute;
@@ -244,8 +288,9 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 900px;
+    max-width: 1200px;
     width: 100%;
+    padding: 0 2rem;
 }
 
 .hero-logo-container {
@@ -299,16 +344,35 @@
 
 .hero-text-container {
     margin-bottom: 2rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .hero-title {
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
     font-weight: 700;
-    margin: 0 0 1rem 0;
-    line-height: 1.1;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+    margin: 0 auto 0.5rem auto;
+    line-height: 1.4;
+    text-align: center;
+    display: block;
+    background: var(--ihec-gradient-teal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.hero-year {
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--ihec-teal);
+    text-align: center;
+    margin: 0 auto 1rem auto;
+    letter-spacing: 0.1em;
 }
 
 .title-line {
@@ -362,71 +426,93 @@
 
 .hero-actions {
     display: flex;
-    gap: 1.5rem;
+    gap: 1.25rem;
     justify-content: center;
     flex-wrap: wrap;
     animation: fadeInUp 1s ease-out 0.8s both;
 }
 
 .btn-large {
-    padding: 1rem 2.5rem;
+    padding: 1rem 2rem;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 12px;
+    border-radius: 8px;
     position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     display: inline-flex;
     align-items: center;
     gap: 0.75rem;
-    min-width: 180px;
+    min-width: 160px;
     justify-content: center;
+    text-decoration: none;
+}
+
+.btn-icon {
+    font-size: 1.125rem;
+    transition: transform 0.2s ease;
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .btn-enter {
-    background: var(--ihec-gradient-teal);
+    background: var(--ihec-teal);
     color: var(--ihec-text-primary);
-    box-shadow: 0 8px 30px rgba(0, 168, 150, 0.4);
-    border: 2px solid transparent;
+    border: 1px solid var(--ihec-teal);
+    box-shadow: 0 2px 8px rgba(0, 168, 150, 0.2);
 }
 
 .btn-enter:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(0, 191, 165, 0.5);
-    background: var(--ihec-teal-light);
+    background: rgba(0, 168, 150, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
+    transform: translateY(-2px);
 }
 
-.btn-enter:hover .btn-arrow {
-    transform: translateX(5px);
+.btn-enter:hover .btn-icon {
+    transform: scale(1.05);
 }
 
 .btn-view {
-    background: rgba(26, 31, 58, 0.8);
+    background: rgba(26, 31, 58, 0.6);
     color: var(--ihec-text-primary);
-    border: 2px solid var(--ihec-teal);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--ihec-teal);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-view:hover {
-    background: rgba(0, 168, 150, 0.1);
-    border-color: var(--ihec-teal-light);
-    transform: translateY(-3px);
-    box-shadow: 0 12px 40px rgba(0, 168, 150, 0.3);
+    background: rgba(26, 31, 58, 0.8);
+    border-color: var(--ihec-teal);
+    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.2);
+    transform: translateY(-2px);
 }
 
-.btn-view:hover .btn-arrow {
-    transform: translateX(5px);
+.btn-view:hover .btn-icon {
+    transform: scale(1.05);
 }
 
-.btn-arrow {
-    transition: transform 0.3s ease;
-    font-size: 1.25rem;
+.btn-contact {
+    background: rgba(26, 31, 58, 0.6);
+    color: var(--ihec-text-primary);
+    border: 1px solid var(--ihec-gold);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.15);
+}
+
+.btn-contact:hover {
+    background: rgba(26, 31, 58, 0.8);
+    border-color: var(--ihec-gold);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+    transform: translateY(-2px);
+}
+
+.btn-contact:hover .btn-icon {
+    transform: scale(1.05);
 }
 
 .btn-text {
     position: relative;
     z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 /* Decoration Lines */
@@ -646,6 +732,21 @@
         height: 40px;
     }
     
+    .download-module-btn {
+        top: 1rem;
+        right: 1rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.8125rem;
+    }
+    
+    .download-module-btn .btn-text {
+        font-size: 0.75rem;
+    }
+    
+    .download-module-btn .btn-icon {
+        font-size: 0.875rem;
+    }
+    
     .hero-logo-img {
         height: 80px;
     }
@@ -660,7 +761,13 @@
     }
     
     .hero-title {
-        font-size: 2rem;
+        font-size: clamp(1.25rem, 3.5vw, 2rem);
+        margin-bottom: 0.5rem;
+        white-space: normal;
+    }
+    
+    .hero-year {
+        font-size: clamp(1rem, 2.5vw, 1.5rem);
         margin-bottom: 0.75rem;
     }
     
@@ -679,18 +786,23 @@
     
     .hero-text-container {
         margin-bottom: 1.5rem;
+        padding: 0 0.5rem;
     }
     
     .btn-large {
-        padding: 0.875rem 2rem;
+        padding: 0.875rem 1.75rem;
         font-size: 0.9375rem;
-        min-width: 150px;
+        min-width: 140px;
     }
     
     .hero-actions {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+    }
+    
+    .btn-icon {
+        font-size: 1rem;
     }
     
     .orb-1,
@@ -719,8 +831,31 @@
         padding: 1rem 0.75rem;
     }
     
+    .download-module-btn {
+        top: 0.75rem;
+        right: 0.75rem;
+        padding: 0.625rem 1.25rem;
+        font-size: 0.75rem;
+    }
+    
+    .download-module-btn .btn-text {
+        font-size: 0.6875rem;
+        display: none;
+    }
+    
+    .download-module-btn .btn-icon {
+        font-size: 0.875rem;
+        margin: 0;
+    }
+    
     .hero-title {
-        font-size: 1.75rem;
+        font-size: clamp(1rem, 3vw, 1.5rem);
+        margin-bottom: 0.5rem;
+        white-space: normal;
+    }
+    
+    .hero-year {
+        font-size: clamp(0.875rem, 2vw, 1.25rem);
         margin-bottom: 0.5rem;
     }
     
@@ -744,12 +879,21 @@
     
     .hero-text-container {
         margin-bottom: 1rem;
+        padding: 0 0.5rem;
     }
     
     .btn-large {
-        padding: 0.75rem 1.5rem;
+        padding: 0.75rem 1.25rem;
         font-size: 0.875rem;
-        min-width: 140px;
+        min-width: 120px;
+    }
+    
+    .hero-actions {
+        gap: 0.75rem;
+    }
+    
+    .btn-icon {
+        font-size: 0.9375rem;
     }
 }
 

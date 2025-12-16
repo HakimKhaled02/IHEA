@@ -11,6 +11,11 @@
             <div class="gradient-orb orb-3"></div>
         </div>
         
+        <a href="#" class="download-module-btn">
+            <i class="fas fa-download btn-icon"></i>
+            <span class="btn-text">DOWNLOAD MODULE</span>
+        </a>
+        
         <div class="hero-content">
             <div class="hero-logo-container">
                 <div class="logo-glow"></div>
@@ -19,21 +24,24 @@
             
             <div class="hero-text-container">
                 <h1 class="hero-title">
-                    <span class="title-line">International</span>
-                    <span class="title-line highlight">Halal Awards</span>
-                    <span class="title-line year">2026</span>
+                    INTERNATIONAL HALAL ECONOMIC AWARD (IHEA)
                 </h1>
-                <p class="hero-subtitle">Celebrating Global Excellence. Honouring Integrity. Elevating the Halal Economy.</p>
+                <div class="hero-year">2026</div>
+                <p class="hero-subtitle">Celebrating Global Excellence.</p>
             </div>
             
             <div class="hero-actions">
-                <a href="{{ route('how-to-enter') }}" class="btn btn-primary btn-large btn-enter">
-                    <span class="btn-text">Enter Awards</span>
-                    <span class="btn-arrow">→</span>
+                <a href="{{ route('home') }}" class="btn btn-primary btn-large btn-enter">
+                    <i class="fas fa-home btn-icon"></i>
+                    <span class="btn-text">HOME</span>
                 </a>
-                <a href="{{ route('categories') }}" class="btn btn-secondary btn-large btn-view">
-                    <span class="btn-text">View Categories</span>
-                    <span class="btn-arrow">→</span>
+                <a href="{{ route('how-to-enter') }}" class="btn btn-secondary btn-large btn-view">
+                    <i class="fas fa-user-check btn-icon"></i>
+                    <span class="btn-text">REGISTER</span>
+                </a>
+                <a href="{{ route('contact') }}" class="btn btn-tertiary btn-large btn-contact">
+                    <i class="fas fa-envelope btn-icon"></i>
+                    <span class="btn-text">CONTACT US</span>
                 </a>
             </div>
         </div>
