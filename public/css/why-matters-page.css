@@ -56,16 +56,19 @@
 /* Cards Grid */
 .why-cards-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
     margin-top: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .why-card {
     position: relative;
-    border-radius: 20px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     aspect-ratio: 4 / 3;
 }
@@ -90,11 +93,11 @@
     left: 0;
     right: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: 0.25rem;
 }
 
 .card-stat {
@@ -104,27 +107,27 @@
 }
 
 .stat-number {
-    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
     font-weight: 700;
     color: #ffffff;
     line-height: 1;
 }
 
 .stat-icon {
-    width: 40px;
-    height: 40px;
+    width: 28px;
+    height: 28px;
     background: var(--ihec-teal);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    font-size: 1.125rem;
-    box-shadow: 0 4px 15px rgba(0, 168, 150, 0.4);
+    font-size: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0, 168, 150, 0.4);
 }
 
 .stat-label {
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: #ffffff;
     margin: 0;
     font-weight: 500;
@@ -137,7 +140,8 @@
     }
     
     .why-cards-grid {
-        gap: 1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 }
 
@@ -156,18 +160,18 @@
     }
     
     .why-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
     }
     
     .card-overlay {
-        padding: 1.5rem;
+        padding: 0.875rem;
     }
     
     .stat-icon {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
+        width: 24px;
+        height: 24px;
+        font-size: 0.6875rem;
     }
 }
 

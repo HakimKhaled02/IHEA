@@ -20,7 +20,7 @@
 
     <!-- Content Cards Grid -->
     <div class="why-cards-grid">
-        <!-- Card 1 -->
+        <!-- Row 1 -->
         <div class="why-card">
             <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                 <div class="card-overlay">
@@ -35,7 +35,6 @@
             </div>
         </div>
 
-        <!-- Card 2 -->
         <div class="why-card">
             <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
                 <div class="card-overlay">
@@ -50,7 +49,6 @@
             </div>
         </div>
 
-        <!-- Card 3 -->
         <div class="why-card">
             <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                 <div class="card-overlay">
@@ -65,7 +63,6 @@
             </div>
         </div>
 
-        <!-- Card 4 -->
         <div class="why-card">
             <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
                 <div class="card-overlay">
@@ -76,6 +73,177 @@
                         </div>
                     </div>
                     <p class="stat-label">Your Growth Partner</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">25+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Award Winners</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">50+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Global Partners</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">100+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Countries</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">200+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Participants</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">40+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Categories</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">60+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Industries</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">500+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Submissions</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">10+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Years Experience</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 4 -->
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">80+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Expert Judges</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">150+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Media Partners</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">300+</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Success Stories</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="why-card">
+            <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                <div class="card-overlay">
+                    <div class="card-stat">
+                        <span class="stat-number">95%</span>
+                        <div class="stat-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                    </div>
+                    <p class="stat-label">Satisfaction Rate</p>
                 </div>
             </div>
         </div>
