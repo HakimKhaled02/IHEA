@@ -505,13 +505,13 @@
     <div class="hero-full">
         <div class="hero-content">
             <div class="hero-badge">
-                International Halal Awards 2026
+                International Halal Economic Awards 2026
             </div>
             <h1 class="hero-title">
                 Winner Recognition<br>& Usage Rights
             </h1>
             <p class="hero-subtitle">
-                Winners of the International Halal Awards 2026 will receive exceptional global exposure and branding privileges
+                Winners of the International Halal Economic Awards 2026 will receive exceptional global exposure and branding privileges
             </p>
         </div>
     </div>
@@ -710,7 +710,7 @@
 <div class="footer-full">
     <div class="footer-content">
         <p class="footer-text">
-            Join the elite winners of <span class="footer-highlight">International Halal Awards 2026</span>
+            Join the elite winners of <span class="footer-highlight">International Halal Economic Awards 2026</span>
         </p>
     </div>
 </div>

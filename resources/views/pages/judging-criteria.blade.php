@@ -240,7 +240,7 @@
     <div class="hero-full">
         <div class="hero-content">
             <div class="hero-badge scroll-animate fade-in-up">
-                International Halal Awards 2026
+                International Halal Economic Awards 2026
             </div>
             <h1 class="hero-title scroll-animate fade-in-up delay-1">
                 JUDGING<br>CRITERIA

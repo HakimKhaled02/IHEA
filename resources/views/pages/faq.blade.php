@@ -185,14 +185,14 @@
         <div class="text-center animate-fade-in-up">
             <div class="inline-flex items-center gap-3 mb-6 px-8 py-4 glass-morphism-dark rounded-full shadow-2xl border-2 border-halal-gold/30 glow-effect">
                 <span class="text-4xl animate-float">❓</span>
-                <p class="text-sm font-bold tracking-[0.3em] text-white uppercase">International Halal Awards 2026</p>
+                <p class="text-sm font-bold tracking-[0.3em] text-white uppercase">International Halal Economic Awards 2026</p>
             </div>
             <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                 <span class="text-gradient-gold">Frequently Asked</span><br>
                 <span class="text-white">Questions</span>
             </h1>
             <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-medium">
-                Everything you need to know about the International Halal Awards 2026
+                Everything you need to know about the International Halal Economic Awards 2026
             </p>
         </div>
     </div>

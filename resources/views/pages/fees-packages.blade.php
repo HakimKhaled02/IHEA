@@ -362,7 +362,7 @@
     <div class="hero-full">
         <div class="hero-content">
             <div class="hero-badge scroll-animate fade-in-up">
-                International Halal Awards 2026
+                International Halal Economic Awards 2026
             </div>
             <h1 class="hero-title scroll-animate fade-in-up delay-1">
                 AWARD PARTICIPATION FEES<br>& PRESTIGE PACKAGES
@@ -381,7 +381,7 @@
     <div class="package-card premium scroll-animate fade-in-left delay-1">
         <div class="package-badge">PREMIUM CATEGORY</div>
         <h2 class="package-title">GLOBAL HALAL EXCELLENCE AWARD</h2>
-        <p class="package-subtitle">"The Highest Honor of the International Halal Awards 2026"</p>
+        <p class="package-subtitle">"The Highest Honor of the International Halal Economic Awards 2026"</p>
         
         <div class="package-price">
             <span class="currency">RM</span>

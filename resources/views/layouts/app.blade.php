@@ -30,7 +30,7 @@
             </div>
             <ul class="menu-list">
                 <li><a href="{{ route('home') }}" class="menu-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
-                <li><a href="{{ route('about') }}" class="menu-link {{ request()->routeIs('about') ? 'active' : '' }}">About International Halal Awards 2026</a></li>
+                <li><a href="{{ route('about') }}" class="menu-link {{ request()->routeIs('about') ? 'active' : '' }}">About International Halal Economic Awards 2026</a></li>
                 <li><a href="{{ route('mission') }}" class="menu-link {{ request()->routeIs('mission') ? 'active' : '' }}">Mission & Purpose</a></li>
                 <li><a href="{{ route('why-matters') }}" class="menu-link {{ request()->routeIs('why-matters') ? 'active' : '' }}">Why The International Halal Awards Matter</a></li>
                 <li><a href="{{ route('categories') }}" class="menu-link {{ request()->routeIs('categories') ? 'active' : '' }}">Award Categories</a></li>
