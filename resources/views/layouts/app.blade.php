@@ -4,35 +4,53 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Award Management System')</title>
+    <title>@yield('title', 'IHEC Award Management System')</title>
+    <link rel="icon" type="image/png" href="{{ asset('assets/iheclogo1.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/ihec-theme.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
     @stack('styles')
 </head>
-<body class="min-h-screen flex flex-col font-sans leading-relaxed text-text-primary bg-bg-secondary">
-    <nav class="bg-gradient-to-r from-primary to-secondary text-white py-6 shadow-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-8 flex justify-between items-center">
-            <div class="nav-brand">
-                <h1 class="text-3xl font-bold">🏆 Award System</h1>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="{{ route('awards.index') }}" class="sidebar-logo-link">
+                    <img src="{{ asset('assets/iheclogo1.png') }}" alt="IHEC Logo" class="sidebar-logo">
+                    <div class="sidebar-title">
+                        <h1>IHEC Award System</h1>
+                        <p class="sidebar-subtitle">Halal Economic Conference</p>
+                    </div>
+                </a>
             </div>
-            <ul class="flex list-none gap-6 items-center">
-                <li><a href="{{ route('awards.index') }}" class="text-white font-medium px-4 py-2 rounded-md transition-all duration-300 hover:bg-white hover:bg-opacity-10">Awards</a></li>
-                <li><a href="{{ route('awards.create') }}" class="text-white font-medium px-4 py-2 rounded-md transition-all duration-300 bg-white bg-opacity-20 border border-white border-opacity-30 hover:bg-opacity-30">Add Award</a></li>
-            </ul>
-        </div>
-    </nav>
+            <nav class="sidebar-nav">
+                <a href="{{ route('awards.index') }}" class="sidebar-link {{ request()->routeIs('awards.index') ? 'active' : '' }}">
+                    <span class="sidebar-icon">🏆</span>
+                    <span>Awards</span>
+                </a>
+                <a href="{{ route('awards.create') }}" class="sidebar-link sidebar-link-primary {{ request()->routeIs('awards.create') ? 'active' : '' }}">
+                    <span class="sidebar-icon">➕</span>
+                    <span>Add Award</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <p>&copy; {{ date('Y') }} IHEC</p>
+            </div>
+        </aside>
 
-    <main class="flex-1 py-8">
-        <div class="max-w-6xl mx-auto px-8">
+        <!-- Main Content Area -->
+        <main class="main-content-wrapper">
             @if(session('success'))
-                <div class="p-4 rounded-lg mb-8 animate-slide-down bg-green-50 text-green-800 border-l-4 border-success">
+                <div class="alert alert-success">
                     {{ session('success') }}
                 </div>
             @endif
 
             @if(isset($errors) && $errors->any())
-                <div class="p-4 rounded-lg mb-8 animate-slide-down bg-red-50 text-red-800 border-l-4 border-danger">
-                    <ul class="m-2 mt-0 ml-6">
+                <div class="alert alert-error">
+                    <ul>
                         @foreach($errors->all() as $error)
                             <li>{{ $error }}</li>
                         @endforeach
@@ -40,15 +58,11 @@
                 </div>
             @endif
 
-            @yield('content')
-        </div>
-    </main>
-
-    <footer class="bg-text-primary text-white py-8 text-center mt-auto">
-        <div class="max-w-6xl mx-auto px-8">
-            <p class="text-white text-opacity-80 m-0">&copy; {{ date('Y') }} Award Management System. All rights reserved.</p>
-        </div>
-    </footer>
+            <div class="content-container">
+                @yield('content')
+            </div>
+        </main>
+    </div>
 
     @stack('scripts')
 </body>
