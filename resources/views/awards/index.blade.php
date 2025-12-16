@@ -16,6 +16,12 @@
         </div>
     </div>
 
+    <div class="flex justify-center mb-10">
+        <a href="{{ route('winnerFAQsAwards.index') }}" class="inline-flex items-center gap-2 px-6 py-3 rounded-md font-medium text-white bg-primary hover:bg-primary-dark transition-all duration-300 text-sm no-underline shadow-md">
+            <span>Winner Recognition, FAQs &amp; Prestige Packages</span>
+        </a>
+    </div>
+
     @if($awards->count() > 0)
         <div class="awards-grid">
             @foreach($awards as $award)

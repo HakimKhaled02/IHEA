@@ -64,3 +64,6 @@ Route::get('/fees-packages', function () {
 // Awards Management (Admin)
 Route::resource('awards', AwardController::class);
 
+Route::view('winner-faqs-awards', 'winnerFAQsAwards.winnerFAQsAward')
+    ->name('winnerFAQsAwards.index');
+
