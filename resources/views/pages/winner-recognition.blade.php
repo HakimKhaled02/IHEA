@@ -482,6 +482,16 @@
     }
     
     @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+        
+        .section-content {
+            padding: 2rem;
+        }
+        
         .section-header {
             flex-direction: column;
             gap: 2rem;
@@ -490,10 +500,28 @@
         
         .section-number {
             min-width: auto;
+            font-size: clamp(2rem, 8vw, 3rem);
         }
         
         .content-grid {
             grid-template-columns: 1fr;
+        }
+        
+        .hero-full {
+            min-height: 70vh;
+            padding: 2rem 1rem;
+        }
+        
+        .hero-title {
+            font-size: clamp(2rem, 8vw, 3rem);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1rem, 4vw, 1.4rem);
+        }
+        
+        .section-e .section-content {
+            max-width: 100%;
         }
     }
 </style>
