@@ -4,491 +4,436 @@
 
 @push('styles')
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap');
     
-    @keyframes fadeInUp {
-        0% { opacity: 0; transform: translateY(40px); }
-        100% { opacity: 1; transform: translateY(0); }
+    :root {
+        --halal-green: #059669;
+        --halal-dark: #064e3b;
+        --halal-gold: #d4af37;
     }
-    @keyframes gradient-shift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-    @keyframes subtle-glow {
-        0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.1); }
-        50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.2); }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     
     body {
         font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
     }
     
-    .serif-heading {
-        font-family: 'Playfair Display', serif;
-    }
-    
-    .grand-section {
-        background: linear-gradient(135deg, 
-            rgba(5, 150, 105, 0.03) 0%, 
-            rgba(6, 78, 59, 0.05) 50%, 
-            rgba(5, 150, 105, 0.03) 100%);
-        border-left: 4px solid rgba(212, 175, 55, 0.3);
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    .full-width-section {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
         position: relative;
-    }
-    
-    .grand-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, 
-            transparent 0%, 
-            rgba(212, 175, 55, 0.3) 50%, 
-            transparent 100%);
-    }
-    
-    .grand-section:hover {
-        transform: translateY(-8px);
-        box-shadow: 
-            0 20px 40px rgba(0, 0, 0, 0.1),
-            0 0 20px rgba(212, 175, 55, 0.15);
-        border-left-color: rgba(212, 175, 55, 0.6);
-    }
-    
-    .section-number {
-        font-family: 'Playfair Display', serif;
-        font-size: 3rem;
-        font-weight: 900;
-        background: linear-gradient(135deg, 
-            #d4af37 0%, 
-            #f4e4bc 50%, 
-            #d4af37 100%);
-        background-size: 200% 200%;
-        animation: gradient-shift 4s ease infinite;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: 1;
-        opacity: 0.9;
-    }
-    
-    .section-title {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.875rem;
-        font-weight: 700;
-        color: white;
-        line-height: 1.2;
-        letter-spacing: -0.02em;
-    }
-    
-    .section-subtitle {
-        color: rgba(212, 175, 55, 0.8);
-        font-weight: 500;
-        font-size: 0.875rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-    }
-    
-    .content-area {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 0.75rem;
-        padding: 2rem;
-        position: relative;
-    }
-    
-    .content-area::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, 
-            rgba(212, 175, 55, 0.02) 0%, 
-            transparent 50%, 
-            rgba(5, 150, 105, 0.02) 100%);
-        border-radius: inherit;
-        pointer-events: none;
-    }
-    
-    .list-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 1rem;
-        color: rgba(255, 255, 255, 0.8);
-        line-height: 1.6;
-    }
-    
-    .list-bullet {
-        color: rgba(212, 175, 55, 0.8);
-        font-weight: 600;
-        flex-shrink: 0;
-        margin-top: 0.25rem;
-    }
-    
-    .hero-title {
-        font-family: 'Playfair Display', serif;
-        font-size: clamp(3rem, 8vw, 6rem);
-        font-weight: 900;
-        line-height: 0.9;
-        letter-spacing: -0.04em;
-    }
-    
-    .hero-gradient {
-        background: linear-gradient(135deg, 
-            #d4af37 0%, 
-            #f4e4bc 25%, 
-            #d4af37 50%, 
-            #b8941f 75%, 
-            #d4af37 100%);
-        background-size: 200% 200%;
-        animation: gradient-shift 6s ease infinite;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
-    }
-    
-    .hero-subtitle {
-        font-size: 1.25rem;
-        color: rgba(255, 255, 255, 0.7);
-        font-weight: 300;
-        line-height: 1.6;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
-    .hero-badge {
-        background: linear-gradient(135deg, 
-            rgba(212, 175, 55, 0.1) 0%, 
-            rgba(212, 175, 55, 0.05) 100%);
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        padding: 0.75rem 2rem;
-        border-radius: 2rem;
-        font-size: 0.875rem;
-        font-weight: 500;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(212, 175, 55, 0.9);
-        animation: subtle-glow 4s ease-in-out infinite;
-    }
-    
-    .progress-container {
-        display: flex;
-        height: 40px;
-        border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        background: rgba(255, 255, 255, 0.05);
     }
     
-    .progress-segment {
+    .hero-full {
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
+        padding: 4rem 2rem;
+        position: relative;
+        background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    }
+    
+    .hero-content {
+        text-align: center;
+        max-width: 1000px;
+        position: relative;
+        z-index: 2;
+    }
+    
+    .hero-badge {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 50px;
+        color: var(--halal-gold);
         font-weight: 600;
-        font-size: 0.9rem;
-        transition: transform 0.3s ease;
+        font-size: 0.875rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+    
+    .hero-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.3));
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        font-weight: 400;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+    }
+    
+    .criteria-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
         position: relative;
     }
     
-    .progress-segment:hover {
-        transform: scaleY(1.1);
-        z-index: 10;
+    .criteria-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 3rem;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+        overflow: hidden;
     }
     
-    .criteria-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    .criteria-card:hover {
+        transform: translateY(-12px);
+        border-color: rgba(212, 175, 55, 0.4);
+        box-shadow: 0 25px 80px rgba(212, 175, 55, 0.3);
+    }
+    
+    .card-header {
+        display: flex;
+        align-items: center;
         gap: 1.5rem;
-        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card-number {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: var(--halal-gold);
+        flex-shrink: 0;
+    }
+    
+    .card-title-group {
+        flex: 1;
+    }
+    
+    .card-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-subtitle {
+        color: var(--halal-gold);
+        font-weight: 500;
+        font-size: 0.875rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+    
+    .card-content {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        margin-bottom: 2rem;
+    }
+    
+    .criteria-list {
+        list-style: none;
+        margin: 0;
     }
     
     .criteria-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
         background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 0.75rem;
-        padding: 1.5rem;
+        border-radius: 12px;
         transition: all 0.3s ease;
     }
     
     .criteria-item:hover {
-        transform: translateY(-4px);
-        border-color: rgba(212, 175, 55, 0.3);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        background: rgba(255, 255, 255, 0.04);
+        transform: translateX(8px);
     }
     
     .criteria-icon {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1rem;
+        color: var(--halal-gold);
+        font-size: 1.2rem;
+        margin-top: 0.25rem;
+        flex-shrink: 0;
     }
     
-    .criteria-icon i {
-        font-size: 1.5rem;
-        color: #d4af37;
+    .criteria-text {
+        flex: 1;
+        color: rgba(255, 255, 255, 0.9);
     }
     
-    .criteria-name {
-        color: white;
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
+    /* Scroll Animations */
+    .scroll-animate {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
     }
     
-    .criteria-weight {
-        color: rgba(212, 175, 55, 0.8);
-        font-size: 0.9rem;
-        font-weight: 500;
+    .scroll-animate.fade-in-up {
+        transform: translateY(60px);
     }
     
-    .footer-grand {
-        background: linear-gradient(135deg, 
-            rgba(212, 175, 55, 0.05) 0%, 
-            rgba(5, 150, 105, 0.05) 100%);
-        border: 1px solid rgba(212, 175, 55, 0.2);
-        padding: 2rem 3rem;
-        border-radius: 2rem;
-        text-align: center;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    .scroll-animate.is-animated {
+        opacity: 1;
+        transform: translateY(0);
     }
     
-    .criteria-list li {
-        font-size: 0.95rem;
+    .scroll-animate.delay-1 { transition-delay: 0.1s; }
+    .scroll-animate.delay-2 { transition-delay: 0.2s; }
+    .scroll-animate.delay-3 { transition-delay: 0.3s; }
+    .scroll-animate.delay-4 { transition-delay: 0.4s; }
+    .scroll-animate.delay-5 { transition-delay: 0.5s; }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .criteria-container {
+            padding: 2rem 1rem;
+        }
+        
+        .criteria-card {
+            padding: 2rem;
+        }
+        
+        .hero-full {
+            min-height: 70vh;
+            padding: 2rem 1rem;
+        }
     }
-}
-
-/* AOS Animation Overrides */
-[data-aos] {
-    pointer-events: none;
-}
-
-[data-aos].aos-animate {
-    pointer-events: auto;
-}
 </style>
 @endpush
 
 @section('content')
-<!-- Grand Hero Section -->
-<div class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-halal-dark to-gray-900 py-32">
-    <div class="max-w-4xl mx-auto px-8 text-center">
-        <div class="animate-fade-in-up">
-            <div class="hero-badge inline-block mb-12">
+<!-- Full Width Hero Section -->
+<div class="full-width-section">
+    <div class="hero-full">
+        <div class="hero-content">
+            <div class="hero-badge scroll-animate fade-in-up">
                 International Halal Awards 2026
             </div>
-            <h1 class="hero-title serif-heading mb-8">
-                <span class="hero-gradient">Judging Criteria</span><br>
-                <span class="text-white">& Framework</span>
+            <h1 class="hero-title scroll-animate fade-in-up delay-1">
+                JUDGING<br>CRITERIA
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle scroll-animate fade-in-up delay-2">
                 The Awards evaluate performance using a comprehensive multi-dimensional scoring system tailored to Halal ethics, industry excellence, and global impact
             </p>
         </div>
     </div>
 </div>
 
-<!-- Grand Criteria Sections -->
-<div class="max-w-4xl mx-auto px-8 py-24">
-    <div class="space-y-24">
-        
-        <!-- Halal Integrity & Compliance -->
-        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.1s;">
-            <div class="flex items-start gap-8 mb-8">
-                <div class="section-number">01</div>
-                <div class="flex-1">
-                    <h2 class="section-title serif-heading mb-2">HALAL INTEGRITY & COMPLIANCE</h2>
-                    <p class="section-subtitle mb-2">WEIGHT: 25%</p>
-                    <div class="content-area">
-                        <div class="space-y-4">
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Alignment with recognized Halal standards</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Transparency in certification and supply chain</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Ethical and Shariah-compliant practices</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Traceability & risk management</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!-- Criteria Section -->
+<div class="criteria-container">
+    
+    <!-- Halal Integrity & Compliance -->
+    <div class="criteria-card scroll-animate fade-in-up delay-1">
+        <div class="card-header">
+            <div class="card-number">01</div>
+            <div class="card-title-group">
+                <h2 class="card-title">HALAL INTEGRITY & COMPLIANCE</h2>
+                <p class="card-subtitle">WEIGHT: 25%</p>
             </div>
         </div>
-
-        <!-- Innovation & Transformation -->
-        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.2s;">
-            <div class="flex items-start gap-8 mb-8">
-                <div class="section-number">02</div>
-                <div class="flex-1">
-                    <h2 class="section-title serif-heading mb-2">INNOVATION & TRANSFORMATION</h2>
-                    <p class="section-subtitle mb-2">WEIGHT: 20%</p>
-                    <div class="content-area">
-                        <div class="space-y-4">
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Introduction of new technologies, processes, or business models</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Creativity in solving industry challenges</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Enhancements to user or stakeholder experience</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Pioneering approaches in Halal markets</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Market Performance & Impact -->
-        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.3s;">
-            <div class="flex items-start gap-8 mb-8">
-                <div class="section-number">03</div>
-                <div class="flex-1">
-                    <h2 class="section-title serif-heading mb-2">MARKET PERFORMANCE & IMPACT</h2>
-                    <p class="section-subtitle mb-2">WEIGHT: 20%</p>
-                    <div class="content-area">
-                        <div class="space-y-4">
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Measurable business outcomes</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Revenue or export growth</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Market expansion or penetration</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Contribution to industry competitiveness</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sustainability & ESG Contribution -->
-        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.4s;">
-            <div class="flex items-start gap-8 mb-8">
-                <div class="section-number">04</div>
-                <div class="flex-1">
-                    <h2 class="section-title serif-heading mb-2">SUSTAINABILITY & ESG CONTRIBUTION</h2>
-                    <p class="section-subtitle mb-2">WEIGHT: 15%</p>
-                    <div class="content-area">
-                        <div class="space-y-4">
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Environmental stewardship</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Social impact and community development</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Responsible governance practices</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Long-term positive outcomes</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Strategic Execution & Effectiveness -->
-        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.5s;">
-            <div class="flex items-start gap-8 mb-8">
-                <div class="section-number">05</div>
-                <div class="flex-1">
-                    <h2 class="section-title serif-heading mb-2">STRATEGIC EXECUTION & EFFECTIVENESS</h2>
-                    <p class="section-subtitle mb-2">WEIGHT: 20%</p>
-                    <div class="content-area">
-                        <div class="space-y-4">
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Clarity of objectives</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Strength of strategy</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Quality of implementation</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Evidence of success against goals</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <ul class="criteria-list">
+            <li class="criteria-item">
+                <i class="fas fa-check-circle criteria-icon"></i>
+                <span class="criteria-text">Alignment with recognized Halal standards</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-check-circle criteria-icon"></i>
+                <span class="criteria-text">Transparency in certification and supply chain</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-check-circle criteria-icon"></i>
+                <span class="criteria-text">Ethical and Shariah-compliant practices</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-check-circle criteria-icon"></i>
+                <span class="criteria-text">Traceability & risk management</span>
+            </li>
+        </ul>
     </div>
 
-    <!-- Grand Footer -->
-    <div class="mt-32 text-center">
-        <div class="footer-grand inline-block">
-            <p class="text-white font-medium text-lg">
-                Our <span class="text-halal-gold font-semibold">structured judging rubric</span> ensures fair and comprehensive evaluation
-            </p>
+    <!-- Innovation & Transformation -->
+    <div class="criteria-card scroll-animate fade-in-up delay-2">
+        <div class="card-header">
+            <div class="card-number">02</div>
+            <div class="card-title-group">
+                <h2 class="card-title">INNOVATION & TRANSFORMATION</h2>
+                <p class="card-subtitle">WEIGHT: 20%</p>
+            </div>
         </div>
+        <ul class="criteria-list">
+            <li class="criteria-item">
+                <i class="fas fa-lightbulb criteria-icon"></i>
+                <span class="criteria-text">Introduction of new technologies, processes, or business models</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-palette criteria-icon"></i>
+                <span class="criteria-text">Creativity in solving industry challenges</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-users criteria-icon"></i>
+                <span class="criteria-text">Enhancements to user or stakeholder experience</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-rocket criteria-icon"></i>
+                <span class="criteria-text">Pioneering approaches in Halal markets</span>
+            </li>
+        </ul>
     </div>
+
+    <!-- Market Performance & Impact -->
+    <div class="criteria-card scroll-animate fade-in-up delay-3">
+        <div class="card-header">
+            <div class="card-number">03</div>
+            <div class="card-title-group">
+                <h2 class="card-title">MARKET PERFORMANCE & IMPACT</h2>
+                <p class="card-subtitle">WEIGHT: 20%</p>
+            </div>
+        </div>
+        <ul class="criteria-list">
+            <li class="criteria-item">
+                <i class="fas fa-chart-line criteria-icon"></i>
+                <span class="criteria-text">Measurable business outcomes</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-dollar-sign criteria-icon"></i>
+                <span class="criteria-text">Revenue or export growth</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-globe criteria-icon"></i>
+                <span class="criteria-text">Market expansion or penetration</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-trophy criteria-icon"></i>
+                <span class="criteria-text">Contribution to industry competitiveness</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Sustainability & ESG Contribution -->
+    <div class="criteria-card scroll-animate fade-in-up delay-4">
+        <div class="card-header">
+            <div class="card-number">04</div>
+            <div class="card-title-group">
+                <h2 class="card-title">SUSTAINABILITY & ESG CONTRIBUTION</h2>
+                <p class="card-subtitle">WEIGHT: 15%</p>
+            </div>
+        </div>
+        <ul class="criteria-list">
+            <li class="criteria-item">
+                <i class="fas fa-leaf criteria-icon"></i>
+                <span class="criteria-text">Environmental stewardship</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-hands-helping criteria-icon"></i>
+                <span class="criteria-text">Social impact and community development</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-balance-scale criteria-icon"></i>
+                <span class="criteria-text">Responsible governance practices</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-infinity criteria-icon"></i>
+                <span class="criteria-text">Long-term positive outcomes</span>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Strategic Execution & Effectiveness -->
+    <div class="criteria-card scroll-animate fade-in-up delay-5">
+        <div class="card-header">
+            <div class="card-number">05</div>
+            <div class="card-title-group">
+                <h2 class="card-title">STRATEGIC EXECUTION & EFFECTIVENESS</h2>
+                <p class="card-subtitle">WEIGHT: 20%</p>
+            </div>
+        </div>
+        <ul class="criteria-list">
+            <li class="criteria-item">
+                <i class="fas fa-bullseye criteria-icon"></i>
+                <span class="criteria-text">Clarity of objectives</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-chess criteria-icon"></i>
+                <span class="criteria-text">Strength of strategy</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-cogs criteria-icon"></i>
+                <span class="criteria-text">Quality of implementation</span>
+            </li>
+            <li class="criteria-item">
+                <i class="fas fa-flag-checkered criteria-icon"></i>
+                <span class="criteria-text">Evidence of success against goals</span>
+            </li>
+        </ul>
+    </div>
+
 </div>
 
 <script>
-    // Add staggered animation on scroll
+    // Scroll Animation with Intersection Observer
     const observerOptions = {
-        threshold: 0.1,
+        threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const scrollObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('is-animated');
+                scrollObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.animate-fade-in-up').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s ease-out';
-        observer.observe(el);
+    // Initialize animations when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const animatedElements = document.querySelectorAll('.scroll-animate');
+        animatedElements.forEach(el => {
+            scrollObserver.observe(el);
+        });
+
+        // Add parallax effect to hero section
+        const heroContent = document.querySelector('.hero-content');
+        if (heroContent) {
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallax = scrolled * 0.5;
+                heroContent.style.transform = `translateY(${parallax}px)`;
+            });
+        }
     });
 </script>
 @endsection
-

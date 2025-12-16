@@ -4,209 +4,190 @@
 
 @push('styles')
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap');
     
-    @keyframes fadeInUp {
-        0% { opacity: 0; transform: translateY(40px); }
-        100% { opacity: 1; transform: translateY(0); }
+    :root {
+        --halal-green: #059669;
+        --halal-dark: #064e3b;
+        --halal-gold: #d4af37;
     }
-    @keyframes gradient-shift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-    @keyframes subtle-glow {
-        0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.1); }
-        50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.2); }
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
     
     body {
         font-family: 'Inter', sans-serif;
+        background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
+        min-height: 100vh;
+        overflow-x: hidden;
     }
     
-    .serif-heading {
-        font-family: 'Playfair Display', serif;
-    }
-    
-    .grand-section {
-        background: linear-gradient(135deg, 
-            rgba(5, 150, 105, 0.03) 0%, 
-            rgba(6, 78, 59, 0.05) 50%, 
-            rgba(5, 150, 105, 0.03) 100%);
-        border-left: 4px solid rgba(212, 175, 55, 0.3);
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    .full-width-section {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
         position: relative;
+        overflow: hidden;
     }
     
-    .grand-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, 
-            transparent 0%, 
-            rgba(212, 175, 55, 0.3) 50%, 
-            transparent 100%);
-    }
-    
-    .grand-section:hover {
-        transform: translateY(-8px);
-        box-shadow: 
-            0 20px 40px rgba(0, 0, 0, 0.1),
-            0 0 20px rgba(212, 175, 55, 0.15);
-        border-left-color: rgba(212, 175, 55, 0.6);
-    }
-    
-    .section-number {
-        font-family: 'Playfair Display', serif;
-        font-size: 3rem;
-        font-weight: 900;
-        background: linear-gradient(135deg, 
-            #d4af37 0%, 
-            #f4e4bc 50%, 
-            #d4af37 100%);
-        background-size: 200% 200%;
-        animation: gradient-shift 4s ease infinite;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: 1;
-        opacity: 0.9;
-    }
-    
-    .section-title {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.875rem;
-        font-weight: 700;
-        color: white;
-        line-height: 1.2;
-        letter-spacing: -0.02em;
-    }
-    
-    .section-subtitle {
-        color: rgba(212, 175, 55, 0.8);
-        font-weight: 500;
-        font-size: 0.875rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-    }
-    
-    .content-area {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 0.75rem;
-        padding: 2rem;
-        position: relative;
-    }
-    
-    .content-area::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(135deg, 
-            rgba(212, 175, 55, 0.02) 0%, 
-            transparent 50%, 
-            rgba(5, 150, 105, 0.02) 100%);
-        border-radius: inherit;
-        pointer-events: none;
-    }
-    
-    .list-item {
+    .hero-full {
+        min-height: 100vh;
         display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 1rem;
-        color: rgba(255, 255, 255, 0.8);
-        line-height: 1.6;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 2rem;
+        position: relative;
+        background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
     }
     
-    .list-bullet {
-        color: rgba(212, 175, 55, 0.8);
-        font-weight: 600;
-        flex-shrink: 0;
-        margin-top: 0.25rem;
-    }
-    
-    .hero-title {
-        font-family: 'Playfair Display', serif;
-        font-size: clamp(3rem, 8vw, 6rem);
-        font-weight: 900;
-        line-height: 0.9;
-        letter-spacing: -0.04em;
-    }
-    
-    .hero-gradient {
-        background: linear-gradient(135deg, 
-            #d4af37 0%, 
-            #f4e4bc 25%, 
-            #d4af37 50%, 
-            #b8941f 75%, 
-            #d4af37 100%);
-        background-size: 200% 200%;
-        animation: gradient-shift 6s ease infinite;
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
-    }
-    
-    .hero-subtitle {
-        font-size: 1.25rem;
-        color: rgba(255, 255, 255, 0.7);
-        font-weight: 300;
-        line-height: 1.6;
-        max-width: 600px;
-        margin: 0 auto;
+    .hero-content {
+        text-align: center;
+        max-width: 1000px;
+        position: relative;
+        z-index: 2;
     }
     
     .hero-badge {
-        background: linear-gradient(135deg, 
-            rgba(212, 175, 55, 0.1) 0%, 
-            rgba(212, 175, 55, 0.05) 100%);
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: rgba(212, 175, 55, 0.1);
         border: 1px solid rgba(212, 175, 55, 0.3);
-        padding: 0.75rem 2rem;
-        border-radius: 2rem;
+        border-radius: 50px;
+        color: var(--halal-gold);
+        font-weight: 600;
         font-size: 0.875rem;
-        font-weight: 500;
         letter-spacing: 0.1em;
         text-transform: uppercase;
-        color: rgba(212, 175, 55, 0.9);
-        animation: subtle-glow 4s ease-in-out infinite;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+    
+    .hero-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.3));
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        font-weight: 400;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+    }
+    
+    .confidentiality-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        position: relative;
+    }
+    
+    .confidentiality-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        padding: 3rem;
+        position: relative;
+        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+        overflow: hidden;
+    }
+    
+    .confidentiality-card:hover {
+        transform: translateY(-12px);
+        border-color: rgba(212, 175, 55, 0.4);
+        box-shadow: 0 25px 80px rgba(212, 175, 55, 0.3);
+    }
+    
+    .card-header {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .card-number {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: var(--halal-gold);
+        flex-shrink: 0;
+    }
+    
+    .card-title-group {
+        flex: 1;
+    }
+    
+    .card-title {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-subtitle {
+        color: var(--halal-gold);
+        font-weight: 500;
+        font-size: 0.875rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
     }
     
     .principle-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.5rem;
+        margin-top: 2rem;
     }
     
     .principle-item {
         display: flex;
         align-items: center;
-        padding: 1.25rem;
+        padding: 1.5rem;
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 0.5rem;
+        border-radius: 15px;
         transition: all 0.3s ease;
     }
     
     .principle-item:hover {
         background: rgba(212, 175, 55, 0.1);
         border-color: rgba(212, 175, 55, 0.3);
-        transform: translateY(-2px);
+        transform: translateX(8px);
     }
     
     .principle-item i {
-        color: rgba(212, 175, 55, 0.8);
+        color: var(--halal-gold);
         font-size: 1.5rem;
         margin-right: 1rem;
         flex-shrink: 0;
     }
     
     .principle-item span {
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 0.9);
         font-weight: 500;
     }
     
@@ -219,27 +200,29 @@
     .conduct-item {
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 0.5rem;
-        padding: 1.5rem;
+        border-radius: 15px;
+        padding: 2rem;
         transition: all 0.3s ease;
     }
     
     .conduct-item:hover {
         background: rgba(212, 175, 55, 0.1);
         border-color: rgba(212, 175, 55, 0.3);
+        transform: translateY(-4px);
     }
     
     .conduct-item h4 {
         color: white;
         font-weight: 600;
-        margin-bottom: 0.75rem;
+        margin-bottom: 1rem;
         display: flex;
         align-items: center;
         gap: 0.75rem;
+        font-family: 'Space Grotesk', sans-serif;
     }
     
     .conduct-item h4 i {
-        color: rgba(212, 175, 55, 0.8);
+        color: var(--halal-gold);
         font-size: 1.2rem;
     }
     
@@ -249,238 +232,296 @@
         margin: 0;
     }
     
+    .confidentiality-list {
+        list-style: none;
+        margin: 2rem 0;
+    }
+    
+    .confidentiality-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 12px;
+        transition: all 0.3s ease;
+    }
+    
+    .confidentiality-item:hover {
+        background: rgba(255, 255, 255, 0.04);
+        transform: translateX(8px);
+    }
+    
+    .confidentiality-icon {
+        color: var(--halal-gold);
+        font-size: 1.2rem;
+        margin-top: 0.25rem;
+        flex-shrink: 0;
+    }
+    
+    .confidentiality-text {
+        flex: 1;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    
     .enforcement-notice {
         background: linear-gradient(135deg, rgba(5, 150, 105, 0.1), rgba(6, 78, 59, 0.1));
         border: 1px solid rgba(5, 150, 105, 0.3);
-        border-radius: 0.75rem;
-        padding: 2rem;
+        border-radius: 15px;
+        padding: 2.5rem;
         text-align: center;
         color: white;
+        margin-top: 2rem;
     }
     
     .enforcement-notice i {
         font-size: 3rem;
-        color: rgba(212, 175, 55, 0.8);
+        color: var(--halal-gold);
         margin-bottom: 1rem;
     }
     
     .enforcement-notice h4 {
-        font-size: 1.25rem;
-        font-weight: 600;
-        margin-bottom: 0.75rem;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        font-family: 'Space Grotesk', sans-serif;
     }
     
     .enforcement-notice p {
         color: rgba(255, 255, 255, 0.8);
         line-height: 1.6;
+        font-size: 1.1rem;
     }
     
-    .footer-grand {
-        background: linear-gradient(135deg, 
-            rgba(212, 175, 55, 0.05) 0%, 
-            rgba(5, 150, 105, 0.05) 100%);
-        border: 1px solid rgba(212, 175, 55, 0.2);
-        padding: 2rem 3rem;
-        border-radius: 2rem;
-        text-align: center;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+    /* Scroll Animations */
+    .scroll-animate {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
     }
     
-    .footer-grand:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 20px 40px rgba(212, 175, 55, 0.1);
-        border-color: rgba(212, 175, 55, 0.4);
+    .scroll-animate.fade-in-up {
+        transform: translateY(60px);
+    }
+    
+    .scroll-animate.is-animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .scroll-animate.delay-1 { transition-delay: 0.1s; }
+    .scroll-animate.delay-2 { transition-delay: 0.2s; }
+    .scroll-animate.delay-3 { transition-delay: 0.3s; }
+    .scroll-animate.delay-4 { transition-delay: 0.4s; }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .confidentiality-container {
+            padding: 2rem 1rem;
+        }
+        
+        .confidentiality-card {
+            padding: 2rem;
+        }
+        
+        .hero-full {
+            min-height: 70vh;
+            padding: 2rem 1rem;
+        }
+        
+        .principle-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .conduct-grid {
+            grid-template-columns: 1fr;
+        }
     }
 </style>
 @endpush
 
 @section('content')
-<!-- Grand Hero Section -->
-<div class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-halal-dark to-gray-900 py-32">
-    <div class="max-w-4xl mx-auto px-8 text-center">
-        <div class="animate-fade-in-up">
-            <div class="hero-badge inline-block mb-12">
+<!-- Full Width Hero Section -->
+<div class="full-width-section">
+    <div class="hero-full">
+        <div class="hero-content">
+            <div class="hero-badge scroll-animate fade-in-up">
                 International Halal Awards 2026
             </div>
-            <h1 class="hero-title serif-heading mb-8">
-                <span class="hero-gradient">Confidentiality</span><br>
-                <span class="text-white">& Code of Conduct</span>
+            <h1 class="hero-title scroll-animate fade-in-up delay-1">
+                CONFIDENTIALITY<br>& CODE OF CONDUCT
             </h1>
-            <p class="hero-subtitle">
+            <p class="hero-subtitle scroll-animate fade-in-up delay-2">
                 The International Halal Awards 2026 operates under strict confidentiality and ethical governance protocols
             </p>
         </div>
     </div>
 </div>
 
-<!-- Grand Confidentiality Sections -->
-<div class="max-w-4xl mx-auto px-8 py-24">
-    <div class="space-y-24">
+<!-- Confidentiality Section -->
+<div class="confidentiality-container">
+    
+    <!-- Confidentiality Principles -->
+    <div class="confidentiality-card scroll-animate fade-in-up delay-1">
+        <div class="card-header">
+            <div class="card-number">A</div>
+            <div class="card-title-group">
+                <h2 class="card-title">CONFIDENTIALITY PRINCIPLES</h2>
+                <p class="card-subtitle">Protecting Information Integrity</p>
+            </div>
+        </div>
+        <p class="card-content" style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 2rem;">
+            All participants, judges, and organizers must adhere to:
+        </p>
+        <div class="principle-grid">
+            <div class="principle-item">
+                <i class="fas fa-lock"></i>
+                <span>Non-disclosure of submission details</span>
+            </div>
+            <div class="principle-item">
+                <i class="fas fa-user-secret"></i>
+                <span>Protection of sensitive business information</span>
+            </div>
+            <div class="principle-item">
+                <i class="fas fa-eye-slash"></i>
+                <span>Anonymous evaluation process</span>
+            </div>
+            <div class="principle-item">
+                <i class="fas fa-shield-alt"></i>
+                <span>Secure data handling protocols</span>
+            </div>
+            <div class="principle-item">
+                <i class="fas fa-file-contract"></i>
+                <span>Legal confidentiality agreements</span>
+            </div>
+            <div class="principle-item">
+                <i class="fas fa-database"></i>
+                <span>Encrypted storage systems</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Code of Conduct -->
+    <div class="confidentiality-card scroll-animate fade-in-up delay-2">
+        <div class="card-header">
+            <div class="card-number">B</div>
+            <div class="card-title-group">
+                <h2 class="card-title">CODE OF CONDUCT</h2>
+                <p class="card-subtitle">Professional Standards & Ethics</p>
+            </div>
+        </div>
+        <div class="space-y-6">
+            <div>
+                <h4 class="text-white font-semibold mb-3" style="font-size: 1.25rem;">For Participants</h4>
+                <div class="conduct-grid">
+                    <div class="conduct-item">
+                        <h4><i class="fas fa-certificate"></i>Authenticity</h4>
+                        <p>Submit only accurate and verifiable information</p>
+                    </div>
+                    <div class="conduct-item">
+                        <h4><i class="fas fa-handshake"></i>Professionalism</h4>
+                        <p>Maintain respectful communication throughout</p>
+                    </div>
+                    <div class="conduct-item">
+                        <h4><i class="fas fa-balance-scale"></i>Fair Play</h4>
+                        <p>Accept decisions with grace and dignity</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-semibold mb-3" style="font-size: 1.25rem;">For Judges</h4>
+                <div class="conduct-grid">
+                    <div class="conduct-item">
+                        <h4><i class="fas fa-ban"></i>Impartiality</h4>
+                        <p>Evaluate based solely on merit and criteria</p>
+                    </div>
+                    <div class="conduct-item">
+                        <h4><i class="fas fa-eye"></i>Objectivity</h4>
+                        <p>Remove personal bias from evaluation</p>
+                    </div>
+                    <div class="conduct-item">
+                        <h4><i class="fas fa-comments"></i>Confidentiality</h4>
+                        <p>Never discuss evaluations with others</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enforcement -->
+    <div class="confidentiality-card scroll-animate fade-in-up delay-3">
+        <div class="card-header">
+            <div class="card-number">C</div>
+            <div class="card-title-group">
+                <h2 class="card-title">ENFORCEMENT & COMPLIANCE</h2>
+                <p class="card-subtitle">Ensuring Standards Are Met</p>
+            </div>
+        </div>
+        <ul class="confidentiality-list">
+            <li class="confidentiality-item">
+                <i class="fas fa-clipboard-check confidentiality-icon"></i>
+                <span class="confidentiality-text">Regular audits of confidentiality protocols</span>
+            </li>
+            <li class="confidentiality-item">
+                <i class="fas fa-user-shield confidentiality-icon"></i>
+                <span class="confidentiality-text">Independent compliance monitoring</span>
+            </li>
+            <li class="confidentiality-item">
+                <i class="fas fa-flag confidentiality-icon"></i>
+                <span class="confidentiality-text">Clear reporting mechanisms for violations</span>
+            </li>
+            <li class="confidentiality-item">
+                <i class="fas fa-search confidentiality-icon"></i>
+                <span class="confidentiality-text">Swift investigation of breaches</span>
+            </li>
+            <li class="confidentiality-item">
+                <i class="fas fa-gavel confidentiality-icon"></i>
+                <span class="confidentiality-text">Consistent application of penalties</span>
+            </li>
+        </ul>
         
-        <!-- Confidentiality Principles -->
-        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.1s;">
-            <div class="flex items-start gap-8 mb-8">
-                <div class="section-number">A</div>
-                <div class="flex-1">
-                    <h2 class="section-title serif-heading mb-2">CONFIDENTIALITY PRINCIPLES</h2>
-                    <p class="section-subtitle mb-8">Protecting Information Integrity</p>
-                    <div class="content-area">
-                        <p class="text-white/80 mb-6 font-medium">All participants, judges, and organizers must adhere to:</p>
-                        <div class="principle-grid">
-                            <div class="principle-item">
-                                <i class="fas fa-lock"></i>
-                                <span>Non-disclosure of submission details</span>
-                            </div>
-                            <div class="principle-item">
-                                <i class="fas fa-user-secret"></i>
-                                <span>Protection of sensitive business information</span>
-                            </div>
-                            <div class="principle-item">
-                                <i class="fas fa-eye-slash"></i>
-                                <span>Anonymous evaluation process</span>
-                            </div>
-                            <div class="principle-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>Secure data handling protocols</span>
-                            </div>
-                            <div class="principle-item">
-                                <i class="fas fa-file-contract"></i>
-                                <span>Legal confidentiality agreements</span>
-                            </div>
-                            <div class="principle-item">
-                                <i class="fas fa-database"></i>
-                                <span>Encrypted storage systems</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Code of Conduct -->
-        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.2s;">
-            <div class="flex items-start gap-8 mb-8">
-                <div class="section-number">B</div>
-                <div class="flex-1">
-                    <h2 class="section-title serif-heading mb-2">CODE OF CONDUCT</h2>
-                    <p class="section-subtitle mb-8">Professional Standards & Ethics</p>
-                    <div class="content-area">
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="text-white font-semibold mb-3">For Participants</h4>
-                                <div class="conduct-grid">
-                                    <div class="conduct-item">
-                                        <h4><i class="fas fa-certificate"></i>Authenticity</h4>
-                                        <p>Submit only accurate and verifiable information</p>
-                                    </div>
-                                    <div class="conduct-item">
-                                        <h4><i class="fas fa-handshake"></i>Professionalism</h4>
-                                        <p>Maintain respectful communication throughout</p>
-                                    </div>
-                                    <div class="conduct-item">
-                                        <h4><i class="fas fa-balance-scale"></i>Fair Play</h4>
-                                        <p>Accept decisions with grace and dignity</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-
-                            <div>
-                                <h4 class="text-white font-semibold mb-3">For Judges</h4>
-                                <div class="conduct-grid">
-                                    <div class="conduct-item">
-                                        <h4><i class="fas fa-ban"></i>Impartiality</h4>
-                                        <p>Evaluate based solely on merit and criteria</p>
-                                    </div>
-                                    <div class="conduct-item">
-                                        <h4><i class="fas fa-eye"></i>Objectivity</h4>
-                                        <p>Remove personal bias from evaluation</p>
-                                    </div>
-                                    <div class="conduct-item">
-                                        <h4><i class="fas fa-comments"></i>Confidentiality</h4>
-                                        <p>Never discuss evaluations with others</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Enforcement -->
-        <div class="grand-section p-12 animate-fade-in-up" style="animation-delay: 0.3s;">
-            <div class="flex items-start gap-8 mb-8">
-                <div class="section-number">C</div>
-                <div class="flex-1">
-                    <h2 class="section-title serif-heading mb-2">ENFORCEMENT & COMPLIANCE</h2>
-                    <p class="section-subtitle mb-8">Ensuring Standards Are Met</p>
-                    <div class="content-area">
-                        <div class="space-y-4">
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Regular audits of confidentiality protocols</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Independent compliance monitoring</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Clear reporting mechanisms for violations</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Swift investigation of breaches</span>
-                            </div>
-                            <div class="list-item">
-                                <span class="list-bullet">•</span>
-                                <span>Consistent application of penalties</span>
-                            </div>
-                        </div>
-                        
-                        <div class="enforcement-notice mt-8">
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <h4>Strict Enforcement</h4>
-                            <p>Violation of confidentiality agreements or code of conduct may result in immediate disqualification and potential legal action</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="enforcement-notice">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h4>Strict Enforcement</h4>
+            <p>Violation of confidentiality agreements or code of conduct may result in immediate disqualification and potential legal action</p>
         </div>
     </div>
 
-    <!-- Grand Footer -->
-    <div class="mt-32 text-center">
-        <div class="footer-grand inline-block">
-            <p class="text-white font-medium text-lg">
-                Trust in our <span class="text-halal-gold font-semibold">commitment to confidentiality</span> and ethical excellence
-            </p>
-        </div>
-    </div>
 </div>
 
 <script>
-    // Add staggered animation on scroll
+    // Scroll Animation with Intersection Observer
     const observerOptions = {
-        threshold: 0.1,
+        threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const scrollObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('is-animated');
+                scrollObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.animate-fade-in-up').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s ease-out';
-        observer.observe(el);
+    // Initialize animations when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const animatedElements = document.querySelectorAll('.scroll-animate');
+        animatedElements.forEach(el => {
+            scrollObserver.observe(el);
+        });
+
+        // Add parallax effect to hero section
+        const heroContent = document.querySelector('.hero-content');
+        if (heroContent) {
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const parallax = scrolled * 0.5;
+                heroContent.style.transform = `translateY(${parallax}px)`;
+            });
+        }
     });
 </script>
 @endsection
