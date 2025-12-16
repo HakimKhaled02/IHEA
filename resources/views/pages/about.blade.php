@@ -11,7 +11,7 @@
     <div class="about-hero">
         <div class="about-hero-content">
             <div class="about-logo">
-                <img src="{{ asset('assets/iheclogo1.png') }}" alt="IHEC Logo" class="about-logo-img">
+                <img src="{{ asset('assets/ihealogo.png') }}" alt="IHEC Logo" class="about-logo-img">
             </div>
             <h1 class="about-title">International Halal Awards <span class="year-highlight">2026</span></h1>
             <p class="about-subtitle">Premier Global Platform for Halal Excellence</p>

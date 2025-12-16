@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'IHEC Award Management System')</title>
-    <link rel="icon" type="image/png" href="{{ asset('assets/iheclogo1.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('assets/ihealogo.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/ihec-theme.css') }}">
@@ -24,7 +24,7 @@
     <div class="menu-overlay" id="menuOverlay">
         <nav class="mobile-menu">
             <div class="menu-header">
-                <img src="{{ asset('assets/iheclogo1.png') }}" alt="IHEC Logo" class="menu-logo">
+                <img src="{{ asset('assets/ihealogo.png') }}" alt="IHEC Logo" class="menu-logo">
                 <h2>IHEC Awards 2026</h2>
             </div>
             <ul class="menu-list">

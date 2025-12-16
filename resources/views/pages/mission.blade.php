@@ -2,21 +2,80 @@
 
 @section('title', 'Mission & Purpose')
 
+@push('styles')
+<link rel="stylesheet" href="{{ asset('css/mission-page.css') }}">
+@endpush
+
 @section('content')
-<div class="page-content">
-    <h1>Mission & Purpose</h1>
-    
-    <h2>Our Mission</h2>
-    <p>To celebrate and recognize excellence in the global Halal economy by honoring individuals, organizations, and innovators who demonstrate outstanding achievements in Halal compliance, innovation, leadership, and sustainable practices.</p>
-    
-    <h2>Our Purpose</h2>
-    <ul>
-        <li>Promote excellence and innovation in the Halal industry</li>
-        <li>Recognize outstanding contributions to the global Halal economy</li>
-        <li>Foster collaboration and networking among Halal industry leaders</li>
-        <li>Elevate standards and best practices across all Halal sectors</li>
-        <li>Build a global community committed to ethical and sustainable business</li>
-    </ul>
+<div class="mission-page">
+    <div class="mission-hero">
+        <div class="mission-hero-content">
+            <div class="mission-logo">
+                <img src="{{ asset('assets/ihealogo.png') }}" alt="IHEC Logo" class="mission-logo-img">
+            </div>
+            <h1 class="mission-title">Mission & Purpose</h1>
+            <p class="mission-subtitle">Four Key Objectives for Global Halal Excellence</p>
+        </div>
+    </div>
+
+    <div class="mission-content">
+        <div class="mission-intro">
+            <p class="intro-text">The International Halal Awards 2026 was created to serve four key objectives:</p>
+        </div>
+
+        <div class="mission-objectives">
+            <div class="objective-block">
+                <div class="block-header">
+                    <div class="block-letter">A</div>
+                    <div class="block-title-wrapper">
+                        <h3 class="block-title">Celebrate Excellence in the Global Halal Ecosystem</h3>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <p>To recognize organizations that exemplifies excellence in quality, compliance, innovation and business performance</p>
+                </div>
+            </div>
+
+            <div class="objective-block">
+                <div class="block-header">
+                    <div class="block-letter">B</div>
+                    <div class="block-title-wrapper">
+                        <h3 class="block-title">Strengthen Global Confidence in Halal Standards</h3>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <p>To elevate global trust by highlighting initiatives that adhere to the highest levels of Halal, ethical, sustainability and traceability requirements</p>
+                </div>
+            </div>
+
+            <div class="objective-block">
+                <div class="block-header">
+                    <div class="block-letter">C</div>
+                    <div class="block-title-wrapper">
+                        <h3 class="block-title">Encourage Innovation & Industry Leadership</h3>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <p>To inspire breakthrough ideas, responsible practices and forward-thinking strategies that contribute to the long-term growth of Halal industries</p>
+                </div>
+            </div>
+
+            <div class="objective-block">
+                <div class="block-header">
+                    <div class="block-letter">D</div>
+                    <div class="block-title-wrapper">
+                        <h3 class="block-title">Foster International Cooperation & Market Expansion</h3>
+                    </div>
+                </div>
+                <div class="block-content">
+                    <p>To bring together global Halal stakeholders—government, industry leaders, investors, innovators and certification bodies—to build networks and unlock opportunities</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="mission-closing">
+            <p class="closing-text">The Awards stand as a global benchmark designed to honor leadership, integrity and progressive impact in an ever-expanding global Halal economy</p>
+        </div>
+    </div>
 </div>
 @endsection
-

@@ -14,7 +14,7 @@
         <div class="hero-content">
             <div class="hero-logo-container">
                 <div class="logo-glow"></div>
-                <img src="{{ asset('assets/iheclogo1.png') }}" alt="IHEC Logo" class="hero-logo-img">
+                <img src="{{ asset('assets/ihealogo.png') }}" alt="IHEC Logo" class="hero-logo-img">
             </div>
             
             <div class="hero-text-container">

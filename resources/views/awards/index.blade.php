@@ -7,7 +7,7 @@
     <div class="page-header">
         <div class="page-header-content">
             <div class="page-header-logo">
-                <img src="{{ asset('assets/iheclogo1.png') }}" alt="IHEC Logo" class="header-logo">
+                <img src="{{ asset('assets/ihealogo.png') }}" alt="IHEC Logo" class="header-logo">
             </div>
             <div class="page-header-text">
                 <h2>Our Awards</h2>
