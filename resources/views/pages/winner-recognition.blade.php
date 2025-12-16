@@ -533,7 +533,7 @@
                 object-fit: cover;
                 z-index: 1;
                 opacity: 1;
-                filter: none;
+                filter: blur(1px);
             "
             onerror="console.error('Video failed to load'); this.style.display='none';"
             onloadstart="console.log('Video loading started...');"

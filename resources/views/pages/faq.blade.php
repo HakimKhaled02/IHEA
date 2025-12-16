@@ -169,13 +169,46 @@
 @endpush
 
 @section('content')
-<!-- Hero Section with Black-Gold Dominant Live Gradient Background -->
-<div class="relative overflow-hidden py-24 islamic-pattern" style="
-    background: linear-gradient(135deg, #000000 0%, #000000 20%, #f4e4bc 35%, #d4af37 50%, #f4e4bc 65%, #000000 80%, #059669 90%, #000000 100%);
-    background-size: 400% 400%;
-    animation: live-gradient 15s ease infinite;
-    will-change: background-position;
-">
+<!-- Hero Section with Video Background -->
+<div class="relative overflow-hidden py-24" style="position: relative;">
+    <!-- Video Background -->
+    <video 
+        class="hero-video" 
+        autoplay 
+        loop 
+        muted 
+        playsinline
+        preload="auto"
+        style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+            opacity: 0.4;
+            filter: blur(1px);
+        "
+        onerror="console.error('Video failed to load'); this.style.display='none';"
+        onloadstart="console.log('Video loading started...');"
+        oncanplay="console.log('Video can play'); this.play().catch(e => console.error('Autoplay blocked:', e));"
+        onloadeddata="console.log('Video data loaded');"
+    >
+        <source src="{{ asset('assets/abstract-lines-bg.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <!-- Video Overlay for Text Readability -->
+    <div style="
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -1;
+    "></div>
     <!-- Floating Particles -->
     <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
     <div class="particle" style="left: 25%; animation-delay: 2s;"></div>
