@@ -14,7 +14,7 @@
 </head>
 <body>
     <!-- Hamburger Menu Button -->
-    <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+    <button class="hamburger-menu {{ request()->routeIs('home') ? 'hero-hamburger' : 'fixed-hamburger' }}" id="hamburgerMenu" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
