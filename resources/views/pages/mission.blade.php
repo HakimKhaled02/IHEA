@@ -9,7 +9,7 @@
 @section('content')
 <div class="mission-page">
     <!-- Hero Image Section with Overlay -->
-    <div class="mission-hero-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+    <div class="mission-hero-image" style="background-image: url('{{ asset("assets/aboutpage.jpg") }}');">
         <div class="hero-overlay-box">
             <h1 class="hero-overlay-title">Mission & Purpose</h1>
         </div>
@@ -22,7 +22,7 @@
             <div class="mission-left-column">
                 <h2 class="section-heading">A little bit about</h2>
                 <h3 class="mission-main-title">INTERNATIONAL HALAL ECONOMIC AWARD (IHEA)</h3>
-                <p class="mission-description">The International Halal Awards 2026 was created to serve four key objectives.</p>
+                <p class="mission-description">The International Halal Economic Awards 2026 was created to serve four key objectives.</p>
                 
                 <div class="objectives-left">
                     <div class="objective-item">

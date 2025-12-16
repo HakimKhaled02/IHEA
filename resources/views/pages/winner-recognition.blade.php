@@ -482,6 +482,16 @@
     }
     
     @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+        
+        .section-content {
+            padding: 2rem;
+        }
+        
         .section-header {
             flex-direction: column;
             gap: 2rem;
@@ -490,10 +500,28 @@
         
         .section-number {
             min-width: auto;
+            font-size: clamp(2rem, 8vw, 3rem);
         }
         
         .content-grid {
             grid-template-columns: 1fr;
+        }
+        
+        .hero-full {
+            min-height: 70vh;
+            padding: 2rem 1rem;
+        }
+        
+        .hero-title {
+            font-size: clamp(2rem, 8vw, 3rem);
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1rem, 4vw, 1.4rem);
+        }
+        
+        .section-e .section-content {
+            max-width: 100%;
         }
     }
 </style>
@@ -505,13 +533,13 @@
     <div class="hero-full">
         <div class="hero-content">
             <div class="hero-badge">
-                International Halal Awards 2026
+                International Halal Economic Awards 2026
             </div>
             <h1 class="hero-title">
                 Winner Recognition<br>& Usage Rights
             </h1>
             <p class="hero-subtitle">
-                Winners of the International Halal Awards 2026 will receive exceptional global exposure and branding privileges
+                Winners of the International Halal Economic Awards 2026 will receive exceptional global exposure and branding privileges
             </p>
         </div>
     </div>
@@ -710,7 +738,7 @@
 <div class="footer-full">
     <div class="footer-content">
         <p class="footer-text">
-            Join the elite winners of <span class="footer-highlight">International Halal Awards 2026</span>
+            Join the elite winners of <span class="footer-highlight">International Halal Economic Awards 2026</span>
         </p>
     </div>
 </div>

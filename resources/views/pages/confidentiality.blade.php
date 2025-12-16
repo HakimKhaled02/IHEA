@@ -346,13 +346,13 @@
     <div class="hero-full">
         <div class="hero-content">
             <div class="hero-badge scroll-animate fade-in-up">
-                International Halal Awards 2026
+                International Halal Economic Awards 2026
             </div>
             <h1 class="hero-title scroll-animate fade-in-up delay-1">
                 CONFIDENTIALITY<br>& CODE OF CONDUCT
             </h1>
             <p class="hero-subtitle scroll-animate fade-in-up delay-2">
-                The International Halal Awards 2026 operates under strict confidentiality and ethical governance protocols
+                The International Halal Economic Awards 2026 operates under strict confidentiality and ethical governance protocols
             </p>
         </div>
     </div>

@@ -253,13 +253,13 @@
     <div class="hero-full">
         <div class="hero-content">
             <div class="hero-badge scroll-animate fade-in-up">
-                International Halal Awards 2026
+                International Halal Economic Awards 2026
             </div>
             <h1 class="hero-title scroll-animate fade-in-up delay-1">
                 HOW TO<br>ENTER
             </h1>
             <p class="hero-subtitle scroll-animate fade-in-up delay-2">
-                Follow these simple steps to submit your entry for the prestigious International Halal Awards 2026
+                Follow these simple steps to submit your entry for the prestigious International Halal Economic Awards 2026
             </p>
         </div>
     </div>

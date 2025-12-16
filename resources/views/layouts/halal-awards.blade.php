@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'International Halal Awards 2026')</title>
+    <title>@yield('title', 'International Halal Economic Awards 2026')</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @stack('styles')
@@ -17,7 +17,7 @@
     <footer class="bg-gradient-to-r from-halal-dark to-halal-green text-white py-8 mt-16">
         <div class="max-w-6xl mx-auto px-8 text-center">
             <div class="mb-4">
-                <h3 class="text-2xl font-bold text-halal-gold mb-2">International Halal Awards 2026</h3>
+                <h3 class="text-2xl font-bold text-halal-gold mb-2">International Halal Economic Awards 2026</h3>
                 <p class="text-white/80">Recognizing Excellence in the Global Halal Economy</p>
             </div>
             <div class="border-t border-halal-gold/30 pt-4">

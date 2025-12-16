@@ -6,7 +6,7 @@
 <div class="page-content">
     <h1>Participation Guidelines & Submission</h1>
     
-    <p>International Halal Awards 2026</p>
+    <p>International Halal Economic Awards 2026</p>
     
     <!-- SECTION 1: ELIGIBILITY REQUIREMENTS -->
     <h2>Eligibility Requirements</h2>

@@ -6,7 +6,7 @@
 <div class="page-content">
     <h1>Award Categories</h1>
     
-    <p>The International Halal Awards 2026 features 15 prestigious categories recognizing excellence across the Halal economy:</p>
+    <p>The International Halal Economic Awards 2026 features 15 prestigious categories recognizing excellence across the Halal economy:</p>
     
     <div class="categories-list">
         <div class="category-item">
