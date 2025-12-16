@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Why The International Halal Awards Matter')
+@section('title', 'Why The International Halal Economic Award (IHEA) Matter')
 
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/why-matters-page.css') }}">
@@ -10,12 +10,8 @@
 <div class="why-matters-page">
     <!-- Header Section -->
     <div class="why-header">
-        <div class="header-badge">
-            <i class="fas fa-star"></i>
-            <span>Why The International Halal Awards Matter</span>
-        </div>
-        <h1 class="header-title">Why The International Halal Awards Matter</h1>
-        <p class="header-mission">In today's interconnected marketplace, Halal is no longer restricted to food—it represents a global movement toward ethics, sustainability, transparency, and trust. The International Halal Awards 2026 provides:</p>
+        <h1 class="header-title">WHY THE INTERNATIONAL HALAL ECONOMIC AWARD(IHEA) MATTER</h1>
+        <p class="header-mission">In today's interconnected marketplace, Halal is no longer restricted to food—it represents a global movement toward ethics, sustainability, transparency, and trust. The International Halal Economic Award (IHEA) 2026 provides:</p>
     </div>
 
     <!-- Content Cards Grid -->
@@ -27,7 +23,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="fas fa-globe"></i>
+                                <i class="far fa-award"></i>
                             </div>
                             <h3 class="card-title">UNMATCHED GLOBAL RECOGNITION</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -35,8 +31,8 @@
                     </div>
                 </div>
                 <div class="flip-card-back">
-                    <h3 class="card-title-back">A. UNMATCHED GLOBAL RECOGNITION</h3>
-                    <p class="card-description">Winning at the International Halal Awards sets a powerful standard of excellence, strengthening your organization's global reputation and credibility among buyers, investors, regulators, and consumers.</p>
+                    <h3 class="card-title-back">UNMATCHED GLOBAL RECOGNITION</h3>
+                    <p class="card-description">Winning at the International Halal Economic Award (IHEA) sets a powerful standard of excellence, strengthening your organization's global reputation and credibility among buyers, investors, regulators, and consumers.</p>
                 </div>
             </div>
         </div>
@@ -48,7 +44,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
                             </div>
                             <h3 class="card-title">A BENCHMARK FOR HALAL EXCELLENCE</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -56,7 +52,7 @@
                     </div>
                 </div>
                 <div class="flip-card-back">
-                    <h3 class="card-title-back">B. A BENCHMARK FOR HALAL EXCELLENCE</h3>
+                    <h3 class="card-title-back">A BENCHMARK FOR HALAL EXCELLENCE</h3>
                     <p class="card-description">The Awards function as a prestigious benchmark for:</p>
                     <ul class="card-list">
                         <li>Halal compliance</li>
@@ -77,7 +73,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="fas fa-handshake"></i>
+                                <i class="far fa-handshake"></i>
                             </div>
                             <h3 class="card-title">STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -85,8 +81,8 @@
                     </div>
                 </div>
                 <div class="flip-card-back">
-                    <h3 class="card-title-back">C. STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
-                    <p class="card-description">In a world where trust drives decisions, receiving an International Halal Award signals:</p>
+                    <h3 class="card-title-back">STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
+                    <p class="card-description">In a world where trust drives decisions, receiving an International Halal Economic Award (IHEA) signals:</p>
                     <ul class="card-list">
                         <li>Integrity</li>
                         <li>Reliability</li>
@@ -106,7 +102,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="fas fa-chart-line"></i>
+                                <i class="far fa-chart-line"></i>
                             </div>
                             <h3 class="card-title">COMPETITIVE DIFFERENTIATION</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -114,7 +110,7 @@
                     </div>
                 </div>
                 <div class="flip-card-back">
-                    <h3 class="card-title-back">D. COMPETITIVE DIFFERENTIATION</h3>
+                    <h3 class="card-title-back">COMPETITIVE DIFFERENTIATION</h3>
                     <p class="card-description">Award recipients stand apart from competitors with:</p>
                     <ul class="card-list">
                         <li>Superior Visibility</li>
@@ -133,7 +129,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="fas fa-globe-americas"></i>
+                                <i class="far fa-globe-americas"></i>
                             </div>
                             <h3 class="card-title">GAIN ACCESS TO GLOBAL MARKETS</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -141,7 +137,7 @@
                     </div>
                 </div>
                 <div class="flip-card-back">
-                    <h3 class="card-title-back">E. GAIN ACCESS TO GLOBAL MARKETS</h3>
+                    <h3 class="card-title-back">GAIN ACCESS TO GLOBAL MARKETS</h3>
                     <p class="card-description">Winning attracts:</p>
                     <ul class="card-list">
                         <li>Distributors</li>
@@ -161,7 +157,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="fas fa-dollar-sign"></i>
+                                <i class="far fa-dollar-sign"></i>
                             </div>
                             <h3 class="card-title">ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -169,7 +165,7 @@
                     </div>
                 </div>
                 <div class="flip-card-back">
-                    <h3 class="card-title-back">F. ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
+                    <h3 class="card-title-back">ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
                     <p class="card-description">Investors trust brands with:</p>
                     <ul class="card-list">
                         <li>Verified Halal Integrity</li>
@@ -188,7 +184,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="fas fa-users"></i>
+                                <i class="far fa-users"></i>
                             </div>
                             <h3 class="card-title">TALENT ATTRACTION & EMPLOYER BRANDING</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -196,7 +192,7 @@
                     </div>
                 </div>
                 <div class="flip-card-back">
-                    <h3 class="card-title-back">G. TALENT ATTRACTION & EMPLOYER BRANDING</h3>
+                    <h3 class="card-title-back">TALENT ATTRACTION & EMPLOYER BRANDING</h3>
                     <p class="card-description">Recognized organizations attract:</p>
                     <ul class="card-list">
                         <li>Higher-Quality Talent</li>
@@ -215,7 +211,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="fas fa-bullhorn"></i>
+                                <i class="far fa-bullhorn"></i>
                             </div>
                             <h3 class="card-title">MEDIA VISIBILITY & BRAND ELEVATION</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -223,7 +219,7 @@
                     </div>
                 </div>
                 <div class="flip-card-back">
-                    <h3 class="card-title-back">H. MEDIA VISIBILITY & BRAND ELEVATION</h3>
+                    <h3 class="card-title-back">MEDIA VISIBILITY & BRAND ELEVATION</h3>
                     <p class="card-description">Winners receive extensive publicity through:</p>
                     <ul class="card-list">
                         <li>press releases</li>
@@ -243,7 +239,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="fas fa-trophy"></i>
+                                <i class="far fa-trophy"></i>
                             </div>
                             <h3 class="card-title">LEGACY & LONG-TERM VALUE</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -251,10 +247,10 @@
                     </div>
                 </div>
                 <div class="flip-card-back">
-                    <h3 class="card-title-back">I. LEGACY & LONG-TERM VALUE</h3>
+                    <h3 class="card-title-back">LEGACY & LONG-TERM VALUE</h3>
                     <p class="card-description">Winners are permanently listed in:</p>
                     <ul class="card-list">
-                        <li>The International Halal Awards Archive</li>
+                        <li>The International Halal Economic Award (IHEA) Archive</li>
                         <li>Digital Platforms</li>
                         <li>Global Publications</li>
                         <li>IHEC Promotional Materials</li>
