@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.halal-awards')
 
 @section('title', 'Winner Recognition, FAQs & Prestige Packages')
 
