@@ -4,7 +4,7 @@
 
 @push('styles')
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap');
     
     @keyframes slideIn {
         0% { opacity: 0; transform: translateX(-30px); }
@@ -116,21 +116,16 @@
     
     .hero-title {
         font-family: 'Space Grotesk', sans-serif;
-        font-size: clamp(3.5rem, 10vw, 8rem);
-        font-weight: 900;
-        line-height: 0.85;
-        margin-bottom: 2rem;
-        background: linear-gradient(135deg, 
-            #d4af37 0%, 
-            #f4e4bc 25%, 
-            #d4af37 50%, 
-            #ffffff 75%, 
-            #d4af37 100%);
-        background-size: 200% 200%;
-        animation: borderGlow 4s ease-in-out infinite;
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-weight: 800;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.4));
+        text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
         letter-spacing: -0.05em;
     }
     
@@ -336,6 +331,8 @@
         flex-shrink: 0;
         min-width: 80px;
         text-align: center;
+        filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5));
+        text-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
     }
     
     .section-title-group {
