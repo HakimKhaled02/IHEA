@@ -23,7 +23,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="far fa-award"></i>
+                                <i class="far fa-medal"></i>
                             </div>
                             <h3 class="card-title">UNMATCHED GLOBAL RECOGNITION</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -44,7 +44,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="far fa-star"></i>
+                                <i class="far fa-check-circle"></i>
                             </div>
                             <h3 class="card-title">A BENCHMARK FOR HALAL EXCELLENCE</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -102,7 +102,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="far fa-chart-line"></i>
+                                <i class="far fa-flag"></i>
                             </div>
                             <h3 class="card-title">COMPETITIVE DIFFERENTIATION</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -129,7 +129,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="far fa-globe-americas"></i>
+                                <i class="far fa-globe"></i>
                             </div>
                             <h3 class="card-title">GAIN ACCESS TO GLOBAL MARKETS</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -157,7 +157,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="far fa-dollar-sign"></i>
+                                <i class="far fa-briefcase"></i>
                             </div>
                             <h3 class="card-title">ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -184,7 +184,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="far fa-users"></i>
+                                <i class="far fa-user-tie"></i>
                             </div>
                             <h3 class="card-title">TALENT ATTRACTION & EMPLOYER BRANDING</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -211,7 +211,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="far fa-bullhorn"></i>
+                                <i class="far fa-newspaper"></i>
                             </div>
                             <h3 class="card-title">MEDIA VISIBILITY & BRAND ELEVATION</h3>
                             <p class="card-subtitle">Click to learn more</p>
@@ -239,7 +239,7 @@
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-icon-badge">
-                                <i class="far fa-trophy"></i>
+                                <i class="far fa-infinity"></i>
                             </div>
                             <h3 class="card-title">LEGACY & LONG-TERM VALUE</h3>
                             <p class="card-subtitle">Click to learn more</p>
