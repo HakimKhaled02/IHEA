@@ -38,7 +38,12 @@ php artisan migrate
 php artisan db:seed --class=AwardSeeder
 ```
 
-## Step 7: Start Development Server
+## Step 7: Build CSS Assets
+```bash
+npm run build
+```
+
+## Step 8: Start Development Server
 ```bash
 php artisan serve
 ```

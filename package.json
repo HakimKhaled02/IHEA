@@ -1,0 +1,26 @@
+{
+  "name": "ihec-award",
+  "version": "1.0.0",
+  "description": "A beautiful and modern award management system built with Laravel, PHP, MySQL, and CSS.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tailwindcss -i ./resources/css/app.css -o ./public/css/app.css --watch",
+    "build": "tailwindcss -i ./resources/css/app.css -o ./public/css/app.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MEDIA-Olympia-Education/IHEC-Award.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MEDIA-Olympia-Education/IHEC-Award/issues"
+  },
+  "homepage": "https://github.com/MEDIA-Olympia-Education/IHEC-Award#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.19"
+  }
+}
