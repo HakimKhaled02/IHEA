@@ -31,10 +31,6 @@
             </div>
             
             <div class="hero-actions">
-                <a href="{{ route('home') }}" class="btn btn-primary btn-large btn-enter">
-                    <i class="fas fa-home btn-icon"></i>
-                    <span class="btn-text">HOME</span>
-                </a>
                 <a href="{{ route('how-to-enter') }}" class="btn btn-secondary btn-large btn-view">
                     <i class="fas fa-user-check btn-icon"></i>
                     <span class="btn-text">REGISTER</span>
