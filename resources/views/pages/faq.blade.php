@@ -44,6 +44,14 @@
         100% { transform: translateX(100%); }
     }
     
+    @keyframes live-gradient {
+        0% { background-position: 0% 50%; }
+        25% { background-position: 100% 50%; }
+        50% { background-position: 100% 100%; }
+        75% { background-position: 0% 100%; }
+        100% { background-position: 0% 50%; }
+    }
+    
     .islamic-pattern {
         background-image:
             repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(5, 150, 105, 0.04) 35px, rgba(5, 150, 105, 0.04) 70px),
@@ -161,8 +169,13 @@
 @endpush
 
 @section('content')
-<!-- Hero Section with Shining Modern Effects -->
-<div class="relative overflow-hidden bg-gradient-to-br from-gray-900 via-halal-dark to-gray-900 py-24 islamic-pattern">
+<!-- Hero Section with Black-Gold Dominant Live Gradient Background -->
+<div class="relative overflow-hidden py-24 islamic-pattern" style="
+    background: linear-gradient(135deg, #000000 0%, #000000 20%, #f4e4bc 35%, #d4af37 50%, #f4e4bc 65%, #000000 80%, #059669 90%, #000000 100%);
+    background-size: 400% 400%;
+    animation: live-gradient 15s ease infinite;
+    will-change: background-position;
+">
     <!-- Floating Particles -->
     <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
     <div class="particle" style="left: 25%; animation-delay: 2s;"></div>

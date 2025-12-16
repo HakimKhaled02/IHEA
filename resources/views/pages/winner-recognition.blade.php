@@ -83,28 +83,13 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background: linear-gradient(135deg, 
-            rgba(5, 150, 105, 0.1) 0%, 
-            rgba(6, 78, 59, 0.2) 50%, 
-            rgba(5, 150, 105, 0.1) 100%);
+        background: #000000;
         border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         position: relative;
         overflow: hidden;
     }
     
-    .hero-full::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: 
-            radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 80%, rgba(5, 150, 105, 0.1) 0%, transparent 50%);
-        pointer-events: none;
-    }
-    
+        
     .hero-content {
         text-align: center;
         z-index: 2;
@@ -531,6 +516,45 @@
 <!-- Full Width Hero Section -->
 <div class="full-width-section">
     <div class="hero-full">
+        <!-- Video Background -->
+        <video 
+            class="hero-video" 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            preload="auto"
+            style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+                opacity: 1;
+                filter: none;
+            "
+            onerror="console.error('Video failed to load'); this.style.display='none';"
+            onloadstart="console.log('Video loading started...');"
+            oncanplay="console.log('Video can play'); this.play().catch(e => console.error('Autoplay blocked:', e));"
+            onloadeddata="console.log('Video data loaded');"
+        >
+            <source src="{{ asset('assets/halal-waves-bg.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Video Overlay for Text Readability -->
+        <div class="video-overlay" style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        "></div>
+        
         <div class="hero-content">
             <div class="hero-badge">
                 International Halal Economic Awards 2026
