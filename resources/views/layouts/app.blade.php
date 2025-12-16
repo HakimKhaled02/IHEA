@@ -9,60 +9,95 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/ihec-theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/homepage.css') }}">
     @stack('styles')
 </head>
 <body>
-    <div class="app-layout">
-        <!-- Sidebar Navigation -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <a href="{{ route('awards.index') }}" class="sidebar-logo-link">
-                    <img src="{{ asset('assets/iheclogo1.png') }}" alt="IHEC Logo" class="sidebar-logo">
-                    <div class="sidebar-title">
-                        <h1>IHEC Award System</h1>
-                        <p class="sidebar-subtitle">Halal Economic Conference</p>
-                    </div>
-                </a>
-            </div>
-            <nav class="sidebar-nav">
-                <a href="{{ route('awards.index') }}" class="sidebar-link {{ request()->routeIs('awards.index') ? 'active' : '' }}">
-                    <span class="sidebar-icon">🏆</span>
-                    <span>Awards</span>
-                </a>
-                <a href="{{ route('awards.create') }}" class="sidebar-link sidebar-link-primary {{ request()->routeIs('awards.create') ? 'active' : '' }}">
-                    <span class="sidebar-icon">➕</span>
-                    <span>Add Award</span>
-                </a>
-            </nav>
-            <div class="sidebar-footer">
-                <p>&copy; {{ date('Y') }} IHEC</p>
-            </div>
-        </aside>
+    <!-- Hamburger Menu Button -->
+    <button class="hamburger-menu" id="hamburgerMenu" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-        <!-- Main Content Area -->
-        <main class="main-content-wrapper">
-            @if(session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-
-            @if(isset($errors) && $errors->any())
-                <div class="alert alert-error">
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
-
-            <div class="content-container">
-                @yield('content')
+    <!-- Mobile Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <nav class="mobile-menu">
+            <div class="menu-header">
+                <img src="{{ asset('assets/iheclogo1.png') }}" alt="IHEC Logo" class="menu-logo">
+                <h2>IHEC Awards 2026</h2>
             </div>
-        </main>
+            <ul class="menu-list">
+                <li><a href="{{ route('home') }}" class="menu-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
+                <li><a href="{{ route('about') }}" class="menu-link {{ request()->routeIs('about') ? 'active' : '' }}">About International Halal Awards 2026</a></li>
+                <li><a href="{{ route('mission') }}" class="menu-link {{ request()->routeIs('mission') ? 'active' : '' }}">Mission & Purpose</a></li>
+                <li><a href="{{ route('why-matters') }}" class="menu-link {{ request()->routeIs('why-matters') ? 'active' : '' }}">Why The International Halal Awards Matter</a></li>
+                <li><a href="{{ route('categories') }}" class="menu-link {{ request()->routeIs('categories') ? 'active' : '' }}">Award Categories</a></li>
+                <li><a href="{{ route('eligibility') }}" class="menu-link {{ request()->routeIs('eligibility') ? 'active' : '' }}">Eligibility Requirements</a></li>
+                <li><a href="{{ route('how-to-enter') }}" class="menu-link {{ request()->routeIs('how-to-enter') ? 'active' : '' }}">How To Enter</a></li>
+                <li><a href="{{ route('submission-rules') }}" class="menu-link {{ request()->routeIs('submission-rules') ? 'active' : '' }}">Submission Rules</a></li>
+                <li><a href="{{ route('judging-framework') }}" class="menu-link {{ request()->routeIs('judging-framework') ? 'active' : '' }}">Judging Framework & Standards</a></li>
+                <li><a href="{{ route('judging-criteria') }}" class="menu-link {{ request()->routeIs('judging-criteria') ? 'active' : '' }}">Judging Criteria</a></li>
+                <li><a href="{{ route('confidentiality') }}" class="menu-link {{ request()->routeIs('confidentiality') ? 'active' : '' }}">Confidentiality & Code of Conduct</a></li>
+                <li><a href="{{ route('winner-recognition') }}" class="menu-link {{ request()->routeIs('winner-recognition') ? 'active' : '' }}">Winner Recognition & Usage Rights</a></li>
+                <li><a href="{{ route('faq') }}" class="menu-link {{ request()->routeIs('faq') ? 'active' : '' }}">FAQ's</a></li>
+                <li><a href="{{ route('fees-packages') }}" class="menu-link {{ request()->routeIs('fees-packages') ? 'active' : '' }}">Awards Participation Fees & Prestige Packages</a></li>
+                <li><a href="{{ route('awards.index') }}" class="menu-link {{ request()->routeIs('awards.*') ? 'active' : '' }}">View Awards</a></li>
+            </ul>
+        </nav>
     </div>
+
+    <!-- Main Content -->
+    <main class="main-content-simple">
+        @if(session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
+
+        @if(isset($errors) && $errors->any())
+            <div class="alert alert-error">
+                <ul>
+                    @foreach($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
+        @yield('content')
+    </main>
+
+    <script>
+        // Hamburger Menu Toggle
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const menuOverlay = document.getElementById('menuOverlay');
+        
+        hamburgerMenu.addEventListener('click', function() {
+            hamburgerMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            document.body.style.overflow = menuOverlay.classList.contains('active') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking on overlay
+        menuOverlay.addEventListener('click', function(e) {
+            if (e.target === menuOverlay) {
+                hamburgerMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Close menu when clicking on a menu link
+        const menuLinks = document.querySelectorAll('.menu-link');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburgerMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
 
     @stack('scripts')
 </body>
