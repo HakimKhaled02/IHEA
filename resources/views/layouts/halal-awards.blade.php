@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @stack('styles')
 </head>
-<body class="min-h-screen flex flex-col font-sans bg-gradient-to-br from-halal-dark/5 via-white to-halal-green/5">
+<body class="min-h-screen flex flex-col font-sans bg-gradient-to-br from-halal-dark via-gray-900 to-halal-dark">
     <main class="flex-1">
         @yield('content')
     </main>
