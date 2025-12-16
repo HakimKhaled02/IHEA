@@ -193,13 +193,78 @@
     }
     
     .package-price {
-        font-size: 2.5rem;
+        font-size: 4rem;
         font-weight: 900;
-        color: #ffffff;
         margin-bottom: 2rem;
         display: flex;
         align-items: baseline;
         gap: 0.5rem;
+        position: relative;
+        animation: priceGlow 2s ease-in-out infinite;
+    }
+    
+    .premium .package-price {
+        background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+        text-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+    }
+    
+    .elite .package-price {
+        background: linear-gradient(135deg, #059669, #10b981, #059669);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 0 20px rgba(5, 150, 105, 0.6));
+        text-shadow: 0 0 40px rgba(5, 150, 105, 0.4);
+    }
+    
+    .package-price .currency {
+        font-size: 2rem;
+        font-weight: 700;
+        opacity: 0.9;
+        background: none !important;
+        -webkit-text-fill-color: #ffffff !important;
+        filter: none !important;
+    }
+    
+    @keyframes priceGlow {
+        0%, 100% { 
+            transform: scale(1);
+            filter: brightness(1);
+        }
+        50% { 
+            transform: scale(1.05);
+            filter: brightness(1.2);
+        }
+    }
+    
+    .prestige-ribbon {
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        background: linear-gradient(135deg, var(--halal-gold), #b8941f);
+        color: #000;
+        padding: 0.5rem 3rem;
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transform: rotate(45deg);
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        z-index: 10;
+        animation: ribbonShine 3s ease-in-out infinite;
+    }
+    
+    @keyframes ribbonShine {
+        0%, 100% { 
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+        50% { 
+            box-shadow: 0 4px 25px rgba(212, 175, 55, 0.8);
+        }
     }
     
     .package-price .currency {
@@ -380,6 +445,7 @@
     <!-- Premium Package -->
     <div class="package-card premium scroll-animate fade-in-left delay-1">
         <div class="package-badge">PREMIUM CATEGORY</div>
+        <div class="prestige-ribbon">MOST PRESTIGIOUS</div>
         <h2 class="package-title">GLOBAL HALAL EXCELLENCE AWARD</h2>
         <p class="package-subtitle">"The Highest Honor of the International Halal Economic Awards 2026"</p>
         
