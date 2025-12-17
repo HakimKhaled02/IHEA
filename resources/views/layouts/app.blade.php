@@ -43,7 +43,7 @@
                 <li><a href="{{ route('winner-recognition') }}" class="menu-link {{ request()->routeIs('winner-recognition') ? 'active' : '' }}">Winner Recognition & Usage Rights</a></li>
                 <li><a href="{{ route('faq') }}" class="menu-link {{ request()->routeIs('faq') ? 'active' : '' }}">FAQ's</a></li>
                 <li><a href="{{ route('fees-packages') }}" class="menu-link {{ request()->routeIs('fees-packages') ? 'active' : '' }}">Awards Participation Fees & Prestige Packages</a></li>
-                <li><a href="{{ route('awards.index') }}" class="menu-link {{ request()->routeIs('awards.*') ? 'active' : '' }}">View Awards</a></li>
+                
             </ul>
         </nav>
     </div>
