@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'IHEC Award Management System')</title>
+    <title>@yield('title', 'IHEA Management System')</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/ihealogo.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -26,7 +26,7 @@
         <nav class="mobile-menu">
             <div class="menu-header">
                 <img src="{{ asset('assets/ihealogo.png') }}" alt="IHEC Logo" class="menu-logo">
-                <h2>IHEA Award 2026</h2>
+                <h2>IHEA 2026</h2>
             </div>
             <ul class="menu-list">
                 <li><a href="{{ route('home') }}" class="menu-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
