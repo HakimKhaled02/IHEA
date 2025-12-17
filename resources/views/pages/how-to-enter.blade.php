@@ -343,7 +343,7 @@
 
     <!-- CTA Section -->
     <div class="cta-section scroll-animate fade-in-up">
-        <a href="{{ route('awards.create') }}" class="cta-button">Start Your Entry</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCURjiSDPnTe07wafiEtYrgO1YSytYcXkjtI2sKrfEnoZ-mg/viewform" target="_blank" class="cta-button">Start Your Entry</a>
     </div>
 
 </div>
