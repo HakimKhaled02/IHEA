@@ -14,15 +14,12 @@
         @yield('content')
     </main>
 
-    <footer class="bg-gradient-to-r from-halal-dark to-halal-green text-white py-8 mt-16">
-        <div class="max-w-6xl mx-auto px-8 text-center">
-            <div class="mb-4">
-                <h3 class="text-2xl font-bold text-halal-gold mb-2">International Halal Economic Award 2026</h3>
-                <p class="text-white/80">Recognizing Excellence in the Global Halal Economy</p>
+    <footer class="bg-gray-900 text-white py-6 mt-auto">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center mb-2">
+                <span class="text-sm">International Halal Economic Award 2026</span>
             </div>
-            <div class="border-t border-halal-gold/30 pt-4">
-                <p class="text-white/70">Copyright by world islamic economic development 2025 - 2026 c</p>
-            </div>
+            <p class="text-xs text-gray-400">© 2025-2026 World Islamic Development. All rights reserved.</p>
         </div>
     </footer>
 

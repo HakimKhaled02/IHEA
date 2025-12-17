@@ -69,9 +69,14 @@
         @yield('content')
     </main>
 
-    <!-- Small Footer -->
-    <footer class="small-footer">
-        <p>Copyright by World Islamic Development 2025 - 2026 c</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-6 mt-auto">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <div class="flex items-center justify-center mb-2">
+                <span class="text-sm">International Halal Economic Award 2026</span>
+            </div>
+            <p class="text-xs text-gray-400">© 2025-2026 World Islamic Development. All rights reserved.</p>
+        </div>
     </footer>
 
     <script>
