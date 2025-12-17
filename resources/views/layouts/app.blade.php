@@ -75,7 +75,7 @@
             <div class="flex items-center justify-center mb-2">
                 <span class="text-sm">International Halal Economic Award 2026</span>
             </div>
-            <p class="text-xs text-gray-400">© 2025-2026 World Islamic Development. All rights reserved.</p>
+            <p class="text-xs text-gray-400">© 2025-2026 World Islamic Economic Development. All rights reserved.</p>
         </div>
     </footer>
 
