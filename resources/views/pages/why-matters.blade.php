@@ -114,6 +114,8 @@
     .hero-full {
         z-index: 1;
     }
+</style>
+@endpush
 
 @section('content')
 <!-- Full Width Hero Section -->
@@ -586,8 +588,9 @@
     }
 }
 </style>
-@endpush
+@endsection
 
+@push('scripts')
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const flipCards = document.querySelectorAll('.flip-card');
@@ -599,4 +602,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-@endsection
+@endpush
