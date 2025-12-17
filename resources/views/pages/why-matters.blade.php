@@ -93,6 +93,27 @@
         margin: 0 auto;
         padding: 4rem 2rem;
     }
+    
+    /* Ensure hamburger menu is above hero section and clickable */
+    .hamburger-menu {
+        z-index: 9999 !important;
+        position: fixed !important;
+        pointer-events: auto !important;
+    }
+    
+    /* Ensure menu overlay is above hero section */
+    .menu-overlay {
+        z-index: 9998 !important;
+    }
+    
+    /* Ensure hero section doesn't create a blocking stacking context */
+    .full-width-section {
+        z-index: 1;
+    }
+    
+    .hero-full {
+        z-index: 1;
+    }
 
 @section('content')
 <!-- Full Width Hero Section -->
