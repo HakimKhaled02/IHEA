@@ -423,21 +423,108 @@
                     <p class="card-description">This establishes a legacy of excellence that strengthens your organization for years to come</p>
                 </div>
             </div>
+        </div>
+
+        <!-- Card J -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="far fa-shield-alt"></i>
+                            </div>
+                            <h3 class="card-title">ENHANCED COMPLIANCE STANDARDS</h3>
+                            <p class="card-subtitle">Click to learn more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">ENHANCED COMPLIANCE STANDARDS</h3>
+                    <p class="card-description">Award recognition validates your commitment to:</p>
+                    <ul class="card-list">
+                        <li>Halal Certification Standards</li>
+                        <li>Regulatory Compliance</li>
+                        <li>Quality Assurance</li>
+                        <li>Ethical Business Practices</li>
+                    </ul>
+                    <p class="card-description">This demonstrates your organization's dedication to maintaining the highest standards</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card K -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="far fa-network-wired"></i>
+                            </div>
+                            <h3 class="card-title">NETWORKING & PARTNERSHIPS</h3>
+                            <p class="card-subtitle">Click to learn more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">NETWORKING & PARTNERSHIPS</h3>
+                    <p class="card-description">Winners gain access to:</p>
+                    <ul class="card-list">
+                        <li>Exclusive Industry Events</li>
+                        <li>Global Halal Networks</li>
+                        <li>Strategic Partnerships</li>
+                        <li>Business Opportunities</li>
+                    </ul>
+                    <p class="card-description">Connect with key stakeholders and expand your business network</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card L -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                        <div class="card-overlay">
+                            <div class="card-icon-badge">
+                                <i class="far fa-award"></i>
+                            </div>
+                            <h3 class="card-title">CERTIFICATION & CREDIBILITY</h3>
+                            <p class="card-subtitle">Click to learn more</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card-back">
+                    <h3 class="card-title-back">CERTIFICATION & CREDIBILITY</h3>
+                    <p class="card-description">Award recognition provides:</p>
+                    <ul class="card-list">
+                        <li>Third-Party Validation</li>
+                        <li>Industry Credibility</li>
+                        <li>Consumer Trust</li>
+                        <li>Market Authority</li>
+                    </ul>
+                    <p class="card-description">Strengthen your brand's credibility in the global Halal marketplace</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
 .why-cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
     margin-top: 2rem;
 }
 
 .flip-card {
     background-color: transparent;
     width: 100%;
-    height: 400px;
+    height: 300px;
     perspective: 1000px;
+    cursor: pointer;
 }
 
 .flip-card-inner {
@@ -449,7 +536,7 @@
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card.flipped .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -474,10 +561,12 @@
     border: 1px solid rgba(212, 175, 55, 0.3);
     color: #ffffff;
     transform: rotateY(180deg);
-    padding: 2rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .card-image {
@@ -499,33 +588,34 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .card-icon-badge {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: rgba(212, 175, 55, 0.2);
     border: 2px solid var(--halal-gold);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .card-icon-badge i {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--halal-gold);
 }
 
 .card-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 0.5rem;
     text-align: center;
+    line-height: 1.3;
 }
 
 .card-subtitle {
@@ -534,30 +624,34 @@
 }
 
 .card-title-back {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--halal-gold);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
 }
 
 .card-description {
     color: rgba(255, 255, 255, 0.9);
-    line-height: 1.6;
-    margin-bottom: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem;
 }
 
 .card-list {
     list-style: none;
     padding: 0;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
 }
 
 .card-list li {
     position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
+    padding-left: 1.25rem;
+    margin-bottom: 0.4rem;
     color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+    line-height: 1.4;
 }
 
 .card-list li:before {
