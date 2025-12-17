@@ -82,6 +82,7 @@
     </div>
     
     <!-- About Section -->
+    <div class="about-section-wrapper">
     <div class="about-page">
         <div class="about-hero">
             <div class="about-hero-content">
@@ -116,6 +117,7 @@
                 <p>From agriculture and food security to finance, technology, logistics, lifestyle and ESG, the Awards showcase the breadth and influence of Halal across industries, markets and cultures.</p>
             </div>
         </div>
+    </div>
     </div>
     
     <!-- Evening Gala Section -->
@@ -220,9 +222,9 @@
     
     <!-- Award Fees Section -->
     <div class="fees-section">
-        <div class="max-w-6xl mx-auto px-8 py-16">
-            <h2 class="text-4xl font-bold text-center text-halal-gold mb-4">Award Participation Fees & Prestige Packages</h2>
-            <p class="text-center text-white/80 mb-12 max-w-3xl mx-auto">
+        <div class="max-w-6xl mx-auto px-8 py-8">
+            <h2 class="text-3xl font-bold text-center text-halal-gold mb-3">Award Participation Fees & Prestige Packages</h2>
+            <p class="text-center text-white/80 mb-8 max-w-3xl mx-auto text-sm">
                 Premium Recognition Packages designed to elevate recipients to the highest levels of global recognition, leadership positioning, and long-term brand prestige
             </p>
             
@@ -245,7 +247,7 @@
                     
                     <ul class="benefits-list">
                         <li class="benefit-item">
-                            <span class="benefit-letter">A</span>
+                            <span class="benefit-icon"><i class="fas fa-trophy"></i></span>
                             <div class="benefit-content">
                                 <h4 class="benefit-title">AWARD PRESENTATION BY HONORABLE MINISTER</h4>
                                 <p class="benefit-description">A rare and highly prestigious moment where the award recipient receives their accolade directly from a Malaysian Minister or dignitary</p>
@@ -253,7 +255,7 @@
                         </li>
                         
                         <li class="benefit-item">
-                            <span class="benefit-letter">B</span>
+                            <span class="benefit-icon"><i class="fas fa-chair"></i></span>
                             <div class="benefit-content">
                                 <h4 class="benefit-title">VVIP SEATING EXPERIENCE</h4>
                                 <p class="benefit-description">The award recipient will be seated at the VVIP Table, together with Ministers, VIP guests, international leaders, and high-profile dignitaries</p>
@@ -261,7 +263,7 @@
                         </li>
                         
                         <li class="benefit-item">
-                            <span class="benefit-letter">C</span>
+                            <span class="benefit-icon"><i class="fas fa-newspaper"></i></span>
                             <div class="benefit-content">
                                 <h4 class="benefit-title">NATIONAL & INTERNATIONAL MEDIA FEATURE</h4>
                                 <p class="benefit-description">Your achievement will be highlighted in National & International media platforms, Online news portals, and Official social media channels</p>
@@ -269,7 +271,7 @@
                         </li>
                         
                         <li class="benefit-item">
-                            <span class="benefit-letter">D</span>
+                            <span class="benefit-icon"><i class="fas fa-users"></i></span>
                             <div class="benefit-content">
                                 <h4 class="benefit-title">DEDICATED GALA SEATING FOR YOUR GUESTS</h4>
                                 <p class="benefit-description">A full 10-pax Premium Table will be allocated for your family, colleagues, partners, or invited guests</p>
@@ -277,7 +279,7 @@
                         </li>
                         
                         <li class="benefit-item">
-                            <span class="benefit-letter">E</span>
+                            <span class="benefit-icon"><i class="fas fa-star"></i></span>
                             <div class="benefit-content">
                                 <h4 class="benefit-title">HALL OF FAME INDUCTION (LIFETIME VISIBILITY)</h4>
                                 <p class="benefit-description">Your organization will be permanently listed in the WIED Hall of Fame, IHEC 2026 Hall of Honor, and International Halal Awards Digital Hall of Fame</p>
@@ -307,7 +309,7 @@
                     
                     <ul class="benefits-list">
                         <li class="benefit-item">
-                            <span class="benefit-letter">A</span>
+                            <span class="benefit-icon"><i class="fas fa-award"></i></span>
                             <div class="benefit-content">
                                 <h4 class="benefit-title">AWARD PRESENTATION BY CEO OR INDUSTRY LEADER</h4>
                                 <p class="benefit-description">Recipients will be honored by respected industry captains, CEOs, or distinguished Halal authorities</p>
@@ -315,7 +317,7 @@
                         </li>
                         
                         <li class="benefit-item">
-                            <span class="benefit-letter">B</span>
+                            <span class="benefit-icon"><i class="fas fa-chair"></i></span>
                             <div class="benefit-content">
                                 <h4 class="benefit-title">VIP SEATING PRIVILEGES</h4>
                                 <p class="benefit-description">Award recipients will be seated at the VIP Table, positioned adjacent to the VVIP area — ensuring premium networking access</p>
@@ -323,7 +325,7 @@
                         </li>
                         
                         <li class="benefit-item">
-                            <span class="benefit-letter">C</span>
+                            <span class="benefit-icon"><i class="fas fa-bullhorn"></i></span>
                             <div class="benefit-content">
                                 <h4 class="benefit-title">NATIONAL MEDIA ACKNOWLEDGEMENT</h4>
                                 <p class="benefit-description">Your award recognition will be featured in Major digital media outlets, Official IHEC & WIED social media, and Awards publicity campaigns</p>
@@ -331,7 +333,7 @@
                         </li>
                         
                         <li class="benefit-item">
-                            <span class="benefit-letter">D</span>
+                            <span class="benefit-icon"><i class="fas fa-users"></i></span>
                             <div class="benefit-content">
                                 <h4 class="benefit-title">EXCLUSIVE TABLE FOR YOUR GUESTS</h4>
                                 <p class="benefit-description">Enjoy a 10-pax VIP Table for family members, guests or corporate representatives</p>
@@ -339,7 +341,7 @@
                         </li>
                         
                         <li class="benefit-item">
-                            <span class="benefit-letter">E</span>
+                            <span class="benefit-icon"><i class="fas fa-star"></i></span>
                             <div class="benefit-content">
                                 <h4 class="benefit-title">HALL OF FAME RECOGNITION (LONG-TERM EXPOSURE)</h4>
                                 <p class="benefit-description">Awardees will be permanently listed in the WIED Hall of Fame, IHEC 2026 Hall of Honor, and International Halal Awards Digital Hall of Fame</p>
@@ -353,8 +355,8 @@
                 </div>
             </div>
             
-            <div class="text-center mt-12">
-                <a href="{{ route('fees-packages') }}" class="inline-block bg-halal-gold text-halal-dark px-8 py-3 rounded-lg font-semibold hover:bg-halal-gold/90 transition-colors">
+            <div class="text-center mt-8">
+                <a href="{{ route('fees-packages') }}" class="inline-block bg-halal-gold text-halal-dark px-6 py-2 rounded-lg font-semibold hover:bg-halal-gold/90 transition-colors text-sm">
                     View All Package Details
                 </a>
             </div>
@@ -375,14 +377,14 @@
     /* Fees Section Styles */
     .fees-section {
         background: transparent;
-        margin: 2rem 0;
+        margin: 1.5rem 0;
     }
     
     /* Packages Container */
     .packages-container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 3rem;
+        gap: 2rem;
         position: relative;
     }
     
@@ -390,8 +392,8 @@
     .package-card {
         background: rgba(255, 255, 255, 0.02);
         border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 3rem;
+        border-radius: 15px;
+        padding: 2rem;
         position: relative;
         transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
         overflow: hidden;
@@ -401,9 +403,9 @@
     }
     
     .package-card:hover {
-        transform: translateY(-12px) scale(1.02);
+        transform: translateY(-8px) scale(1.01);
         border-color: rgba(212, 175, 55, 0.4);
-        box-shadow: 0 25px 80px rgba(212, 175, 55, 0.3);
+        box-shadow: 0 15px 50px rgba(212, 175, 55, 0.3);
     }
     
     .package-card.premium {
@@ -438,13 +440,13 @@
     
     .package-badge {
         display: inline-block;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.7rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 0.05em;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
     
     .premium .package-badge {
@@ -461,17 +463,17 @@
     
     .package-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: clamp(1.8rem, 3vw, 2.2rem);
+        font-size: clamp(1.5rem, 2.5vw, 1.8rem);
         font-weight: 800;
         color: #ffffff;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.4rem;
         line-height: 1.2;
     }
     
     .package-subtitle {
-        font-size: 1rem;
+        font-size: 0.9rem;
         font-weight: 500;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         line-height: 1.4;
     }
     
@@ -484,12 +486,12 @@
     }
     
     .package-price {
-        font-size: 4rem;
+        font-size: 3rem;
         font-weight: 900;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         display: flex;
         align-items: baseline;
-        gap: 0.5rem;
+        gap: 0.4rem;
         position: relative;
         animation: priceGlow 2s ease-in-out infinite;
     }
@@ -513,7 +515,7 @@
     }
     
     .package-price .currency {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 700;
         opacity: 0.9;
         background: none !important;
@@ -560,25 +562,25 @@
     
     .package-description {
         color: rgba(255, 255, 255, 0.8);
-        line-height: 1.6;
-        margin-bottom: 2rem;
-        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        font-size: 0.85rem;
     }
     
     .benefits-list {
         list-style: none;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
         flex: 1;
     }
     
     .benefit-item {
         display: flex;
         align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-        padding: 1rem;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+        padding: 0.75rem;
         background: rgba(255, 255, 255, 0.02);
-        border-radius: 12px;
+        border-radius: 10px;
         transition: all 0.3s ease;
     }
     
@@ -587,21 +589,29 @@
         transform: translateX(8px);
     }
     
-    .benefit-letter {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 900;
-        line-height: 1;
-        min-width: 40px;
-        text-align: center;
+    .benefit-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 32px;
+        height: 32px;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        flex-shrink: 0;
     }
     
-    .premium .benefit-letter {
+    .premium .benefit-icon {
         color: var(--halal-gold);
+        background: rgba(212, 175, 55, 0.15);
     }
     
-    .elite .benefit-letter {
+    .elite .benefit-icon {
         color: var(--halal-green);
+        background: rgba(5, 150, 105, 0.15);
+    }
+    
+    .benefit-icon i {
+        display: block;
     }
     
     .benefit-content {
@@ -611,27 +621,27 @@
     .benefit-title {
         font-weight: 600;
         color: #ffffff;
-        margin-bottom: 0.5rem;
-        font-size: 1rem;
+        margin-bottom: 0.4rem;
+        font-size: 0.9rem;
     }
     
     .benefit-description {
         color: rgba(255, 255, 255, 0.7);
-        font-size: 0.9rem;
-        line-height: 1.5;
+        font-size: 0.8rem;
+        line-height: 1.4;
     }
     
     .package-cta {
         margin-top: auto;
-        padding-top: 2rem;
+        padding-top: 1.5rem;
     }
     
     .cta-button {
         display: inline-block;
-        padding: 1rem 2rem;
-        border-radius: 12px;
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-align: center;
         text-decoration: none;
         transition: all 0.3s ease;
@@ -690,11 +700,11 @@
     @media (max-width: 768px) {
         .packages-container {
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 1.5rem;
         }
         
         .package-card {
-            padding: 2rem;
+            padding: 1.5rem;
         }
     }
 </style>
