@@ -4,7 +4,7 @@
 
 @push('styles')
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
     
     @keyframes slideIn {
         0% { opacity: 0; transform: translateX(-30px); }
@@ -66,7 +66,7 @@
     }
     
     body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
         color: #ffffff;
         overflow-x: hidden;
@@ -100,7 +100,7 @@
     }
     
     .hero-title {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: clamp(2.5rem, 6vw, 5rem);
         font-weight: 800;
         line-height: 1.1;
@@ -246,7 +246,7 @@
     }
     
     .section-number {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: clamp(3rem, 6vw, 5rem);
         font-weight: 900;
         line-height: 1;
@@ -268,7 +268,7 @@
     }
     
     .section-title {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: clamp(1.5rem, 3vw, 2rem);
         font-weight: 700;
         color: #ffffff;
@@ -308,7 +308,7 @@
     }
     
     .section-number {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: clamp(3rem, 6vw, 5rem);
         font-weight: 900;
         color: rgba(212, 175, 55, 0.3);
@@ -325,7 +325,7 @@
     }
     
     .section-title {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: clamp(1.5rem, 3vw, 2rem);
         font-weight: 700;
         color: #ffffff;
