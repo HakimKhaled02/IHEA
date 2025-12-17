@@ -156,9 +156,9 @@
 <!-- Guidelines Section -->
 <div class="guidelines-container">
     <!-- SECTION 1: ELIGIBILITY REQUIREMENTS -->
-    <h2 style="color: #d4af37; font-size: 2.5rem; margin-bottom: 2rem; font-family: 'Space Grotesk', sans-serif;">Eligibility Requirements</h2>
+    <h2 style="color: #d4af37; font-size: 2.5rem; margin-bottom: 2rem; font-family: 'Montserrat', sans-serif;">Eligibility Requirements</h2>
     
-    <h3 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif;">Who Can Enter:</h3>
+    <h3 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Montserrat', sans-serif;">Who Can Enter:</h3>
     <div class="eligibility-grid">
         <div class="eligibility-item">
             <h4>Corporations</h4>
@@ -183,7 +183,7 @@
         </div>
     </div>
     
-    <h3 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Space Grotesk', sans-serif;">Eligibility Rules:</h3>
+    <h3 style="color: #ffffff; font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Montserrat', sans-serif;">Eligibility Rules:</h3>
     <ul>
         <li>Entries must demonstrate clear Halal relevance, compliance, or impact.</li>
         <li>Achievements must be active within 2023–2026.</li>
@@ -192,7 +192,7 @@
     </ul>
     
     <!-- SECTION 2: HOW TO ENTER -->
-    <h2 style="color: #d4af37; font-size: 2.5rem; margin-bottom: 2rem; margin-top: 3rem; font-family: 'Space Grotesk', sans-serif;">How To Enter</h2>
+    <h2 style="color: #d4af37; font-size: 2.5rem; margin-bottom: 2rem; margin-top: 3rem; font-family: 'Montserrat', sans-serif;">How To Enter</h2>
     
     <div class="process-steps">
         <div class="process-step">
@@ -245,7 +245,7 @@
     </div>
     
     <!-- SECTION 3: SUBMISSION RULES -->
-    <h2 style="color: #d4af37; font-size: 2.5rem; margin-bottom: 2rem; margin-top: 3rem; font-family: 'Space Grotesk', sans-serif;">Submission Rules</h2>
+    <h2 style="color: #d4af37; font-size: 2.5rem; margin-bottom: 2rem; margin-top: 3rem; font-family: 'Montserrat', sans-serif;">Submission Rules</h2>
     
     <div class="rules-list">
         <div class="rule-item">

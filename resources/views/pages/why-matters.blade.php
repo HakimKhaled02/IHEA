@@ -520,7 +520,7 @@
 }
 
 .card-title {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: #ffffff;
@@ -534,7 +534,7 @@
 }
 
 .card-title-back {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--halal-gold);
