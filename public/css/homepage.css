@@ -314,9 +314,11 @@
 }
 
 .scroll-arrow {
-    color: var(--halal-gold, #d4af37);
-    font-size: 1.5rem;
+    color: #d4af37;
+    font-size: 2.5rem;
     animation: pulse 2s infinite;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.5);
+    filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.6));
 }
 
 @keyframes bounce {
@@ -334,9 +336,11 @@
 @keyframes pulse {
     0%, 100% {
         opacity: 1;
+        transform: scale(1);
     }
     50% {
-        opacity: 0.5;
+        opacity: 0.8;
+        transform: scale(1.1);
     }
 }
 
@@ -351,7 +355,7 @@
     }
     
     .scroll-arrow {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 }
 .homepage {
