@@ -1,0 +1,276 @@
+/* About Page Styles */
+
+.about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    min-height: calc(100vh - 2rem);
+    max-height: calc(100vh - 2rem);
+    display: flex;
+    flex-direction: column;
+}
+
+/* About Hero Section */
+.about-hero {
+    text-align: center;
+    padding: 0.5rem 0 1rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid rgba(0, 168, 150, 0.2);
+    flex-shrink: 0;
+}
+
+.about-logo {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.about-logo-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0, 168, 150, 0.3));
+}
+
+.about-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+    color: var(--ihec-text-primary);
+}
+
+.year-highlight {
+    display: inline;
+    color: var(--ihec-teal);
+}
+
+.about-subtitle {
+    font-size: 1rem;
+    color: var(--ihec-text-secondary);
+    margin: 0;
+    font-weight: 400;
+}
+
+/* About Content */
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+    flex: 1;
+    min-height: 0;
+}
+
+.about-intro {
+    background: var(--ihec-bg-card);
+    border: 1px solid rgba(0, 168, 150, 0.15);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    grid-column: 1 / -1;
+}
+
+.intro-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    display: inline-block;
+}
+
+.about-intro h2 {
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--ihec-text-primary);
+    margin: 0 0 0.75rem 0;
+    border-bottom: 2px solid var(--ihec-teal);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.lead-text {
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--ihec-text-secondary);
+    margin: 0;
+}
+
+/* About Sections */
+.about-section {
+    background: var(--ihec-bg-card);
+    border: 1px solid rgba(0, 168, 150, 0.15);
+    border-left: 4px solid var(--ihec-teal);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.section-number {
+    width: 32px;
+    height: 32px;
+    background: var(--ihec-teal);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--ihec-text-primary);
+    flex-shrink: 0;
+}
+
+.about-section h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ihec-text-primary);
+    margin: 0;
+}
+
+.about-section p {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: var(--ihec-text-secondary);
+    margin: 0;
+    flex: 1;
+}
+
+/* Highlights Grid */
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+    grid-column: 1 / -1;
+}
+
+.highlight-card {
+    background: var(--ihec-bg-card);
+    border: 1px solid rgba(0, 168, 150, 0.15);
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.highlight-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ihec-text-primary);
+    margin: 0 0 0.5rem 0;
+}
+
+.highlight-card p {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: var(--ihec-text-secondary);
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-highlights {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-page {
+        padding: 1rem 1.5rem;
+        min-height: calc(100vh - 2rem);
+    }
+
+    .about-hero {
+        padding: 0.75rem 0 1rem 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-title {
+        font-size: 1.75rem;
+    }
+
+    .about-subtitle {
+        font-size: 0.9375rem;
+    }
+
+    .about-intro {
+        padding: 1.5rem;
+    }
+
+    .about-intro h2 {
+        font-size: 1.375rem;
+    }
+
+    .lead-text {
+        font-size: 0.9375rem;
+    }
+
+    .about-section {
+        padding: 1.25rem;
+    }
+
+    .section-header {
+        gap: 0.75rem;
+    }
+
+    .section-number {
+        width: 28px;
+        height: 28px;
+        font-size: 0.875rem;
+    }
+
+    .about-section h3 {
+        font-size: 1.125rem;
+    }
+
+    .about-section p {
+        font-size: 0.875rem;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .highlight-card {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-subtitle {
+        font-size: 1.125rem;
+    }
+
+    .about-intro h2 {
+        font-size: 1.75rem;
+    }
+
+    .lead-text {
+        font-size: 1rem;
+    }
+}
+
