@@ -366,6 +366,12 @@
 @push('styles')
 <link rel="stylesheet" href="{{ asset('css/about-page.css') }}">
 <style>
+    :root {
+        --halal-green: #059669;
+        --halal-dark: #064e3b;
+        --halal-gold: #d4af37;
+    }
+    
     /* Fees Section Styles */
     .fees-section {
         background: transparent;
