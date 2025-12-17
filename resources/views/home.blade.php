@@ -7,7 +7,7 @@
     <div class="hero-section">
         <!-- Video Background -->
         <video autoplay muted loop playsinline preload="auto" class="background-video" id="bgVideo">
-            <source src="{{ asset('assets/BackgroundHomepage.mp4') }}" type="video/mp4">
+            <source src="{{ asset('assets/Ihea.mp4') }}" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         
@@ -19,13 +19,9 @@
                 <i class="fas fa-download btn-icon"></i>
                 <span class="btn-text">DOWNLOAD MODULE</span>
             </a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCURjiSDPnTe07wafiEtYrgO1YSytYcXkjtI2sKrfEnoZ-mg/viewform" target="_blank" class="btn btn-secondary btn-large btn-view">
-                <i class="fas fa-user-check btn-icon"></i>
-                <span class="btn-text">REGISTER</span>
-            </a>
-            <a href="{{ route('contact') }}" class="btn btn-tertiary btn-large btn-contact">
-                <i class="fas fa-envelope btn-icon"></i>
-                <span class="btn-text">CONTACT US</span>
+            <a href="{{ route('eligibility') }}" class="btn btn-tertiary btn-large btn-contact">
+                <i class="fas fa-question-circle btn-icon"></i>
+                <span class="btn-text">AM I ELIGIBLE?</span>
             </a>
         </div>
         
@@ -39,13 +35,9 @@
                     <i class="fas fa-download btn-icon"></i>
                     <span class="btn-text">DOWNLOAD MODULE</span>
                 </a>
-                <a href="{{ route('how-to-enter') }}" class="dropdown-item">
-                    <i class="fas fa-user-check btn-icon"></i>
-                    <span class="btn-text">REGISTER</span>
-                </a>
-                <a href="{{ route('contact') }}" class="dropdown-item">
-                    <i class="fas fa-envelope btn-icon"></i>
-                    <span class="btn-text">CONTACT US</span>
+                <a href="{{ route('eligibility') }}" class="dropdown-item">
+                    <i class="fas fa-question-circle btn-icon"></i>
+                    <span class="btn-text">AM I ELIGIBLE?</span>
                 </a>
             </div>
         </div>
@@ -60,18 +52,23 @@
                 <h1 class="hero-title">
                     INTERNATIONAL HALAL ECONOMIC<br>AWARD (IHEA) 2026
                 </h1>
-                <p class="hero-subtitle">Celebrating Global Excellence.</p>
+                <p class="hero-subtitle">5 Feb 2026 (Thu)  |  7.30 pm - 11.00pm  |  Tenera Hotel & Suites, Bangi</p>
             </div>
             
             <!-- Center Boxes -->
             <div class="center-boxes">
-                <a href="{{ route('how-to-enter') }}" class="center-box">
-                    <h3 class="box-title">HOW TO JOIN</h3>
+                <a href="{{ route('how-to-enter') }}" class="how-to-join-link">
+                    <h3 class="box-title">HOW TO JOIN ?</h3>
                 </a>
-                
-                <a href="{{ route('eligibility') }}" class="center-box">
-                    <h3 class="box-title">AM I ELIGIBLE?</h3>
-                </a>
+                <div class="center-boxes-bottom">
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCURjiSDPnTe07wafiEtYrgO1YSytYcXkjtI2sKrfEnoZ-mg/viewform" target="_blank" class="center-box">
+                        <h3 class="box-title">REGISTER</h3>
+                    </a>
+                    
+                    <a href="{{ route('contact') }}" class="center-box">
+                        <h3 class="box-title">CONTACT US</h3>
+                    </a>
+                </div>
             </div>
         </div>
         
@@ -82,10 +79,6 @@
             </div>
         </div>
         
-        <div class="hero-decoration">
-            <div class="decoration-line line-1"></div>
-            <div class="decoration-line line-2"></div>
-        </div>
     </div>
     
     <!-- Evening Gala Section -->
