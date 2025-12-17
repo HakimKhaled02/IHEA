@@ -204,7 +204,8 @@
 
 .timeline-item {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1rem;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid var(--halal-gold, #d4af37);
