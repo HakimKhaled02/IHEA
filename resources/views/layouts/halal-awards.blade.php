@@ -21,7 +21,7 @@
                 <p class="text-white/80">Recognizing Excellence in the Global Halal Economy</p>
             </div>
             <div class="border-t border-halal-gold/30 pt-4">
-                <p class="text-white/70">&copy; {{ date('Y') }} International Halal Economic Conference. All rights reserved.</p>
+                <p class="text-white/70">Copyright by world islamic economic development 2025 - 2026 c</p>
             </div>
         </div>
     </footer>

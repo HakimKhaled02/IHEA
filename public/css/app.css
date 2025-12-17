@@ -1445,3 +1445,19 @@ video {
     line-height: 1;
   }
 }
+
+/* Small Footer Styles */
+.small-footer {
+    background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    margin-top: auto;
+}
+
+.small-footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}

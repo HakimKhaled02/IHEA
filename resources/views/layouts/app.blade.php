@@ -69,6 +69,11 @@
         @yield('content')
     </main>
 
+    <!-- Small Footer -->
+    <footer class="small-footer">
+        <p>Copyright by World Islamic Development 2025 - 2026 c</p>
+    </footer>
+
     <script>
         // Hamburger Menu Toggle
         const hamburgerMenu = document.getElementById('hamburgerMenu');
