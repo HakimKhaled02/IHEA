@@ -452,6 +452,7 @@
                 z-index: 1;
                 opacity: 1;
                 filter: blur(1px);
+                pointer-events: none;
             "
             onerror="console.error('Video failed to load'); this.style.display='none';"
             onloadstart="console.log('Video loading started...');"
@@ -471,6 +472,7 @@
             height: 100%;
             background: rgba(0, 0, 0, 0.45);
             z-index: 2;
+            pointer-events: none;
         "></div>
         
         <div class="hero-content">
