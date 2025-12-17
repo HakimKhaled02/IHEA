@@ -4,7 +4,7 @@
 
 @push('styles')
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
     
     :root {
         --halal-green: #059669;
@@ -19,7 +19,7 @@
     }
     
     body {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
         min-height: 100vh;
         overflow-x: hidden;
@@ -67,7 +67,7 @@
     }
     
     .hero-title {
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         font-size: clamp(2.5rem, 6vw, 5rem);
         font-weight: 900;
         line-height: 1.1;
