@@ -39,14 +39,16 @@
         justify-content: center;
         padding: 4rem 2rem;
         position: relative;
-        background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+        background: #000000;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        overflow: hidden;
     }
     
     .hero-content {
         text-align: center;
         max-width: 1000px;
         position: relative;
-        z-index: 2;
+        z-index: 3;
     }
     
     .hero-badge {
@@ -344,6 +346,45 @@
 <!-- Full Width Hero Section -->
 <div class="full-width-section">
     <div class="hero-full">
+        <!-- Video Background -->
+        <video 
+            class="hero-video" 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            preload="auto"
+            style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+                opacity: 1;
+                filter: blur(1px);
+            "
+            onerror="console.error('Video failed to load'); this.style.display='none';"
+            onloadstart="console.log('Video loading started...');"
+            oncanplay="console.log('Video can play'); this.play().catch(e => console.error('Autoplay blocked:', e));"
+            onloadeddata="console.log('Video data loaded');"
+        >
+            <source src="{{ asset('assets/halal-waves-bg.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Video Overlay for Text Readability -->
+        <div class="video-overlay" style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 2;
+        "></div>
+        
         <div class="hero-content">
             <div class="hero-badge scroll-animate fade-in-up">
                 International Halal Economic Awards 2026

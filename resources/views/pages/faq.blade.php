@@ -165,6 +165,12 @@
     .hero-glow {
         background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
     }
+    .hero-content {
+        text-align: center;
+        max-width: 1000px;
+        position: relative;
+        z-index: 3;
+    }
 </style>
 @endpush
 
@@ -195,7 +201,7 @@
         oncanplay="console.log('Video can play'); this.play().catch(e => console.error('Autoplay blocked:', e));"
         onloadeddata="console.log('Video data loaded');"
     >
-        <source src="{{ asset('assets/abstract-lines-bg.mp4') }}" type="video/mp4">
+        <source src="{{ asset('assets/halal-waves-bg.mp4') }}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     
@@ -207,7 +213,7 @@
         width: 100%;
         height: 100%;
         background: rgba(0, 0, 0, 0.5);
-        z-index: -1;
+        z-index: 2;
     "></div>
     <!-- Floating Particles -->
     <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
