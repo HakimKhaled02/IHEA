@@ -557,13 +557,13 @@
         
         <div class="hero-content">
             <div class="hero-badge">
-                International Halal Economic Awards 2026
+                International Halal Economic Award 2026
             </div>
             <h1 class="hero-title">
                 Winner Recognition<br>& Usage Rights
             </h1>
             <p class="hero-subtitle">
-                Winners of the International Halal Economic Awards 2026 will receive exceptional global exposure and branding privileges
+                Winners of the International Halal Economic Award 2026 will receive exceptional global exposure and branding privileges
             </p>
         </div>
     </div>

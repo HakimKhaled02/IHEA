@@ -283,7 +283,7 @@
                 Contact Us
             </h1>
             <p class="hero-subtitle">
-                Get in touch with us for any inquiries about the International Halal Economic Awards 2026
+                Get in touch with us for any inquiries about the International Halal Economic Award 2026
             </p>
         </div>
     </div>

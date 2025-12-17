@@ -265,7 +265,7 @@
         
         <div class="hero-content">
             <div class="hero-badge scroll-animate fade-in-up">
-                International Halal Economic Awards 2026
+                International Halal Economic Award 2026
             </div>
             <h1 class="hero-title scroll-animate fade-in-up delay-1">
                 ELIGIBILITY<br>REQUIREMENTS
@@ -289,7 +289,7 @@
             <h2 class="card-title">General Eligibility</h2>
         </div>
         <p class="card-content">
-            All entries must meet the following general requirements to be considered for the International Halal Economic Awards 2026:
+            All entries must meet the following general requirements to be considered for the International Halal Economic Award 2026:
         </p>
         <ul class="requirements-list">
             <li class="requirement-item">

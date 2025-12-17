@@ -26,13 +26,13 @@
         <nav class="mobile-menu">
             <div class="menu-header">
                 <img src="{{ asset('assets/ihealogo.png') }}" alt="IHEC Logo" class="menu-logo">
-                <h2>IHEC Awards 2026</h2>
+                <h2>IHEA Award 2026</h2>
             </div>
             <ul class="menu-list">
                 <li><a href="{{ route('home') }}" class="menu-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
-                <li><a href="{{ route('about') }}" class="menu-link {{ request()->routeIs('about') ? 'active' : '' }}">About International Halal Economic Awards 2026</a></li>
+                <li><a href="{{ route('about') }}" class="menu-link {{ request()->routeIs('about') ? 'active' : '' }}">About International Halal Economic Award 2026</a></li>
                 <li><a href="{{ route('mission') }}" class="menu-link {{ request()->routeIs('mission') ? 'active' : '' }}">Mission & Purpose</a></li>
-                <li><a href="{{ route('why-matters') }}" class="menu-link {{ request()->routeIs('why-matters') ? 'active' : '' }}">Why The International Halal Awards Matter</a></li>
+                <li><a href="{{ route('why-matters') }}" class="menu-link {{ request()->routeIs('why-matters') ? 'active' : '' }}">Why The International Halal Economic Award Matter</a></li>
                 <li><a href="{{ route('categories') }}" class="menu-link {{ request()->routeIs('categories') ? 'active' : '' }}">Award Categories</a></li>
                 <li><a href="{{ route('eligibility') }}" class="menu-link {{ request()->routeIs('eligibility') ? 'active' : '' }}">Eligibility Requirements</a></li>
                 <li><a href="{{ route('how-to-enter') }}" class="menu-link {{ request()->routeIs('how-to-enter') ? 'active' : '' }}">How To Enter</a></li>
