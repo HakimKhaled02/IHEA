@@ -554,10 +554,6 @@ video {
   display: none;
 }
 
-.visible {
-  visibility: visible;
-}
-
 .fixed {
   position: fixed;
 }
@@ -1448,16 +1444,4 @@ video {
     font-size: 4.5rem;
     line-height: 1;
   }
-}
-
-/* Menu Header Styles */
-.menu-header {
-    display: flex;
-    flex-direction: column;   /* stack logo above text */
-    align-items: center;      /* align to center */
-}
-
-.menu-logo {
-    height: 50px;             /* optional */
-    margin-bottom: 8px;
 }
