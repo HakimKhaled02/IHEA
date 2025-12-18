@@ -20,13 +20,13 @@
         <div class="mission-content-grid">
             <!-- Left Column -->
             <div class="mission-left-column">
-                <h2 class="section-heading">A little bit about</h2>
+                <h2 class="section-heading">Mission & Purpose</h2>
                 <h3 class="mission-main-title">INTERNATIONAL HALAL ECONOMIC AWARD (IHEA)</h3>
                 <p class="mission-description">The International Halal Economic Award 2026 was created to serve four key objectives.</p>
                 
                 <div class="objectives-left">
                     <div class="objective-item">
-                        <div class="objective-label">A.</div>
+                        <i class="fas fa-trophy objective-icon"></i>
                         <div class="objective-details">
                             <h4 class="objective-title">CELEBRATE EXCELLENCE IN THE GLOBAL HALAL ECOSYSTEM</h4>
                             <p class="objective-text">To recognize organizations that exemplifies excellence in quality, compliance, innovation and business performance</p>
@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="objective-item">
-                        <div class="objective-label">B.</div>
+                        <i class="fas fa-shield-alt objective-icon"></i>
                         <div class="objective-details">
                             <h4 class="objective-title">STRENGTHEN GLOBAL CONFIDENCE IN HALAL STANDARDS</h4>
                             <p class="objective-text">To elevate global trust by highlighting initiatives that adhere to the highest levels of Halal, ethical, sustainability and traceability requirements</p>
@@ -42,7 +42,7 @@
                     </div>
 
                     <div class="objective-item">
-                        <div class="objective-label">C.</div>
+                        <i class="fas fa-lightbulb objective-icon"></i>
                         <div class="objective-details">
                             <h4 class="objective-title">ENCOURAGE INNOVATION & INDUSTRY LEADERSHIP</h4>
                             <p class="objective-text">To inspire breakthrough ideas, responsible practices and forward-thinking strategies that contribute to the long-term growth of Halal industries</p>
@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="objective-item">
-                        <div class="objective-label">D.</div>
+                        <i class="fas fa-globe objective-icon"></i>
                         <div class="objective-details">
                             <h4 class="objective-title">FOSTER INTERNATIONAL COOPERATION & MARKET EXPANSION</h4>
                             <p class="objective-text">To bring together global Halal stakeholders—government, industry leaders, investors, innovators and certification bodies—to build networks and unlock opportunities</p>
