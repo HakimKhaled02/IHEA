@@ -5,7 +5,24 @@
     margin: 0;
     padding: 0;
     background: #000000;
+    background-image: url('../assets/mission2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
+    position: relative;
+}
+
+.mission-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 0;
 }
 
 /* Hero Image Section */
@@ -22,6 +39,7 @@
     justify-content: center;
     margin-bottom: 0;
     overflow: hidden;
+    z-index: 1;
 }
 
 .mission-hero-image::before {
@@ -60,7 +78,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 2rem;
-    background: #000000;
+    position: relative;
+    z-index: 1;
 }
 
 .mission-content-grid {

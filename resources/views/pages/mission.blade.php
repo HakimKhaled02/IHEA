@@ -8,13 +8,6 @@
 
 @section('content')
 <div class="mission-page">
-    <!-- Hero Image Section with Overlay -->
-    <div class="mission-hero-image" style="background-image: url('{{ asset("assets/aboutpage.jpg") }}');">
-        <div class="hero-overlay-box">
-            <h1 class="hero-overlay-title">Mission & Purpose</h1>
-        </div>
-    </div>
-
     <!-- Content Section -->
     <div class="mission-content-wrapper">
         <div class="mission-content-grid">

@@ -88,10 +88,35 @@
         margin: 0 auto 3rem;
     }
     
+    .why-matters-section {
+        width: 100%;
+        position: relative;
+        background: #000000;
+        background-image: url('{{ asset("assets/mission2.jpg") }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding: 4rem 2rem;
+    }
+    
+    .why-matters-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 0;
+        pointer-events: none;
+    }
+    
     .why-matters-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        position: relative;
+        z-index: 1;
     }
     
     /* Ensure hamburger menu is above hero section and clickable */
@@ -177,10 +202,10 @@
 </div>
 
 <!-- Why Matters Section -->
-<div class="why-matters-container">
-
-    <!-- Content Cards Grid -->
-    <div class="why-cards-grid">
+<div class="why-matters-section">
+    <div class="why-matters-container">
+        <!-- Content Cards Grid -->
+        <div class="why-cards-grid">
         <!-- Card A -->
         <div class="flip-card">
             <div class="flip-card-inner">
@@ -189,7 +214,7 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="far fa-trophy"></i>
+                                    <i class="fas fa-trophy"></i>
                                 </div>
                                 <h3 class="card-title">UNMATCHED GLOBAL RECOGNITION</h3>
                             </div>
@@ -208,11 +233,11 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="far fa-check-circle"></i>
+                                    <i class="fas fa-check-circle"></i>
                                 </div>
                                 <h3 class="card-title">A BENCHMARK FOR HALAL EXCELLENCE</h3>
                             </div>
@@ -243,7 +268,7 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="far fa-handshake"></i>
+                                    <i class="fas fa-handshake"></i>
                                 </div>
                                 <h3 class="card-title">STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
                             </div>
@@ -270,11 +295,11 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="far fa-flag"></i>
+                                    <i class="fas fa-flag"></i>
                                 </div>
                                 <h3 class="card-title">COMPETITIVE DIFFERENTIATION</h3>
                             </div>
@@ -303,7 +328,7 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="far fa-map-marked-alt"></i>
+                                    <i class="fas fa-map-marked-alt"></i>
                                 </div>
                                 <h3 class="card-title">GAIN ACCESS TO GLOBAL MARKETS</h3>
                             </div>
@@ -329,11 +354,11 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="far fa-chart-line"></i>
+                                    <i class="fas fa-chart-line"></i>
                                 </div>
                                 <h3 class="card-title">ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
                             </div>
@@ -362,7 +387,7 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="far fa-users"></i>
+                                    <i class="fas fa-users"></i>
                                 </div>
                                 <h3 class="card-title">TALENT ATTRACTION & EMPLOYER BRANDING</h3>
                             </div>
@@ -387,11 +412,11 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="far fa-newspaper"></i>
+                                    <i class="fas fa-newspaper"></i>
                                 </div>
                                 <h3 class="card-title">MEDIA VISIBILITY & BRAND ELEVATION</h3>
                             </div>
@@ -421,7 +446,7 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="far fa-bookmark"></i>
+                                    <i class="fas fa-bookmark"></i>
                                 </div>
                                 <h3 class="card-title">LEGACY & LONG-TERM VALUE</h3>
                             </div>
@@ -443,6 +468,7 @@
             </div>
         </div>
 
+        </div>
     </div>
 </div>
 
@@ -501,7 +527,7 @@
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
-    text-align: left;
+    text-align: center;
 }
 
 .card-image {
@@ -518,7 +544,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -534,20 +560,31 @@
 }
 
 .card-icon-badge {
-    width: 50px;
-    height: 50px;
-    background: rgba(212, 175, 55, 0.2);
-    border: 2px solid var(--halal-gold);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.flip-card:hover .card-icon-badge {
+    transform: translateY(-3px);
 }
 
 .card-icon-badge i {
-    font-size: 1.25rem;
+    font-size: 2.2rem;
     color: var(--halal-gold);
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    opacity: 0.95;
+}
+
+.flip-card:hover .card-icon-badge i {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 .card-title {
@@ -565,14 +602,41 @@
 }
 
 .card-subtitle {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 0.9rem;
-    font-weight: 500;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
     margin: 0;
-    padding: 0;
+    padding: 0.75rem 0 1rem 0;
     width: 100%;
     text-align: center;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.card-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--halal-gold), transparent);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+.flip-card:hover .card-subtitle {
+    color: var(--halal-gold);
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.8);
+}
+
+.flip-card:hover .card-subtitle::after {
+    width: 120px;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
 }
 
 .card-title-back {
@@ -582,7 +646,7 @@
     color: var(--halal-gold);
     margin-bottom: 0.5rem;
     line-height: 1.2;
-    text-align: left;
+    text-align: center;
     padding: 0;
 }
 
@@ -591,7 +655,7 @@
     line-height: 1.4;
     margin-bottom: 0.5rem;
     font-size: 0.75rem;
-    text-align: left;
+    text-align: center;
     padding: 0;
 }
 
@@ -599,25 +663,31 @@
     list-style: none;
     padding: 0;
     margin: 0.25rem 0 0.5rem 0;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-list li {
     position: relative;
-    padding-left: 0.9rem;
+    padding: 0;
     margin-bottom: 0.25rem;
     color: rgba(255, 255, 255, 0.9);
     font-size: 0.7rem;
     line-height: 1.3;
-    text-align: left;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .card-list li:before {
     content: '✓';
-    position: absolute;
-    left: 0;
     color: var(--halal-gold);
     font-weight: bold;
+    flex-shrink: 0;
 }
 
 @media (max-width: 1024px) {
@@ -632,7 +702,7 @@
         padding: 2rem 1rem;
     }
     
-    .why-matters-container {
+    .why-matters-section {
         padding: 2rem 1rem;
     }
     
