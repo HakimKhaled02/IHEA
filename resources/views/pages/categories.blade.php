@@ -146,6 +146,18 @@
         color: #ffffff;
         margin-bottom: 1rem;
         line-height: 1.3;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+    
+    .category-icon {
+        font-size: 1.5rem;
+        color: #d4af37;
+        min-width: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     
     .category-item p {
@@ -237,77 +249,77 @@
 <div class="categories-container">
     <div class="categories-list">
         <div class="category-item">
-            <h3>1. Global Halal Industry Leadership Award</h3>
+            <h3><i class="fas fa-globe category-icon"></i> Global Halal Industry Leadership Award</h3>
             <p>Recognising outstanding leadership that drives significant advancement of the global Halal Economy.</p>
         </div>
         
         <div class="category-item">
-            <h3>2. Excellence in Halal Certification & Compliance Award</h3>
+            <h3><i class="fas fa-certificate category-icon"></i> Excellence in Halal Certification & Compliance Award</h3>
             <p>Honouring organisations that uphold the highest standards of Halal integrity, governance, and compliance.</p>
         </div>
         
         <div class="category-item">
-            <h3>3. Halal Innovation & Technology Transformation Award</h3>
+            <h3><i class="fas fa-microchip category-icon"></i> Halal Innovation & Technology Transformation Award</h3>
             <p>Celebrating groundbreaking advancements in Halal digitalisation, blockchain, AI, IoT, or automation.</p>
         </div>
         
         <div class="category-item">
-            <h3>4. Outstanding Halal Exporter of the Year Award</h3>
+            <h3><i class="fas fa-shipping-fast category-icon"></i> Outstanding Halal Exporter of the Year Award</h3>
             <p>Acknowledging globally competitive Halal brands with exceptional export performance.</p>
         </div>
         
         <div class="category-item">
-            <h3>5. Halal Sustainability & ESG Leadership Award</h3>
+            <h3><i class="fas fa-leaf category-icon"></i> Halal Sustainability & ESG Leadership Award</h3>
             <p>Recognising organisations integrating Halal, sustainability, and ESG principles with measurable impact.</p>
         </div>
         
         <div class="category-item">
-            <h3>6. Halal Supply Chain & Logistics Excellence Award</h3>
+            <h3><i class="fas fa-truck category-icon"></i> Halal Supply Chain & Logistics Excellence Award</h3>
             <p>Honouring leaders in Halal logistics, cold chain assurance, and international traceability.</p>
         </div>
         
         <div class="category-item">
-            <h3>7. Halal F&B Excellence Award</h3>
+            <h3><i class="fas fa-utensils category-icon"></i> Halal F&B Excellence Award</h3>
             <p>Celebrating exceptional quality, innovation, and market impact in Halal food and beverage production.</p>
         </div>
         
         <div class="category-item">
-            <h3>8. Halal Pharmaceuticals & Health Products Excellence Award</h3>
+            <h3><i class="fas fa-pills category-icon"></i> Halal Pharmaceuticals & Health Products Excellence Award</h3>
             <p>Highlighting leadership in Halal pharmaceuticals, nutraceuticals, medical devices, and wellness solutions.</p>
         </div>
         
         <div class="category-item">
-            <h3>9. Halal Cosmetics & Personal Care Excellence Award</h3>
+            <h3><i class="fas fa-spa category-icon"></i> Halal Cosmetics & Personal Care Excellence Award</h3>
             <p>Recognising Halal-certified brands known for innovation, safety, and global competitiveness.</p>
         </div>
         
         <div class="category-item">
-            <h3>10. Halal Digital Economy Pioneer Award</h3>
+            <h3><i class="fas fa-laptop-code category-icon"></i> Halal Digital Economy Pioneer Award</h3>
             <p>Celebrating innovators driving digital platforms, e-commerce, certification technologies, and Halal fintech.</p>
         </div>
         
         <div class="category-item">
-            <h3>11. Halal-Friendly Tourism & Hospitality Excellence Award</h3>
+            <h3><i class="fas fa-hotel category-icon"></i> Halal-Friendly Tourism & Hospitality Excellence Award</h3>
             <p>Honouring organisations delivering world-class Muslim-friendly tourism and hospitality services.</p>
         </div>
         
         <div class="category-item">
-            <h3>12. Halal SME of the Year Award</h3>
+            <h3><i class="fas fa-building category-icon"></i> Halal SME of the Year Award</h3>
             <p>Acknowledging SMEs achieving outstanding performance, innovation, and international readiness.</p>
         </div>
         
         <div class="category-item">
-            <h3>13. Lifetime Achievement Award in the Global Halal Economy</h3>
+            <h3><i class="fas fa-trophy category-icon"></i> Lifetime Achievement Award in the Global Halal Economy</h3>
             <p>Recognising individuals with exceptional long-term contributions to Halal industry development.</p>
         </div>
         
         <div class="category-item">
-            <h3>14. Young Halal Entrepreneur Award</h3>
+            <h3><i class="fas fa-star category-icon"></i> Young Halal Entrepreneur Award</h3>
             <p>Celebrating rising leaders under 40 shaping the next wave of Halal economic growth.</p>
         </div>
         
         <div class="category-item">
-            <h3>15. Global Halal Education, Research & Knowledge Leadership Award</h3>
+            <h3><i class="fas fa-graduation-cap category-icon"></i> Global Halal Education, Research & Knowledge Leadership Award</h3>
             <p>Honouring institutions or individuals advancing Halal research, standards, academia, or policy innovation.</p>
         </div>
     </div>

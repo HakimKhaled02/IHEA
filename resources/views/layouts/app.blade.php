@@ -35,7 +35,7 @@
                 <li><a href="{{ route('why-matters') }}" class="menu-link {{ request()->routeIs('why-matters') ? 'active' : '' }}">Why The International Halal Economic Award Matter</a></li>
                 <li><a href="{{ route('categories') }}" class="menu-link {{ request()->routeIs('categories') ? 'active' : '' }}">Award Categories</a></li>
                 <li><a href="{{ route('eligibility') }}" class="menu-link {{ request()->routeIs('eligibility') ? 'active' : '' }}">Eligibility Requirements</a></li>
-                <li><a href="{{ route('how-to-enter') }}" class="menu-link {{ request()->routeIs('how-to-enter') ? 'active' : '' }}">How To Enter</a></li>
+                <li><a href="{{ route('how-to-enter') }}" class="menu-link {{ request()->routeIs('how-to-enter') ? 'active' : '' }}">How To Join</a></li>
                 <li><a href="{{ route('submission-rules') }}" class="menu-link {{ request()->routeIs('submission-rules') ? 'active' : '' }}">Submission Rules</a></li>
                 <li><a href="{{ route('judging-framework') }}" class="menu-link {{ request()->routeIs('judging-framework') ? 'active' : '' }}">Judging Framework & Standards</a></li>
                 <li><a href="{{ route('judging-criteria') }}" class="menu-link {{ request()->routeIs('judging-criteria') ? 'active' : '' }}">Judging Criteria</a></li>

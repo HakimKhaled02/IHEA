@@ -88,10 +88,35 @@
         margin: 0 auto 3rem;
     }
     
+    .why-matters-section {
+        width: 100%;
+        position: relative;
+        background: #000000;
+        background-image: url('{{ asset("assets/mission2.jpg") }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding: 4rem 2rem;
+    }
+    
+    .why-matters-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 0;
+        pointer-events: none;
+    }
+    
     .why-matters-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        position: relative;
+        z-index: 1;
     }
     
     /* Ensure hamburger menu is above hero section and clickable */
@@ -177,20 +202,22 @@
 </div>
 
 <!-- Why Matters Section -->
-<div class="why-matters-container">
-
-    <!-- Content Cards Grid -->
-    <div class="why-cards-grid">
+<div class="why-matters-section">
+    <div class="why-matters-container">
+        <!-- Content Cards Grid -->
+        <div class="why-cards-grid">
         <!-- Card A -->
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-trophy"></i>
+                            <div class="card-top-content">
+                                <div class="card-icon-badge">
+                                    <i class="fas fa-trophy"></i>
+                                </div>
+                                <h3 class="card-title">UNMATCHED GLOBAL RECOGNITION</h3>
                             </div>
-                            <h3 class="card-title">UNMATCHED GLOBAL RECOGNITION</h3>
                             <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
@@ -206,12 +233,14 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
                         <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-check-circle"></i>
+                            <div class="card-top-content">
+                                <div class="card-icon-badge">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3 class="card-title">A BENCHMARK FOR HALAL EXCELLENCE</h3>
                             </div>
-                            <h3 class="card-title">A BENCHMARK FOR HALAL EXCELLENCE</h3>
                             <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
@@ -237,10 +266,12 @@
                 <div class="flip-card-front">
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-handshake"></i>
+                            <div class="card-top-content">
+                                <div class="card-icon-badge">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h3 class="card-title">STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
                             </div>
-                            <h3 class="card-title">STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
                             <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
@@ -264,12 +295,14 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
                         <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-flag"></i>
+                            <div class="card-top-content">
+                                <div class="card-icon-badge">
+                                    <i class="fas fa-flag"></i>
+                                </div>
+                                <h3 class="card-title">COMPETITIVE DIFFERENTIATION</h3>
                             </div>
-                            <h3 class="card-title">COMPETITIVE DIFFERENTIATION</h3>
                             <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
@@ -293,10 +326,12 @@
                 <div class="flip-card-front">
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-map-marked-alt"></i>
+                            <div class="card-top-content">
+                                <div class="card-icon-badge">
+                                    <i class="fas fa-map-marked-alt"></i>
+                                </div>
+                                <h3 class="card-title">GAIN ACCESS TO GLOBAL MARKETS</h3>
                             </div>
-                            <h3 class="card-title">GAIN ACCESS TO GLOBAL MARKETS</h3>
                             <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
@@ -319,12 +354,14 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
                         <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-chart-line"></i>
+                            <div class="card-top-content">
+                                <div class="card-icon-badge">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 class="card-title">ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
                             </div>
-                            <h3 class="card-title">ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
                             <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
@@ -348,10 +385,12 @@
                 <div class="flip-card-front">
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-users"></i>
+                            <div class="card-top-content">
+                                <div class="card-icon-badge">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3 class="card-title">TALENT ATTRACTION & EMPLOYER BRANDING</h3>
                             </div>
-                            <h3 class="card-title">TALENT ATTRACTION & EMPLOYER BRANDING</h3>
                             <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
@@ -373,12 +412,14 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
+                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
                         <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-newspaper"></i>
+                            <div class="card-top-content">
+                                <div class="card-icon-badge">
+                                    <i class="fas fa-newspaper"></i>
+                                </div>
+                                <h3 class="card-title">MEDIA VISIBILITY & BRAND ELEVATION</h3>
                             </div>
-                            <h3 class="card-title">MEDIA VISIBILITY & BRAND ELEVATION</h3>
                             <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
@@ -403,10 +444,12 @@
                 <div class="flip-card-front">
                     <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
                         <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-bookmark"></i>
+                            <div class="card-top-content">
+                                <div class="card-icon-badge">
+                                    <i class="fas fa-bookmark"></i>
+                                </div>
+                                <h3 class="card-title">LEGACY & LONG-TERM VALUE</h3>
                             </div>
-                            <h3 class="card-title">LEGACY & LONG-TERM VALUE</h3>
                             <p class="card-subtitle">Click to learn more</p>
                         </div>
                     </div>
@@ -425,88 +468,6 @@
             </div>
         </div>
 
-        <!-- Card J -->
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-shield-alt"></i>
-                            </div>
-                            <h3 class="card-title">ENHANCED COMPLIANCE STANDARDS</h3>
-                            <p class="card-subtitle">Click to learn more</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flip-card-back">
-                    <h3 class="card-title-back">ENHANCED COMPLIANCE STANDARDS</h3>
-                    <p class="card-description">Award recognition validates your commitment to:</p>
-                    <ul class="card-list">
-                        <li>Halal Certification Standards</li>
-                        <li>Regulatory Compliance</li>
-                        <li>Quality Assurance</li>
-                        <li>Ethical Business Practices</li>
-                    </ul>
-                    <p class="card-description">This demonstrates your organization's dedication to maintaining the highest standards</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card K -->
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-network-wired"></i>
-                            </div>
-                            <h3 class="card-title">NETWORKING & PARTNERSHIPS</h3>
-                            <p class="card-subtitle">Click to learn more</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flip-card-back">
-                    <h3 class="card-title-back">NETWORKING & PARTNERSHIPS</h3>
-                    <p class="card-description">Winners gain access to:</p>
-                    <ul class="card-list">
-                        <li>Exclusive Industry Events</li>
-                        <li>Global Halal Networks</li>
-                        <li>Strategic Partnerships</li>
-                        <li>Business Opportunities</li>
-                    </ul>
-                    <p class="card-description">Connect with key stakeholders and expand your business network</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Card L -->
-        <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/background.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-icon-badge">
-                                <i class="far fa-award"></i>
-                            </div>
-                            <h3 class="card-title">CERTIFICATION & CREDIBILITY</h3>
-                            <p class="card-subtitle">Click to learn more</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flip-card-back">
-                    <h3 class="card-title-back">CERTIFICATION & CREDIBILITY</h3>
-                    <p class="card-description">Award recognition provides:</p>
-                    <ul class="card-list">
-                        <li>Third-Party Validation</li>
-                        <li>Industry Credibility</li>
-                        <li>Consumer Trust</li>
-                        <li>Market Authority</li>
-                    </ul>
-                    <p class="card-description">Strengthen your brand's credibility in the global Halal marketplace</p>
-                </div>
-            </div>
         </div>
     </div>
 </div>
@@ -514,7 +475,7 @@
 <style>
 .why-cards-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-top: 2rem;
 }
@@ -561,12 +522,12 @@
     border: 1px solid rgba(212, 175, 55, 0.3);
     color: #ffffff;
     transform: rotateY(180deg);
-    padding: 1.5rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
+    text-align: center;
 }
 
 .card-image {
@@ -583,29 +544,47 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
+}
+
+.card-top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5rem;
 }
 
 .card-icon-badge {
-    width: 50px;
-    height: 50px;
-    background: rgba(212, 175, 55, 0.2);
-    border: 2px solid var(--halal-gold);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.flip-card:hover .card-icon-badge {
+    transform: translateY(-3px);
 }
 
 .card-icon-badge i {
-    font-size: 1.25rem;
+    font-size: 2.2rem;
     color: var(--halal-gold);
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    opacity: 0.95;
+}
+
+.flip-card:hover .card-icon-badge i {
+    opacity: 1;
+    transform: scale(1.05);
 }
 
 .card-title {
@@ -613,53 +592,108 @@
     font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff;
-    margin-bottom: 0.5rem;
+    margin: 0;
     text-align: center;
     line-height: 1.3;
 }
 
+.card-top-content .card-title {
+    margin-top: 0;
+}
+
 .card-subtitle {
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 0.75rem 0 1rem 0;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.card-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--halal-gold), transparent);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+.flip-card:hover .card-subtitle {
+    color: var(--halal-gold);
+    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.8);
+}
+
+.flip-card:hover .card-subtitle::after {
+    width: 120px;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
 }
 
 .card-title-back {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 700;
     color: var(--halal-gold);
-    margin-bottom: 0.75rem;
-    line-height: 1.3;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+    text-align: center;
+    padding: 0;
 }
 
 .card-description {
     color: rgba(255, 255, 255, 0.9);
-    line-height: 1.5;
-    margin-bottom: 0.75rem;
-    font-size: 0.85rem;
+    line-height: 1.4;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 0;
 }
 
 .card-list {
     list-style: none;
     padding: 0;
-    margin: 0.5rem 0;
+    margin: 0.25rem 0 0.5rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .card-list li {
     position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.4rem;
+    padding: 0;
+    margin-bottom: 0.25rem;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.8rem;
-    line-height: 1.4;
+    font-size: 0.7rem;
+    line-height: 1.3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 .card-list li:before {
     content: '✓';
-    position: absolute;
-    left: 0;
     color: var(--halal-gold);
     font-weight: bold;
+    flex-shrink: 0;
+}
+
+@media (max-width: 1024px) {
+    .why-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -668,7 +702,7 @@
         padding: 2rem 1rem;
     }
     
-    .why-matters-container {
+    .why-matters-section {
         padding: 2rem 1rem;
     }
     

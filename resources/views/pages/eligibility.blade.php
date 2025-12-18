@@ -89,96 +89,184 @@
     }
     
     .eligibility-container {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
         padding: 4rem 2rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
         position: relative;
-    }
-    
-    .eligibility-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background-image: url('{{ asset("assets/aboutpage1.jpg") }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         border-radius: 20px;
-        padding: 3rem;
-        position: relative;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
         overflow: hidden;
     }
     
+    .eligibility-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 0;
+    }
+    
+    .eligibility-cards-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+        position: relative;
+        z-index: 1;
+    }
+    
+    
+    .eligibility-card {
+        background: rgba(0, 0, 0, 0.6);
+        border: 2px solid rgba(212, 175, 55, 0.4);
+        border-left: 4px solid #d4af37;
+        border-radius: 12px;
+        padding: 2rem;
+        position: relative;
+        box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
+        backdrop-filter: blur(10px);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        display: flex;
+        flex-direction: column;
+    }
+    
     .eligibility-card:hover {
-        transform: translateY(-12px);
-        border-color: rgba(212, 175, 55, 0.4);
-        box-shadow: 0 25px 80px rgba(212, 175, 55, 0.3);
+        border-color: rgba(212, 175, 55, 0.7);
+        box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3);
+        transform: translateY(-4px);
     }
     
     .card-header {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
+        position: relative;
     }
     
-    .card-icon {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        color: var(--halal-gold);
+    .section-icon {
+        font-size: 2rem;
+        color: #d4af37;
+        margin-bottom: 0.75rem;
+        display: block;
+        filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5));
     }
     
-    .card-title {
+    .section-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 800;
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-weight: 700;
         color: #ffffff;
-        line-height: 1.2;
-    }
-    
-    .card-content {
-        color: rgba(255, 255, 255, 0.8);
-        line-height: 1.6;
-        margin-bottom: 2rem;
-    }
-    
-    .requirements-list {
-        list-style: none;
         margin: 0;
+        position: relative;
+        line-height: 1.3;
+    }
+    
+    .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #d4af37, transparent);
+        border-radius: 2px;
+    }
+    
+    .requirements-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        flex: 1;
     }
     
     .requirement-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-        padding: 1rem;
-        background: rgba(255, 255, 255, 0.02);
-        border-radius: 12px;
+        position: relative;
+        padding: 0.75rem 1rem;
+        background: rgba(212, 175, 55, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 8px;
         transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
     }
     
     .requirement-item:hover {
-        background: rgba(255, 255, 255, 0.04);
-        transform: translateX(8px);
+        background: rgba(212, 175, 55, 0.1);
+        border-color: rgba(212, 175, 55, 0.4);
+        transform: translateX(4px);
     }
     
     .requirement-icon {
-        color: var(--halal-gold);
-        font-size: 1.2rem;
-        margin-top: 0.25rem;
+        color: #d4af37;
+        font-size: 1rem;
         flex-shrink: 0;
+        transition: all 0.3s ease;
+    }
+    
+    .requirement-item:hover .requirement-icon {
+        transform: scale(1.15);
     }
     
     .requirement-text {
         flex: 1;
         color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin: 0;
+        font-weight: 400;
+    }
+    
+    .rules-list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        flex: 1;
+    }
+    
+    .rule-item {
+        position: relative;
+        padding: 0.75rem 1rem;
+        padding-left: 2.5rem;
+        background: rgba(212, 175, 55, 0.05);
+        border-left: 3px solid rgba(212, 175, 55, 0.4);
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+    
+    .rule-item::before {
+        content: '→';
+        position: absolute;
+        left: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #d4af37;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+    
+    .rule-item:hover {
+        background: rgba(212, 175, 55, 0.1);
+        border-left-color: #d4af37;
+        transform: translateX(4px);
+    }
+    
+    .rule-item:hover::before {
+        transform: translateY(-50%) translateX(2px);
+        color: #f4e4bc;
+    }
+    
+    .rule-text {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 0;
     }
     
     /* Scroll Animations */
@@ -201,13 +289,49 @@
     .scroll-animate.delay-3 { transition-delay: 0.3s; }
     
     /* Responsive Design */
+    @media (max-width: 968px) {
+        .eligibility-cards-wrapper {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+    
     @media (max-width: 768px) {
         .eligibility-container {
-            padding: 2rem 1rem;
+            padding: 3rem 1.5rem;
+            background-attachment: scroll;
         }
         
         .eligibility-card {
-            padding: 2rem;
+            padding: 1.5rem;
+        }
+        
+        .card-header {
+            margin-bottom: 1.25rem;
+        }
+        
+        .section-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .requirement-item,
+        .rule-item {
+            padding: 0.65rem 0.85rem;
+        }
+        
+        .rule-item {
+            padding-left: 2.25rem;
+        }
+        
+        .rule-item::before {
+            left: 0.65rem;
+            font-size: 0.9rem;
+        }
+        
+        .requirement-text,
+        .rule-text {
+            font-size: 0.85rem;
         }
         
         .hero-full {
@@ -271,7 +395,7 @@
                 ELIGIBILITY<br>REQUIREMENTS
             </h1>
             <p class="hero-subtitle scroll-animate fade-in-up delay-2">
-                Ensure your organization meets the criteria to participate in the prestigious International Halal Economic Awards 2026
+                Discover who can participate and the requirements to enter the prestigious International Halal Awards 2026
             </p>
         </div>
     </div>
@@ -279,83 +403,73 @@
 
 <!-- Eligibility Requirements Section -->
 <div class="eligibility-container">
-    
-    <!-- General Eligibility -->
-    <div class="eligibility-card scroll-animate fade-in-up delay-1">
-        <div class="card-header">
-            <div class="card-icon">
-                <i class="fas fa-globe"></i>
+    <div class="eligibility-cards-wrapper">
+        
+        <!-- Who Can Apply Card -->
+        <div class="eligibility-card scroll-animate fade-in-up delay-1">
+            <div class="card-header">
+                <h2 class="section-title">The International Halal Awards 2026 is open to:</h2>
             </div>
-            <h2 class="card-title">General Eligibility</h2>
-        </div>
-        <p class="card-content">
-            All entries must meet the following general requirements to be considered for the International Halal Economic Award 2026:
-        </p>
-        <ul class="requirements-list">
-            <li class="requirement-item">
-                <i class="fas fa-check-circle requirement-icon"></i>
-                <span class="requirement-text">Organizations, individuals, or projects must be actively operating in the Halal economy</span>
-            </li>
-            <li class="requirement-item">
-                <i class="fas fa-check-circle requirement-icon"></i>
-                <span class="requirement-text">Must demonstrate compliance with relevant Halal standards and certifications</span>
-            </li>
-            <li class="requirement-item">
-                <i class="fas fa-check-circle requirement-icon"></i>
-                <span class="requirement-text">Must have a track record of at least 12 months of operation (unless specified otherwise)</span>
-            </li>
-            <li class="requirement-item">
-                <i class="fas fa-check-circle requirement-icon"></i>
-                <span class="requirement-text">Must be able to provide supporting documentation and evidence of achievements</span>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Category-Specific Requirements -->
-    <div class="eligibility-card scroll-animate fade-in-up delay-2">
-        <div class="card-header">
-            <div class="card-icon">
-                <i class="fas fa-list-alt"></i>
+            <div class="requirements-grid">
+                <div class="requirement-item">
+                    <i class="fas fa-building requirement-icon"></i>
+                    <span class="requirement-text">Corporations</span>
+                </div>
+                <div class="requirement-item">
+                    <i class="fas fa-store requirement-icon"></i>
+                    <span class="requirement-text">SMEs</span>
+                </div>
+                <div class="requirement-item">
+                    <i class="fas fa-landmark requirement-icon"></i>
+                    <span class="requirement-text">Government agencies</span>
+                </div>
+                <div class="requirement-item">
+                    <i class="fas fa-handshake requirement-icon"></i>
+                    <span class="requirement-text">Cooperatives</span>
+                </div>
+                <div class="requirement-item">
+                    <i class="fas fa-rocket requirement-icon"></i>
+                    <span class="requirement-text">Startups and innovators</span>
+                </div>
+                <div class="requirement-item">
+                    <i class="fas fa-hands-helping requirement-icon"></i>
+                    <span class="requirement-text">NGOs and community organizations</span>
+                </div>
+                <div class="requirement-item">
+                    <i class="fas fa-globe requirement-icon"></i>
+                    <span class="requirement-text">International entities involved in Halal markets</span>
+                </div>
             </div>
-            <h2 class="card-title">Category-Specific Requirements</h2>
         </div>
-        <p class="card-content">
-            Each award category may have specific eligibility criteria tailored to its unique focus area. Please review the category descriptions carefully before submitting your entry to ensure your organization meets all requirements.
-        </p>
-    </div>
 
-    <!-- Documentation Required -->
-    <div class="eligibility-card scroll-animate fade-in-up delay-3">
-        <div class="card-header">
-            <div class="card-icon">
-                <i class="fas fa-file-alt"></i>
+        <!-- Eligibility Rules Card -->
+        <div class="eligibility-card scroll-animate fade-in-up delay-2">
+            <div class="card-header">
+                <h2 class="section-title">Eligibility Rules</h2>
             </div>
-            <h2 class="card-title">Documentation Required</h2>
+            <div class="rules-list">
+                <div class="rule-item">
+                    <span class="rule-text">Entries must demonstrate clear Halal relevance, compliance or impact</span>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-text">Submitted programmes or achievements must be active within 2023–2026</span>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-text">Organizations may enter multiple categories</span>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-text">Evidence of Halal certification is required for categories involving food, cosmetics, pharmaceuticals or supply chains</span>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-text">Joint entries are allowed where collaboration is essential to the results</span>
+                </div>
+                <div class="rule-item">
+                    <span class="rule-text">Each entry must comply with the Awards' documentation and verification requirements</span>
+                </div>
+            </div>
         </div>
-        <ul class="requirements-list">
-            <li class="requirement-item">
-                <i class="fas fa-file-certificate requirement-icon"></i>
-                <span class="requirement-text">Halal certification documents (where applicable)</span>
-            </li>
-            <li class="requirement-item">
-                <i class="fas fa-building requirement-icon"></i>
-                <span class="requirement-text">Company registration and business licenses</span>
-            </li>
-            <li class="requirement-item">
-                <i class="fas fa-chart-line requirement-icon"></i>
-                <span class="requirement-text">Financial statements or performance metrics</span>
-            </li>
-            <li class="requirement-item">
-                <i class="fas fa-trophy requirement-icon"></i>
-                <span class="requirement-text">Supporting materials demonstrating achievements</span>
-            </li>
-            <li class="requirement-item">
-                <i class="fas fa-comment-dots requirement-icon"></i>
-                <span class="requirement-text">References or testimonials (optional but recommended)</span>
-            </li>
-        </ul>
-    </div>
 
+    </div>
 </div>
 
 <script>

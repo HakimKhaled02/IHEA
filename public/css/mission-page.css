@@ -4,8 +4,25 @@
     width: 100%;
     margin: 0;
     padding: 0;
-    background: #0a0e27;
+    background: #000000;
+    background-image: url('../assets/mission2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     min-height: 100vh;
+    position: relative;
+}
+
+.mission-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 0;
 }
 
 /* Hero Image Section */
@@ -22,16 +39,28 @@
     justify-content: center;
     margin-bottom: 0;
     overflow: hidden;
+    z-index: 1;
+}
+
+.mission-hero-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 0;
 }
 
 .hero-overlay-box {
-    background: rgba(26, 31, 58, 0.95);
+    background: rgba(0, 0, 0, 0.85);
     padding: 2rem 3rem;
     border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
     position: relative;
     z-index: 1;
-    border: 1px solid rgba(0, 168, 150, 0.3);
+    border: 1px solid rgba(212, 175, 55, 0.5);
     backdrop-filter: blur(10px);
 }
 
@@ -49,7 +78,8 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem 2rem;
-    background: #0a0e27;
+    position: relative;
+    z-index: 1;
 }
 
 .mission-content-grid {
@@ -67,7 +97,7 @@
 .section-heading {
     font-size: 1rem;
     font-weight: 500;
-    color: #999999;
+    color: #D4AF37;
     margin: 0 0 1rem 0;
     text-transform: uppercase;
     letter-spacing: 0.1em;
@@ -76,7 +106,7 @@
 .mission-main-title {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--ihec-teal);
+    color: #D4AF37;
     margin: 0 0 1.5rem 0;
     line-height: 1.2;
     white-space: nowrap;
@@ -85,7 +115,7 @@
 .mission-description {
     font-size: 1rem;
     line-height: 1.8;
-    color: #cccccc;
+    color: #ffffff;
     margin: 0 0 2.5rem 0;
 }
 
@@ -110,13 +140,13 @@
     margin-bottom: 0;
 }
 
-.objective-label {
+.objective-icon {
     font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--ihec-teal);
+    color: #D4AF37;
     min-width: 2rem;
     flex-shrink: 0;
     line-height: 1.2;
+    margin-top: 0.25rem;
 }
 
 .objective-details {
@@ -134,20 +164,20 @@
 .objective-text {
     font-size: 0.9375rem;
     line-height: 1.7;
-    color: #b3b3b3;
+    color: #ffffff;
     margin: 0;
 }
 
 .mission-closing {
     margin-top: 3rem;
     padding-top: 2rem;
-    border-top: 1px solid rgba(0, 168, 150, 0.3);
+    border-top: 1px solid rgba(212, 175, 55, 0.5);
 }
 
 .closing-text {
     font-size: 1rem;
     line-height: 1.8;
-    color: #cccccc;
+    color: #ffffff;
     margin: 0;
     font-style: italic;
 }
