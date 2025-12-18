@@ -376,6 +376,12 @@
         --halal-gold: #d4af37;
     }
     
+    /* Make hero subtitle bolder for better visibility */
+    .hero-subtitle {
+        font-weight: 700 !important;
+        font-size: 1.2rem !important;
+    }
+    
     /* Fees Section Styles */
     .fees-section {
         background: transparent;
