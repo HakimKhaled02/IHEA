@@ -299,7 +299,7 @@
                 International Halal Economic Award 2026
             </div>
             <h1 class="hero-title scroll-animate fade-in-up delay-1">
-                HOW TO<br>ENTER
+                HOW TO<br>JOIN
             </h1>
             <p class="hero-subtitle scroll-animate fade-in-up delay-2">
                 Follow these simple steps to submit your entry for the prestigious International Halal Economic Awards 2026
