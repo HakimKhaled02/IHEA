@@ -356,12 +356,6 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="text-center mt-8">
-                <a href="{{ route('fees-packages') }}" class="inline-block bg-halal-gold text-halal-dark px-6 py-2 rounded-lg font-semibold hover:bg-halal-gold/90 transition-colors text-sm">
-                    View All Package Details
-                </a>
-            </div>
         </div>
     </div>
 </div>
