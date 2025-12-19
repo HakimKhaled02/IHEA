@@ -132,7 +132,7 @@
             
             <div class="gala-timeline">
                 <div class="timeline-item">
-                    <div class="timeline-time">7:00 PM</div>
+                    <div class="timeline-time">7:30 PM</div>
                     <div class="timeline-content">
                         <h3>Arrival of Guests</h3>
                         <p>Invited attendees, international delegates, industry leaders, and VIP guests arrive and are escorted to their designated seats.</p>
@@ -204,7 +204,7 @@
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-time">11:00 PM</div>
+                    <div class="timeline-time">10:30 PM</div>
                     <div class="timeline-content">
                         <h3>Group Photo with Award Recipients & VIPs</h3>
                         <p>Official photography session involving VIPs, award winners, and honoured guests.</p>
