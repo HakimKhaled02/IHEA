@@ -5,8 +5,8 @@
     z-index: 1001;
     width: 50px;
     height: 50px;
-    background: var(--ihec-gradient-teal);
-    border: none;
+    background: #000000;
+    border: 2px solid #d4af37;
     border-radius: 8px;
     cursor: pointer;
     display: flex;
@@ -15,7 +15,7 @@
     align-items: center;
     gap: 6px;
     padding: 12px;
-    box-shadow: 0 4px 15px rgba(0, 168, 150, 0.3);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
     transition: all 0.3s ease;
 }
 
@@ -35,15 +35,16 @@
 }
 
 .hamburger-menu:hover {
-    background: var(--ihec-teal-light);
-    box-shadow: 0 6px 20px rgba(0, 191, 165, 0.4);
+    background: rgba(212, 175, 55, 0.1);
+    border-color: #d4af37;
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
     transform: scale(1.05);
 }
 
 .hamburger-menu span {
     width: 24px;
     height: 3px;
-    background: var(--ihec-text-primary);
+    background: #d4af37;
     border-radius: 2px;
     transition: all 0.3s ease;
 }
@@ -176,6 +177,8 @@
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .gala-section::before {
@@ -185,7 +188,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.85);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 0;
 }
 
@@ -302,7 +305,7 @@
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: 2rem;
+    bottom: 0.25rem;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -789,6 +792,15 @@
     color: var(--ihec-teal);
     font-weight: 900;
     min-width: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-item .btn-icon svg {
+    width: 1rem;
+    height: 1rem;
+    stroke: currentColor;
 }
 
 .dropdown-item .btn-text {
@@ -901,6 +913,16 @@
     font-weight: 900;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-icon svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    stroke: currentColor;
+    transition: transform 0.2s ease;
 }
 
 .btn-enter {
@@ -934,7 +956,8 @@
     transform: translateY(-2px);
 }
 
-.btn-view:hover .btn-icon {
+.btn-view:hover .btn-icon,
+.btn-view:hover .btn-icon svg {
     transform: scale(1.05);
 }
 
@@ -952,7 +975,8 @@
     transform: translateY(-2px);
 }
 
-.btn-contact:hover .btn-icon {
+.btn-contact:hover .btn-icon,
+.btn-contact:hover .btn-icon svg {
     transform: scale(1.05);
 }
 

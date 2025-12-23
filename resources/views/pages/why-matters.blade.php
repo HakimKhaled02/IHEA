@@ -80,12 +80,17 @@
     }
     
     .hero-subtitle {
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        font-size: clamp(1rem, 1.8vw, 1.4rem);
         color: rgba(255, 255, 255, 0.8);
-        line-height: 1.6;
+        line-height: 1.5;
         font-weight: 400;
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto 3rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .why-matters-section {
@@ -214,7 +219,16 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="fas fa-trophy"></i>
+                                    <div class="icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                            <path d="M4 22h16"></path>
+                                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <h3 class="card-title">UNMATCHED GLOBAL RECOGNITION</h3>
                             </div>
@@ -237,7 +251,12 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="fas fa-check-circle"></i>
+                                    <div class="icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10"></circle>
+                                            <polyline points="9 12 11 14 15 10"></polyline>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <h3 class="card-title">A BENCHMARK FOR HALAL EXCELLENCE</h3>
                             </div>
@@ -268,7 +287,13 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="fas fa-handshake"></i>
+                                    <div class="icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14"></path>
+                                            <path d="M7 18h1.5a2 2 0 0 0 2-2v-1.5c0-.6.4-1.5 1-1.5h2c.6 0 1 .9 1 1.5V16a2 2 0 0 0 2 2H17"></path>
+                                            <path d="M13 12h2a2 2 0 1 1 0 4h-3c-.6 0-1.1-.2-1.4-.6L3 10"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <h3 class="card-title">STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
                             </div>
@@ -299,7 +324,12 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="fas fa-flag"></i>
+                                    <div class="icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                                            <line x1="4" y1="22" x2="4" y2="15"></line>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <h3 class="card-title">COMPETITIVE DIFFERENTIATION</h3>
                             </div>
@@ -328,7 +358,14 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="fas fa-map-marked-alt"></i>
+                                    <div class="icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0"></path>
+                                            <circle cx="12" cy="8" r="2"></circle>
+                                            <path d="M8.835 14H5a1 1 0 0 0-.9.7l-2 6c-.1.3 0 .6.2.8l.8.8c.2.2.5.3.7.2l2.1-.6"></path>
+                                            <path d="M15.165 14H19a1 1 0 0 1 .9.7l2 6c.1.3 0 .6-.2.8l-.8.8c-.2.2-.5.3-.7.2l-2.1-.6"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <h3 class="card-title">GAIN ACCESS TO GLOBAL MARKETS</h3>
                             </div>
@@ -358,7 +395,13 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="fas fa-chart-line"></i>
+                                    <div class="icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="12" y1="20" x2="12" y2="10"></line>
+                                            <line x1="18" y1="20" x2="18" y2="4"></line>
+                                            <line x1="6" y1="20" x2="6" y2="16"></line>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <h3 class="card-title">ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
                             </div>
@@ -387,7 +430,14 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="fas fa-users"></i>
+                                    <div class="icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="9" cy="7" r="4"></circle>
+                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <h3 class="card-title">TALENT ATTRACTION & EMPLOYER BRANDING</h3>
                             </div>
@@ -416,7 +466,14 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="fas fa-newspaper"></i>
+                                    <div class="icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                                            <path d="M18 14h-8"></path>
+                                            <path d="M15 18h-5"></path>
+                                            <path d="M10 6h8v4h-8V6Z"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <h3 class="card-title">MEDIA VISIBILITY & BRAND ELEVATION</h3>
                             </div>
@@ -446,7 +503,11 @@
                         <div class="card-overlay">
                             <div class="card-top-content">
                                 <div class="card-icon-badge">
-                                    <i class="fas fa-bookmark"></i>
+                                    <div class="icon-container">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                        </svg>
+                                    </div>
                                 </div>
                                 <h3 class="card-title">LEGACY & LONG-TERM VALUE</h3>
                             </div>
@@ -572,17 +633,38 @@
     transform: translateY(-3px);
 }
 
-.card-icon-badge i {
-    font-size: 2.2rem;
-    color: var(--halal-gold);
+.icon-container {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--halal-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.card-icon-badge svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    stroke: var(--halal-gold);
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
-    line-height: 1;
     opacity: 0.95;
 }
 
-.flip-card:hover .card-icon-badge i {
+.flip-card:hover .icon-container {
+    background: rgba(0, 0, 0, 0.8);
+    border-color: var(--halal-gold);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    transform: scale(1.05);
+}
+
+.flip-card:hover .card-icon-badge svg {
     opacity: 1;
     transform: scale(1.05);
 }

@@ -30,7 +30,6 @@
             </div>
             <ul class="menu-list">
                 <li><a href="{{ route('home') }}" class="menu-link {{ request()->routeIs('home') ? 'active' : '' }}">Home</a></li>
-                <li><a href="{{ route('about') }}" class="menu-link {{ request()->routeIs('about') ? 'active' : '' }}">About International Halal Economic Award 2026</a></li>
                 <li><a href="{{ route('mission') }}" class="menu-link {{ request()->routeIs('mission') ? 'active' : '' }}">Mission & Purpose</a></li>
                 <li><a href="{{ route('why-matters') }}" class="menu-link {{ request()->routeIs('why-matters') ? 'active' : '' }}">Why The International Halal Economic Award Matter</a></li>
                 <li><a href="{{ route('categories') }}" class="menu-link {{ request()->routeIs('categories') ? 'active' : '' }}">Award Categories</a></li>
@@ -42,7 +41,6 @@
                 <li><a href="{{ route('confidentiality') }}" class="menu-link {{ request()->routeIs('confidentiality') ? 'active' : '' }}">Confidentiality & Code of Conduct</a></li>
                 <li><a href="{{ route('winner-recognition') }}" class="menu-link {{ request()->routeIs('winner-recognition') ? 'active' : '' }}">Winner Recognition & Usage Rights</a></li>
                 <li><a href="{{ route('faq') }}" class="menu-link {{ request()->routeIs('faq') ? 'active' : '' }}">FAQ's</a></li>
-                <li><a href="{{ route('fees-packages') }}" class="menu-link {{ request()->routeIs('fees-packages') ? 'active' : '' }}">Awards Participation Fees & Prestige Packages</a></li>
                 
             </ul>
         </nav>
@@ -70,7 +68,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-6 mt-auto">
+    <footer class="text-white py-6 mt-auto" style="background: #000000;">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <div class="flex items-center justify-center mb-2">
                 <span class="text-sm">International Halal Economic Award 2026</span>

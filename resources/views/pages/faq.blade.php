@@ -165,95 +165,161 @@
     .hero-glow {
         background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
     }
+    .full-width-section {
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hero-full {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4rem 2rem;
+        position: relative;
+        background: #000000;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        overflow: hidden;
+    }
+    
     .hero-content {
         text-align: center;
         max-width: 1000px;
         position: relative;
         z-index: 3;
     }
+    
+    .hero-badge {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        border-radius: 50px;
+        color: var(--halal-gold);
+        font-weight: 600;
+        font-size: 0.875rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        backdrop-filter: blur(10px);
+    }
+    
+    .hero-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.3));
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        font-weight: 400;
+        max-width: 800px;
+        margin: 0 auto 3rem;
+    }
+    
+    /* Scroll Animations */
+    .scroll-animate {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+    
+    .scroll-animate.fade-in-up {
+        transform: translateY(60px);
+    }
+    
+    .scroll-animate.is-animated {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .scroll-animate.delay-1 { transition-delay: 0.1s; }
+    .scroll-animate.delay-2 { transition-delay: 0.2s; }
+    .scroll-animate.delay-3 { transition-delay: 0.3s; }
+    .scroll-animate.delay-4 { transition-delay: 0.4s; }
+    .scroll-animate.delay-5 { transition-delay: 0.5s; }
+    .scroll-animate.delay-6 { transition-delay: 0.6s; }
+    
+    .faq-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        background: #000000;
+    }
 </style>
 @endpush
 
 @section('content')
-<!-- Hero Section with Video Background -->
-<div class="relative overflow-hidden py-24" style="position: relative;">
-    <!-- Video Background -->
-    <video 
-        class="hero-video" 
-        autoplay 
-        loop 
-        muted 
-        playsinline
-        preload="auto"
-        style="
+<!-- Full Width Hero Section -->
+<div class="full-width-section">
+    <div class="hero-full">
+        <!-- Video Background -->
+        <video 
+            class="hero-video" 
+            autoplay 
+            loop 
+            muted 
+            playsinline
+            preload="auto"
+            style="
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+                opacity: 1;
+                filter: blur(1px);
+                pointer-events: none;
+            "
+            onerror="console.error('Video failed to load'); this.style.display='none';"
+            onloadstart="console.log('Video loading started...');"
+            oncanplay="console.log('Video can play'); this.play().catch(e => console.error('Autoplay blocked:', e));"
+            onloadeddata="console.log('Video data loaded');"
+        >
+            <source src="{{ asset('assets/halal-waves-bg.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Video Overlay for Text Readability -->
+        <div class="video-overlay" style="
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            z-index: 1;
-            opacity: 1;
-            filter: blur(1px);
+            background: rgba(0, 0, 0, 0.45);
+            z-index: 2;
             pointer-events: none;
-        "
-        onerror="console.error('Video failed to load'); this.style.display='none';"
-        onloadstart="console.log('Video loading started...');"
-        oncanplay="console.log('Video can play'); this.play().catch(e => console.error('Autoplay blocked:', e));"
-        onloadeddata="console.log('Video data loaded');"
-    >
-        <source src="{{ asset('assets/halal-waves-bg.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    
-    <!-- Video Overlay for Text Readability -->
-    <div style="
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 2;
-        pointer-events: none;
-    "></div>
-    <!-- Floating Particles -->
-    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-    <div class="particle" style="left: 25%; animation-delay: 2s;"></div>
-    <div class="particle" style="left: 40%; animation-delay: 4s;"></div>
-    <div class="particle" style="left: 60%; animation-delay: 6s;"></div>
-    <div class="particle" style="left: 75%; animation-delay: 8s;"></div>
-    <div class="particle" style="left: 90%; animation-delay: 1s;"></div>
-    
-    <!-- Hero Glow Effect -->
-    <div class="absolute inset-0 hero-glow"></div>
-    
-    <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-10 left-10 w-32 h-32 border-4 border-halal-gold/30 rounded-full animate-pulse-slow"></div>
-        <div class="absolute bottom-10 right-10 w-40 h-40 border-4 border-halal-green/30 rotate-45 animate-float"></div>
-        <div class="absolute top-1/2 left-1/4 w-24 h-24 border-4 border-halal-gold/30 rotate-12 animate-pulse-slow"></div>
-        <div class="absolute top-1/3 right-1/4 w-28 h-28 border-4 border-halal-green/20 rounded-full animate-float"></div>
-    </div>
-
-    <div class="max-w-6xl mx-auto px-8 relative z-10">
-        <div class="text-center animate-fade-in-up">
-            <div class="inline-flex items-center gap-3 mb-6 px-8 py-4 glass-morphism-dark rounded-full shadow-2xl border-2 border-halal-gold/30 glow-effect">
-                <span class="text-4xl animate-float">❓</span>
-                <p class="text-sm font-bold tracking-[0.3em] text-white uppercase">International Halal Economic Award 2026</p>
+        "></div>
+        
+        <div class="hero-content">
+            <div class="hero-badge scroll-animate fade-in-up">
+                INTERNATIONAL HALAL ECONOMIC AWARD 2026
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-                <span class="text-gradient-gold">Frequently Asked</span><br>
-                <span class="text-white">Questions</span>
+            <h1 class="hero-title scroll-animate fade-in-up delay-1">
+                FREQUENTLY ASKED QUESTIONS
             </h1>
-            <p class="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed font-medium">
-                Everything you need to know about the International Halal Economic Awards 2026
+            <p class="hero-subtitle scroll-animate fade-in-up delay-2">
+                Everything you need to know about the International Halal Economic Award 2026
             </p>
         </div>
     </div>
 </div>
 
 <!-- FAQ Section -->
-<div class="max-w-6xl mx-auto px-8 py-16">
+<div class="faq-container">
     <div class="space-y-4">
         
         <!-- Q1 -->
@@ -514,28 +580,41 @@
     </div>
 </div>
 
+@push('scripts')
 <script>
-    // Add staggered animation on scroll
+    // Scroll Animation with Intersection Observer
     const observerOptions = {
-        threshold: 0.1,
+        threshold: 0.15,
         rootMargin: '0px 0px -50px 0px'
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    const scrollObserver = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                entry.target.classList.add('is-animated');
+                scrollObserver.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.animate-fade-in-up').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'all 0.6s ease-out';
-        observer.observe(el);
+    // Initialize animations when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const animatedElements = document.querySelectorAll('.scroll-animate');
+        animatedElements.forEach(el => {
+            scrollObserver.observe(el);
+        });
+    });
+    
+    // FAQ Accordion functionality
+    document.querySelectorAll('.faq-accordion').forEach(accordion => {
+        const header = accordion.querySelector('[onclick]');
+        if (header) {
+            header.addEventListener('click', function() {
+                accordion.classList.toggle('active');
+            });
+        }
     });
 </script>
+@endpush
 @endsection
 

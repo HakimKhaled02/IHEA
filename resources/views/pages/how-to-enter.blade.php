@@ -423,7 +423,7 @@
                 International Halal Economic Award 2026
             </div>
             <h1 class="hero-title scroll-animate fade-in-up delay-1">
-                HOW TO<br>JOIN
+                HOW TO JOIN
             </h1>
             <p class="hero-subtitle scroll-animate fade-in-up delay-2">
                 A simple and fully transparent entry process will be used

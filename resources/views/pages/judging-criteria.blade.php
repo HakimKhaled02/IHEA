@@ -80,12 +80,17 @@
     }
     
     .hero-subtitle {
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        font-size: clamp(1rem, 1.8vw, 1.4rem);
         color: rgba(255, 255, 255, 0.8);
-        line-height: 1.6;
+        line-height: 1.5;
         font-weight: 400;
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto 3rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .criteria-container {
@@ -286,10 +291,10 @@
                 International Halal Economic Award 2026
             </div>
             <h1 class="hero-title scroll-animate fade-in-up delay-1">
-                JUDGING<br>CRITERIA
+                JUDGING CRITERIA
             </h1>
             <p class="hero-subtitle scroll-animate fade-in-up delay-2">
-                The Awards evaluate performance using a comprehensive multi-dimensional scoring system tailored to Halal ethics, industry excellence, and global impact
+                The awards evaluate performance using a comprehensive multi-dimensional scoring system tailored to Halal ethics, industry excellence, and global impact
             </p>
         </div>
     </div>

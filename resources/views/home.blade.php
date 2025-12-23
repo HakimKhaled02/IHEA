@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'IHEC Awards 2026 - Home')
+@section('title', 'IHEA 2026 - Home')
 
 @section('content')
 <div class="homepage">
@@ -16,11 +16,19 @@
         <!-- Top Navigation Buttons (Desktop) -->
         <div class="top-nav-buttons">
             <a href="#" class="btn btn-secondary btn-large btn-view">
-                <i class="fas fa-download btn-icon"></i>
+                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
                 <span class="btn-text">DOWNLOAD MODULE</span>
             </a>
             <a href="{{ route('eligibility') }}" class="btn btn-tertiary btn-large btn-contact">
-                <i class="fas fa-question-circle btn-icon"></i>
+                <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
                 <span class="btn-text">AM I ELIGIBLE?</span>
             </a>
         </div>
@@ -32,11 +40,19 @@
             </button>
             <div class="dropdown-menu" id="dropdownMenu">
                 <a href="#" class="dropdown-item">
-                    <i class="fas fa-download btn-icon"></i>
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7 10 12 15 17 10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
                     <span class="btn-text">DOWNLOAD MODULE</span>
                 </a>
                 <a href="{{ route('eligibility') }}" class="dropdown-item">
-                    <i class="fas fa-question-circle btn-icon"></i>
+                    <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
                     <span class="btn-text">AM I ELIGIBLE?</span>
                 </a>
             </div>
@@ -84,9 +100,6 @@
     <!-- About Section -->
     <div class="about-section-wrapper">
         <div class="about-page">
-            <div class="about-image-column">
-                <img src="{{ asset('assets/aboutpage1.jpg') }}" alt="About IHEA 2026" class="about-page-image">
-            </div>
             <div class="about-content-column">
                 <div class="about-hero">
                     <div class="about-hero-content">
@@ -96,23 +109,45 @@
                 </div>
 
                 <div class="about-content">
-                    <div class="about-intro">
-                        <div class="intro-icon">🏆</div>
-                        <h2>About IHEA 2026</h2>
-                        <p class="lead-text">The INTERNATIONAL HALAL ECONOMIC AWARD (IHEA) 2026 is the premier global platform dedicated to recognizing outstanding achievements across the Halal economy. Established under the flagship International Halal Economy Conference (IHEC) 2026, this prestigious awards programme honors organizations, leaders and innovators who demonstrate excellence in Halal integrity, ethical practices, sustainable development, and impactful market performance.</p>
+                    <div class="about-section">
+                        <div class="section-header">
+                            <svg class="section-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                <path d="M4 22h16"></path>
+                                <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                            </svg>
+                            <h3>About IHEA 2026</h3>
+                        </div>
+                        <p>The International Halal Economic Award (IHEA) 2026 is the premier global platform dedicated to recognizing outstanding achievements across the Halal economy. Established under the flagship International Halal Economy Conference (IHEC) 2026, this prestigious awards programme honors organizations, leaders and innovators who demonstrate excellence in Halal integrity, ethical practices, sustainable development, and impactful market performance.</p>
                     </div>
 
                     <div class="about-section">
                         <div class="section-header">
-                            <i class="fas fa-globe section-icon"></i>
+                            <svg class="section-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
                             <h3>Global Halal Economy</h3>
                         </div>
-                        <p>As the Halal industry evolves into a multi-trillion-dollar global force, the demand for trusted brands, compliant systems, sustainable supply chains, and transparent governance has never been greater. The INTERNATIONAL HALAL ECONOMIC AWARD (IHEA) 2026 seeks to highlight and celebrate the individuals and organizations who push boundaries, elevate standards, and contribute meaningfully to the advancement of the global Halal landscape.</p>
+                        <p>As the Halal industry evolves into a multi-trillion-dollar global force, the demand for trusted brands, compliant systems, sustainable supply chains, and transparent governance has never been greater. The International Halal Economic Award (IHEA) 2026 seeks to highlight and celebrate the individuals and organizations who push boundaries, elevate standards, and contribute meaningfully to the advancement of the global Halal landscape.</p>
                     </div>
 
                     <div class="about-section">
                         <div class="section-header">
-                            <i class="fas fa-industry section-icon"></i>
+                            <svg class="section-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="18" rx="2" ry="2"></rect>
+                                <line x1="7" y1="3" x2="7" y2="21"></line>
+                                <line x1="17" y1="3" x2="17" y2="21"></line>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <line x1="2" y1="7" x2="7" y2="7"></line>
+                                <line x1="2" y1="17" x2="7" y2="17"></line>
+                                <line x1="17" y1="17" x2="22" y2="17"></line>
+                                <line x1="17" y1="7" x2="22" y2="7"></line>
+                            </svg>
                             <h3>Industry Coverage</h3>
                         </div>
                         <p>From agriculture and food security to finance, technology, logistics, lifestyle and ESG, the Awards showcase the breadth and influence of Halal across industries, markets and cultures.</p>
@@ -135,15 +170,13 @@
                     <div class="timeline-time">7:30 PM</div>
                     <div class="timeline-content">
                         <h3>Arrival of Guests</h3>
-                        <p>Invited attendees, international delegates, industry leaders, and VIP guests arrive and are escorted to their designated seats.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-time">8:00 PM</div>
                     <div class="timeline-content">
-                        <h3>Arrival of the Deputy Prime Minister</h3>
-                        <p>Formal announcement of the arrival of YAB Deputy Prime Minister and escort to the VVIP table.</p>
+                        <h3>Arrival of the VVIPs</h3>
                     </div>
                 </div>
                 
@@ -151,15 +184,13 @@
                     <div class="timeline-time">8:15 PM</div>
                     <div class="timeline-content">
                         <h3>Welcome Address by the Chairman of IIHE–CIHE</h3>
-                        <p>Opening remarks delivered by the Chairman to commence the Gala Evening.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-time">8:30 PM</div>
                     <div class="timeline-content">
-                        <h3>Official Address by YAB Deputy Prime Minister</h3>
-                        <p>Keynote speech highlighting Malaysia's direction in advancing the national and global Halal Economy.</p>
+                        <h3>Official Address by VVIP</h3>
                     </div>
                 </div>
                 
@@ -167,7 +198,6 @@
                     <div class="timeline-time">8:45 PM</div>
                     <div class="timeline-content">
                         <h3>Official Launch of the International Institute of Halal Economy (IIHE)</h3>
-                        <p>Grand unveiling of IIHE accompanied by a special video montage and symbolic officiation.</p>
                     </div>
                 </div>
                 
@@ -175,7 +205,6 @@
                     <div class="timeline-time">9:00 PM</div>
                     <div class="timeline-content">
                         <h3>International Artist Performance (Segment 1)</h3>
-                        <p>Opening performance to elevate the evening's ambience and entertainment.</p>
                     </div>
                 </div>
                 
@@ -183,7 +212,6 @@
                     <div class="timeline-time">9:15 PM</div>
                     <div class="timeline-content">
                         <h3>Presentation of 10 Awards (Halal International Award 2025 – Phase 1)</h3>
-                        <p>Awarding of the first ten prestigious categories to selected recipients.</p>
                     </div>
                 </div>
                 
@@ -191,7 +219,6 @@
                     <div class="timeline-time">9:45 PM</div>
                     <div class="timeline-content">
                         <h3>International Artist Performance (Segment 2)</h3>
-                        <p>Second performance segment offering cultural and artistic enrichment.</p>
                     </div>
                 </div>
                 
@@ -199,15 +226,13 @@
                     <div class="timeline-time">10:00 PM</div>
                     <div class="timeline-content">
                         <h3>Presentation of 5 Awards (Halal International Award 2025 – Phase 2)</h3>
-                        <p>Awarding of the final five categories, completing the full set of 15 awards.</p>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-time">10:30 PM</div>
                     <div class="timeline-content">
-                        <h3>Group Photo with Award Recipients & VIPs</h3>
-                        <p>Official photography session involving VIPs, award winners, and honoured guests.</p>
+                        <h3>Group Photo with Award Recipients & VVIPs</h3>
                     </div>
                 </div>
                 
@@ -215,7 +240,6 @@
                     <div class="timeline-time">11:00 PM</div>
                     <div class="timeline-content">
                         <h3>Media Session & Adjournment</h3>
-                        <p>Brief press conference with organisers and award recipients followed by the conclusion of the gala event.</p>
                     </div>
                 </div>
             </div>
@@ -226,7 +250,7 @@
     <div class="fees-section">
         <div class="max-w-6xl mx-auto px-8 py-8">
             <h2 class="text-3xl font-bold text-center text-halal-gold mb-3">Award Participation Fees & Prestige Packages</h2>
-            <p class="text-center text-white/80 mb-8 max-w-3xl mx-auto text-sm">
+            <p class="text-center text-halal-gold mb-8 max-w-3xl mx-auto text-sm" style="color: #d4af37;">
                 Premium Recognition Packages designed to elevate recipients to the highest levels of global recognition, leadership positioning, and long-term brand prestige
             </p>
             
@@ -378,8 +402,9 @@
     
     /* Fees Section Styles */
     .fees-section {
-        background: transparent;
-        margin: 1.5rem 0;
+        background: #000000;
+        margin: 0;
+        padding: 2rem 0;
     }
     
     /* Packages Container */
@@ -392,8 +417,8 @@
     
     /* Package Card Styles */
     .package-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: #000000;
+        border: 2px solid #d4af37;
         border-radius: 15px;
         padding: 2rem;
         position: relative;
@@ -406,13 +431,13 @@
     
     .package-card:hover {
         transform: translateY(-8px) scale(1.01);
-        border-color: rgba(212, 175, 55, 0.4);
-        box-shadow: 0 15px 50px rgba(212, 175, 55, 0.3);
+        border-color: #d4af37;
+        box-shadow: 0 15px 50px rgba(212, 175, 55, 0.5);
     }
     
     .package-card.premium {
-        border-color: rgba(212, 175, 55, 0.3);
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+        border-color: #d4af37;
+        background: #000000;
     }
     
     .package-card.premium::before {
@@ -422,12 +447,12 @@
         left: 0;
         right: 0;
         height: 4px;
-        background: linear-gradient(90deg, transparent, var(--halal-gold), transparent);
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
     }
     
     .package-card.elite {
-        border-color: rgba(5, 150, 105, 0.3);
-        background: linear-gradient(135deg, rgba(5, 150, 105, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
+        border-color: #d4af37;
+        background: #000000;
     }
     
     .package-card.elite::before {
@@ -437,7 +462,7 @@
         left: 0;
         right: 0;
         height: 4px;
-        background: linear-gradient(90deg, transparent, var(--halal-green), transparent);
+        background: linear-gradient(90deg, transparent, #d4af37, transparent);
     }
     
     .package-badge {
@@ -452,24 +477,31 @@
     }
     
     .premium .package-badge {
-        background: rgba(212, 175, 55, 0.2);
-        color: var(--halal-gold);
-        border: 1px solid rgba(212, 175, 55, 0.3);
+        background: #d4af37;
+        color: #000000;
+        border: 1px solid #d4af37;
     }
     
     .elite .package-badge {
-        background: rgba(5, 150, 105, 0.2);
-        color: var(--halal-green);
-        border: 1px solid rgba(5, 150, 105, 0.3);
+        background: #d4af37;
+        color: #000000;
+        border: 1px solid #d4af37;
     }
     
     .package-title {
         font-family: 'Montserrat', sans-serif;
         font-size: clamp(1.5rem, 2.5vw, 1.8rem);
         font-weight: 800;
-        color: #ffffff;
         margin-bottom: 0.4rem;
         line-height: 1.2;
+    }
+    
+    .premium .package-title {
+        color: #d4af37;
+    }
+    
+    .elite .package-title {
+        color: #d4af37;
     }
     
     .package-subtitle {
@@ -480,11 +512,11 @@
     }
     
     .premium .package-subtitle {
-        color: var(--halal-gold);
+        color: #d4af37;
     }
     
     .elite .package-subtitle {
-        color: var(--halal-green);
+        color: #d4af37;
     }
     
     .package-price {
@@ -508,12 +540,12 @@
     }
     
     .elite .package-price {
-        background: linear-gradient(135deg, #059669, #10b981, #059669);
+        background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        filter: drop-shadow(0 0 20px rgba(5, 150, 105, 0.6));
-        text-shadow: 0 0 40px rgba(5, 150, 105, 0.4);
+        filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+        text-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
     }
     
     .package-price .currency {
@@ -563,10 +595,17 @@
     }
     
     .package-description {
-        color: rgba(255, 255, 255, 0.8);
         line-height: 1.5;
         margin-bottom: 1.5rem;
         font-size: 0.85rem;
+    }
+    
+    .premium .package-description {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .elite .package-description {
+        color: rgba(255, 255, 255, 0.8);
     }
     
     .benefits-list {
@@ -581,13 +620,25 @@
         gap: 0.75rem;
         margin-bottom: 1rem;
         padding: 0.75rem;
-        background: rgba(255, 255, 255, 0.02);
         border-radius: 10px;
         transition: all 0.3s ease;
     }
     
-    .benefit-item:hover {
-        background: rgba(255, 255, 255, 0.04);
+    .premium .benefit-item {
+        background: rgba(212, 175, 55, 0.1);
+    }
+    
+    .premium .benefit-item:hover {
+        background: rgba(212, 175, 55, 0.2);
+        transform: translateX(8px);
+    }
+    
+    .elite .benefit-item {
+        background: rgba(212, 175, 55, 0.1);
+    }
+    
+    .elite .benefit-item:hover {
+        background: rgba(212, 175, 55, 0.2);
         transform: translateX(8px);
     }
     
@@ -603,13 +654,13 @@
     }
     
     .premium .benefit-icon {
-        color: var(--halal-gold);
-        background: rgba(212, 175, 55, 0.15);
+        color: #d4af37;
+        background: rgba(212, 175, 55, 0.2);
     }
     
     .elite .benefit-icon {
-        color: var(--halal-green);
-        background: rgba(5, 150, 105, 0.15);
+        color: #d4af37;
+        background: rgba(212, 175, 55, 0.2);
     }
     
     .benefit-icon i {
@@ -622,15 +673,29 @@
     
     .benefit-title {
         font-weight: 600;
-        color: #ffffff;
         margin-bottom: 0.4rem;
         font-size: 0.9rem;
     }
     
+    .premium .benefit-title {
+        color: #d4af37;
+    }
+    
+    .elite .benefit-title {
+        color: #d4af37;
+    }
+    
     .benefit-description {
-        color: rgba(255, 255, 255, 0.7);
         font-size: 0.8rem;
         line-height: 1.4;
+    }
+    
+    .premium .benefit-description {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    .elite .benefit-description {
+        color: rgba(255, 255, 255, 0.7);
     }
     
     .package-cta {
@@ -654,7 +719,7 @@
     
     .premium .cta-button {
         background: linear-gradient(135deg, var(--halal-gold), #b8941f);
-        color: #000;
+        color: #000000;
     }
     
     .premium .cta-button:hover {
@@ -663,13 +728,13 @@
     }
     
     .elite .cta-button {
-        background: linear-gradient(135deg, var(--halal-green), #047857);
-        color: #ffffff;
+        background: linear-gradient(135deg, var(--halal-gold), #b8941f);
+        color: #000000;
     }
     
     .elite .cta-button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 10px 30px rgba(5, 150, 105, 0.4);
+        box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
     }
     
     /* Scroll Animations */

@@ -14,7 +14,7 @@
     
     body {
         font-family: 'Montserrat', sans-serif;
-        background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
+        background: #000000;
         color: #ffffff;
         overflow-x: hidden;
     }
@@ -97,26 +97,54 @@
     }
     
     .categories-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
+        padding: 2.5rem 2rem;
+        position: relative;
+        z-index: 1;
+        background-image: url('../assets/mission2.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    
+    .categories-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 0;
+        pointer-events: none;
+    }
+    
+    .categories-container > * {
+        position: relative;
+        z-index: 1;
     }
     
     .categories-list {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.25rem;
+        margin-top: 1.5rem;
+        position: relative;
+        z-index: 1;
     }
     
     .category-item {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.6);
+        border: 2px solid rgba(212, 175, 55, 0.4);
+        border-left: 4px solid #d4af37;
         border-radius: 16px;
-        padding: 2rem;
+        padding: 1.5rem;
         transition: all 0.3s ease;
         position: relative;
         overflow: hidden;
+        backdrop-filter: blur(10px);
     }
     
     .category-item::before {
@@ -128,23 +156,24 @@
         height: 3px;
         background: linear-gradient(90deg, 
             transparent 0%, 
-            rgba(212, 175, 55, 0.6) 50%, 
+            rgba(212, 175, 55, 0.8) 50%, 
             transparent 100%);
     }
     
     .category-item:hover {
-        background: rgba(255, 255, 255, 0.04);
-        border-color: rgba(212, 175, 55, 0.4);
+        background: rgba(0, 0, 0, 0.8);
+        border-color: rgba(212, 175, 55, 0.7);
+        border-left-color: #d4af37;
         transform: translateY(-4px);
-        box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+        box-shadow: 0 20px 60px rgba(212, 175, 55, 0.4);
     }
     
     .category-item h3 {
         font-family: 'Montserrat', sans-serif;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         font-weight: 700;
         color: #ffffff;
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
         line-height: 1.3;
         display: flex;
         align-items: center;
@@ -160,10 +189,24 @@
         justify-content: center;
     }
     
+    .category-icon svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        stroke: #d4af37;
+        stroke-width: 2;
+        fill: none;
+    }
+    
     .category-item p {
         color: rgba(255, 255, 255, 0.8);
         line-height: 1.6;
-        font-size: 0.95rem;
+        font-size: 0.875rem;
+    }
+    
+    @media (max-width: 1024px) {
+        .categories-list {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
     
     @media (max-width: 768px) {
@@ -236,7 +279,7 @@
                 International Halal Economic Award 2026
             </div>
             <h1 class="hero-title">
-                Award Categories
+                AWARD CATEGORIES
             </h1>
             <p class="hero-subtitle">
                 15 prestigious categories recognizing excellence across the global Halal economy
@@ -249,77 +292,77 @@
 <div class="categories-container">
     <div class="categories-list">
         <div class="category-item">
-            <h3><i class="fas fa-globe category-icon"></i> Global Halal Industry Leadership Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg> Global Halal Industry Leadership Award</h3>
             <p>Recognising outstanding leadership that drives significant advancement of the global Halal Economy.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-certificate category-icon"></i> Excellence in Halal Certification & Compliance Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg> Excellence in Halal Certification & Compliance Award</h3>
             <p>Honouring organisations that uphold the highest standards of Halal integrity, governance, and compliance.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-microchip category-icon"></i> Halal Innovation & Technology Transformation Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect><line x1="7" y1="2" x2="7" y2="22"></line><line x1="17" y1="2" x2="17" y2="22"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg> Halal Innovation & Technology Transformation Award</h3>
             <p>Celebrating groundbreaking advancements in Halal digitalisation, blockchain, AI, IoT, or automation.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-shipping-fast category-icon"></i> Outstanding Halal Exporter of the Year Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"></path><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"></path><path d="M7 12h10"></path></svg> Outstanding Halal Exporter of the Year Award</h3>
             <p>Acknowledging globally competitive Halal brands with exceptional export performance.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-leaf category-icon"></i> Halal Sustainability & ESG Leadership Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path></svg> Halal Sustainability & ESG Leadership Award</h3>
             <p>Recognising organisations integrating Halal, sustainability, and ESG principles with measurable impact.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-truck category-icon"></i> Halal Supply Chain & Logistics Excellence Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.28a1 1 0 0 0-.684-.948l-1.923-.641a1 1 0 0 1-.578-.502L17 10V8a2 2 0 0 0-2-2h-1"></path><circle cx="7" cy="18" r="2"></circle><path d="M9 18h6"></circle><circle cx="17" cy="18" r="2"></circle></svg> Halal Supply Chain & Logistics Excellence Award</h3>
             <p>Honouring leaders in Halal logistics, cold chain assurance, and international traceability.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-utensils category-icon"></i> Halal F&B Excellence Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"></path><path d="M7 2v20"></path><path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3v0"></path><path d="M21 15v7"></path></svg> Halal F&B Excellence Award</h3>
             <p>Celebrating exceptional quality, innovation, and market impact in Halal food and beverage production.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-pills category-icon"></i> Halal Pharmaceuticals & Health Products Excellence Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.5 20h3a1.5 1.5 0 0 0 1.5-1.5v-3A1.5 1.5 0 0 0 13.5 14h-3A1.5 1.5 0 0 0 9 15.5v3A1.5 1.5 0 0 0 10.5 20Z"></path><path d="M16 20V9a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v11"></path><path d="M8 3v4"></path><path d="M16 3v4"></path><path d="M12 3v4"></path></svg> Halal Pharmaceuticals & Health Products Excellence Award</h3>
             <p>Highlighting leadership in Halal pharmaceuticals, nutraceuticals, medical devices, and wellness solutions.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-spa category-icon"></i> Halal Cosmetics & Personal Care Excellence Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v6M12 17v6M5.64 5.64l4.24 4.24M14.12 14.12l4.24 4.24M1 12h6M17 12h6M5.64 18.36l4.24-4.24M14.12 9.88l4.24-4.24"></path></svg> Halal Cosmetics & Personal Care Excellence Award</h3>
             <p>Recognising Halal-certified brands known for innovation, safety, and global competitiveness.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-laptop-code category-icon"></i> Halal Digital Economy Pioneer Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="12" rx="2" ry="2"></rect><line x1="6" y1="20" x2="18" y2="20"></line><line x1="10" y1="4" x2="14" y2="4"></line><path d="M8 8h8M8 12h6"></path></svg> Halal Digital Economy Pioneer Award</h3>
             <p>Celebrating innovators driving digital platforms, e-commerce, certification technologies, and Halal fintech.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-hotel category-icon"></i> Halal-Friendly Tourism & Hospitality Excellence Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12h12"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg> Halal-Friendly Tourism & Hospitality Excellence Award</h3>
             <p>Honouring organisations delivering world-class Muslim-friendly tourism and hospitality services.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-building category-icon"></i> Halal SME of the Year Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2" ry="2"></rect><line x1="7" y1="3" x2="7" y2="21"></line><line x1="17" y1="3" x2="17" y2="21"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg> Halal SME of the Year Award</h3>
             <p>Acknowledging SMEs achieving outstanding performance, innovation, and international readiness.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-trophy category-icon"></i> Lifetime Achievement Award in the Global Halal Economy</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg> Lifetime Achievement Award in the Global Halal Economy</h3>
             <p>Recognising individuals with exceptional long-term contributions to Halal industry development.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-star category-icon"></i> Young Halal Entrepreneur Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg> Young Halal Entrepreneur Award</h3>
             <p>Celebrating rising leaders under 40 shaping the next wave of Halal economic growth.</p>
         </div>
         
         <div class="category-item">
-            <h3><i class="fas fa-graduation-cap category-icon"></i> Global Halal Education, Research & Knowledge Leadership Award</h3>
+            <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg> Global Halal Education, Research & Knowledge Leadership Award</h3>
             <p>Honouring institutions or individuals advancing Halal research, standards, academia, or policy innovation.</p>
         </div>
     </div>

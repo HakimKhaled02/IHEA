@@ -560,7 +560,7 @@
                 International Halal Economic Award 2026
             </div>
             <h1 class="hero-title">
-                Winner Recognition<br>& Usage Rights
+                WINNER RECOGNITION<br>& USAGE RIGHTS
             </h1>
             <p class="hero-subtitle">
                 Winners of the International Halal Economic Award 2026 will receive exceptional global exposure and branding privileges

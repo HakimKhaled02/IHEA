@@ -68,24 +68,34 @@
     
     .hero-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: clamp(2.5rem, 6vw, 5rem);
+        font-size: clamp(2rem, 4.5vw, 3.5rem);
         font-weight: 900;
-        line-height: 1.1;
+        line-height: 1.2;
         margin-bottom: 1.5rem;
         background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.3));
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .hero-subtitle {
-        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        font-size: clamp(1rem, 1.8vw, 1.4rem);
         color: rgba(255, 255, 255, 0.8);
-        line-height: 1.6;
+        line-height: 1.5;
         font-weight: 400;
-        max-width: 800px;
+        max-width: 900px;
         margin: 0 auto 3rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .framework-container {
@@ -480,7 +490,7 @@
                 International Halal Economic Award 2026
             </div>
             <h1 class="hero-title scroll-animate fade-in-up delay-1">
-                JUDGING FRAMEWORK<br>& STANDARDS
+                JUDGING FRAMEWORK & STANDARDS
             </h1>
             <p class="hero-subtitle scroll-animate fade-in-up delay-2">
                 The judging methodology reflects the highest standards of fairness, objectivity, and global benchmarking, adapted to Halal-specific requirements

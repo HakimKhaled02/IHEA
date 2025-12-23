@@ -395,7 +395,7 @@
                 CONFIDENTIALITY<br>& CODE OF CONDUCT
             </h1>
             <p class="hero-subtitle scroll-animate fade-in-up delay-2">
-                The International Halal Economic Awards 2026 operates under strict confidentiality and ethical governance protocols
+                The International Halal Economic Award 2026 operates under strict confidentiality and ethical governance protocols
             </p>
         </div>
     </div>

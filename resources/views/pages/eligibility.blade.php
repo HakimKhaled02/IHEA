@@ -20,7 +20,7 @@
     
     body {
         font-family: 'Montserrat', sans-serif;
-        background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
+        background: #000000;
         min-height: 100vh;
         overflow-x: hidden;
     }
@@ -89,17 +89,16 @@
     }
     
     .eligibility-container {
-        max-width: 1400px;
-        margin: 0 auto;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
         padding: 4rem 2rem;
         position: relative;
-        background-image: url('{{ asset("assets/aboutpage1.jpg") }}');
+        z-index: 1;
+        background-image: url('{{ asset("assets/mission2.jpg") }}');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-attachment: fixed;
-        border-radius: 20px;
-        overflow: hidden;
     }
     
     .eligibility-container::before {
@@ -109,8 +108,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.85);
         z-index: 0;
+        pointer-events: none;
+    }
+    
+    .eligibility-container > * {
+        position: relative;
+        z-index: 1;
     }
     
     .eligibility-cards-wrapper {
@@ -120,6 +125,10 @@
         margin-top: 2rem;
         position: relative;
         z-index: 1;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: start;
     }
     
     
@@ -128,13 +137,14 @@
         border: 2px solid rgba(212, 175, 55, 0.4);
         border-left: 4px solid #d4af37;
         border-radius: 12px;
-        padding: 2rem;
+        padding: 1.5rem;
         position: relative;
         box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
         backdrop-filter: blur(10px);
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         display: flex;
         flex-direction: column;
+        height: 100%;
     }
     
     .eligibility-card:hover {
@@ -144,8 +154,11 @@
     }
     
     .card-header {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.25rem;
         position: relative;
+        min-height: 80px;
+        display: flex;
+        align-items: flex-start;
     }
     
     .section-icon {
@@ -158,12 +171,13 @@
     
     .section-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: clamp(1.5rem, 2.5vw, 2rem);
+        font-size: clamp(1.25rem, 2vw, 1.75rem);
         font-weight: 700;
         color: #ffffff;
         margin: 0;
         position: relative;
-        line-height: 1.3;
+        line-height: 1.4;
+        padding-top: 0;
     }
     
     .section-title::after {
@@ -180,13 +194,14 @@
     .requirements-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 0.75rem;
+        gap: 0.65rem;
         flex: 1;
+        margin-top: 0;
     }
     
     .requirement-item {
         position: relative;
-        padding: 0.75rem 1rem;
+        padding: 0.65rem 0.85rem;
         background: rgba(212, 175, 55, 0.05);
         border: 1px solid rgba(212, 175, 55, 0.2);
         border-radius: 8px;
@@ -194,6 +209,7 @@
         display: flex;
         align-items: center;
         gap: 0.75rem;
+        min-height: 2.5rem;
     }
     
     .requirement-item:hover {
@@ -207,9 +223,20 @@
         font-size: 1rem;
         flex-shrink: 0;
         transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
     }
     
-    .requirement-item:hover .requirement-icon {
+    .requirement-icon svg {
+        width: 1rem;
+        height: 1rem;
+        stroke: #d4af37;
+        stroke-width: 2;
+        fill: none;
+    }
+    
+    .requirement-item:hover .requirement-icon svg {
         transform: scale(1.15);
     }
     
@@ -225,18 +252,22 @@
     .rules-list {
         display: flex;
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.65rem;
         flex: 1;
+        margin-top: 0;
     }
     
     .rule-item {
         position: relative;
-        padding: 0.75rem 1rem;
-        padding-left: 2.5rem;
+        padding: 0.65rem 0.85rem;
+        padding-left: 2.25rem;
         background: rgba(212, 175, 55, 0.05);
         border-left: 3px solid rgba(212, 175, 55, 0.4);
         border-radius: 6px;
         transition: all 0.3s ease;
+        min-height: 2.5rem;
+        display: flex;
+        align-items: center;
     }
     
     .rule-item::before {
@@ -392,10 +423,10 @@
                 International Halal Economic Award 2026
             </div>
             <h1 class="hero-title scroll-animate fade-in-up delay-1">
-                ELIGIBILITY<br>REQUIREMENTS
+                ELIGIBILITY REQUIREMENTS
             </h1>
             <p class="hero-subtitle scroll-animate fade-in-up delay-2">
-                Discover who can participate and the requirements to enter the prestigious International Halal Awards 2026
+                Discover who can participate and the requirements to enter the prestigious International Halal Award 2026
             </p>
         </div>
     </div>
@@ -408,35 +439,35 @@
         <!-- Who Can Apply Card -->
         <div class="eligibility-card scroll-animate fade-in-up delay-1">
             <div class="card-header">
-                <h2 class="section-title">The International Halal Awards 2026 is open to:</h2>
+                <h2 class="section-title">The International Halal Award 2026 is open to:</h2>
             </div>
             <div class="requirements-grid">
                 <div class="requirement-item">
-                    <i class="fas fa-building requirement-icon"></i>
+                    <svg class="requirement-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2" ry="2"></rect><line x1="7" y1="3" x2="7" y2="21"></line><line x1="17" y1="3" x2="17" y2="21"></line><line x1="2" y1="12" x2="22" y2="12"></line><line x1="2" y1="7" x2="7" y2="7"></line><line x1="2" y1="17" x2="7" y2="17"></line><line x1="17" y1="17" x2="22" y2="17"></line><line x1="17" y1="7" x2="22" y2="7"></line></svg>
                     <span class="requirement-text">Corporations</span>
                 </div>
                 <div class="requirement-item">
-                    <i class="fas fa-store requirement-icon"></i>
+                    <svg class="requirement-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                     <span class="requirement-text">SMEs</span>
                 </div>
                 <div class="requirement-item">
-                    <i class="fas fa-landmark requirement-icon"></i>
+                    <svg class="requirement-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path><path d="M6 12h12"></path><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path><path d="M18 12h2a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-2"></path><path d="M10 6h4"></path><path d="M10 10h4"></path><path d="M10 14h4"></path><path d="M10 18h4"></path></svg>
                     <span class="requirement-text">Government agencies</span>
                 </div>
                 <div class="requirement-item">
-                    <i class="fas fa-handshake requirement-icon"></i>
+                    <svg class="requirement-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14"></path><path d="M7 18h1.5a2 2 0 0 0 2-2v-1.5c0-.6.4-1.5 1-1.5h2c.6 0 1 .9 1 1.5V16a2 2 0 0 0 2 2H17"></path><path d="M13 12h2a2 2 0 1 1 0 4h-3c-.6 0-1.1-.2-1.4-.6L3 10"></path></svg>
                     <span class="requirement-text">Cooperatives</span>
                 </div>
                 <div class="requirement-item">
-                    <i class="fas fa-rocket requirement-icon"></i>
+                    <svg class="requirement-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="M12 15l-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg>
                     <span class="requirement-text">Startups and innovators</span>
                 </div>
                 <div class="requirement-item">
-                    <i class="fas fa-hands-helping requirement-icon"></i>
+                    <svg class="requirement-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"></path></svg>
                     <span class="requirement-text">NGOs and community organizations</span>
                 </div>
                 <div class="requirement-item">
-                    <i class="fas fa-globe requirement-icon"></i>
+                    <svg class="requirement-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                     <span class="requirement-text">International entities involved in Halal markets</span>
                 </div>
             </div>
