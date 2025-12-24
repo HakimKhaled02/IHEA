@@ -88,104 +88,49 @@
         margin: 0 auto 3rem;
     }
     
-    .rules-container {
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-        padding: 2.5rem 2rem;
+    .rules-section {
+        width: 100%;
+        padding: 4rem 0;
+        background: #000000;
         position: relative;
-        z-index: 1;
-        background-image: url('../assets/mission2.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
     }
     
-    .rules-container-wrapper {
+    .rules-container {
         max-width: 1400px;
         margin: 0 auto;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        padding: 3rem 2rem;
         position: relative;
-        z-index: 1;
-    }
-    
-    .rules-container::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.85);
-        z-index: 0;
-        pointer-events: none;
-    }
-    
-    .rules-container > * {
-        position: relative;
-        z-index: 1;
     }
     
     .rule-card {
-        background: rgba(0, 0, 0, 0.6);
-        border: 2px solid rgba(212, 175, 55, 0.4);
-        border-left: 4px solid #d4af37;
-        border-radius: 16px;
-        padding: 1.5rem;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
         position: relative;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-        overflow: hidden;
-        backdrop-filter: blur(10px);
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .rule-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(212, 175, 55, 0.7);
-        border-left-color: #d4af37;
-        box-shadow: 0 20px 60px rgba(212, 175, 55, 0.4);
     }
     
     .card-header {
         display: flex;
         align-items: center;
         gap: 1rem;
-        margin-bottom: 1.25rem;
+        margin-bottom: 1.5rem;
     }
     
-    .card-icon {
-        width: 50px;
-        height: 50px;
-        background: rgba(0, 0, 0, 0.6);
-        border: 2px solid rgba(212, 175, 55, 0.4);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        color: var(--halal-gold);
-        backdrop-filter: blur(10px);
-        flex-shrink: 0;
-    }
-    
-    .card-icon svg {
-        width: 1.5rem;
-        height: 1.5rem;
-        stroke: #d4af37;
-        stroke-width: 2;
-        fill: none;
+    .card-title-group {
+        flex: 1;
     }
     
     .card-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: clamp(1.25rem, 2.5vw, 1.75rem);
-        font-weight: 800;
+        font-size: 1.375rem;
+        font-weight: 600;
         color: #ffffff;
-        line-height: 1.3;
+        line-height: 1.2;
+        margin: 0 0 0.5rem 0;
+        border-bottom: 2px solid rgba(212, 175, 55, 0.6);
+        padding-bottom: 0.5rem;
+        display: inline-block;
     }
     
     .card-content {
@@ -240,6 +185,83 @@
         color: rgba(255, 255, 255, 0.9);
     }
     
+    .rules-intro {
+        margin-bottom: 1.5rem;
+    }
+    
+    .rules-intro p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+    
+    .rules-list-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .rule-item-letter {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        transition: none;
+    }
+    
+    .rule-item-letter:hover {
+        background: transparent;
+        border: none;
+        transform: none;
+    }
+    
+    .rule-letter {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.125rem;
+        font-weight: 700;
+        color: var(--halal-gold);
+        min-width: 2rem;
+        flex-shrink: 0;
+    }
+    
+    .rule-content {
+        flex: 1;
+    }
+    
+    .rule-content strong {
+        display: block;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+    }
+    
+    .rule-content p {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+    
+    .rules-footer {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    
+    .rules-footer p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        font-style: italic;
+        text-align: center;
+    }
+    
     /* Scroll Animations */
     .scroll-animate {
         opacity: 0;
@@ -262,18 +284,14 @@
     
     /* Responsive Design */
     @media (max-width: 1024px) {
-        .rules-container-wrapper {
-            grid-template-columns: 1fr;
+        .rules-container {
+            padding: 2rem 1.5rem;
         }
     }
     
     @media (max-width: 768px) {
         .rules-container {
             padding: 2rem 1rem;
-        }
-        
-        .rule-card {
-            padding: 1.5rem;
         }
         
         .hero-full {
@@ -344,95 +362,82 @@
 </div>
 
 <!-- Rules Section -->
+<div class="rules-section">
 <div class="rules-container">
-    <div class="rules-container-wrapper">
     
-    <!-- Entry Guidelines -->
+    <!-- Submission Rules -->
     <div class="rule-card scroll-animate fade-in-up delay-1">
         <div class="card-header">
-            <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H8"></path></svg>
+            <div class="card-title-group">
+                <h2 class="card-title">SUBMISSION RULES</h2>
             </div>
-            <h2 class="card-title">Entry Guidelines</h2>
         </div>
-        <ul class="rules-list">
-            <li class="rule-item">
-                <svg class="rule-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                <span class="rule-text">All entries must be submitted through the official entry portal</span>
-            </li>
-            <li class="rule-item">
-                <svg class="rule-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                <span class="rule-text">Entries must be submitted before the stated deadline</span>
-            </li>
-            <li class="rule-item">
-                <svg class="rule-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-                <span class="rule-text">Late submissions will not be accepted</span>
-            </li>
-            <li class="rule-item">
-                <svg class="rule-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
-                <span class="rule-text">Each organization or individual may submit entries for multiple categories</span>
-            </li>
-            <li class="rule-item">
-                <svg class="rule-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                <span class="rule-text">Each entry must be unique and specifically tailored to the selected category</span>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Content Requirements -->
-    <div class="rule-card scroll-animate fade-in-up delay-2">
-        <div class="card-header">
-            <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+        <div class="rules-intro">
+            <p>To maintain integrity and fairness:</p>
+        </div>
+        <div class="rules-list-container">
+            <div class="rule-item-letter">
+                <div class="rule-letter">1.</div>
+                <div class="rule-content">
+                    <strong>EACH ENTRY MUST BE ORIGINAL AND OWNED BY THE SUBMITTING ORGANIZATION</strong>
+                    <p>All information provided must accurately reflect real achievements, performance, and outcomes</p>
+                </div>
             </div>
-            <h2 class="card-title">Content Requirements</h2>
-        </div>
-        <ul class="rules-list">
-            <li class="rule-item">
-                <svg class="rule-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="9 12 11 14 15 10"></polyline></svg>
-                <span class="rule-text">All information provided must be accurate and verifiable</span>
-            </li>
-            <li class="rule-item">
-                <svg class="rule-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                <span class="rule-text">Supporting documentation must be in English or accompanied by certified translations</span>
-            </li>
-            <li class="rule-item">
-                <svg class="rule-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg>
-                <span class="rule-text">Images and media files must be high quality and relevant to the entry</span>
-            </li>
-            <li class="rule-item">
-                <svg class="rule-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                <span class="rule-text">Confidential information should be clearly marked</span>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Submission Format -->
-    <div class="rule-card scroll-animate fade-in-up delay-3">
-        <div class="card-header">
-            <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            
+            <div class="rule-item-letter">
+                <div class="rule-letter">2.</div>
+                <div class="rule-content">
+                    <strong>ENTRIES MAY BE SUBMITTED INTO MULTIPLE CATEGORIES</strong>
+                    <p>Provided they meet the criteria for each category.</p>
+                </div>
             </div>
-            <h2 class="card-title">Submission Format</h2>
-        </div>
-        <p class="card-content">
-            All submissions must follow the specified format and include all required sections. Incomplete entries may be disqualified.
-        </p>
-    </div>
-
-    <!-- Terms and Conditions -->
-    <div class="rule-card scroll-animate fade-in-up delay-4">
-        <div class="card-header">
-            <div class="card-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"></path><path d="M14 2v6h6"></path><path d="M16 13H8"></path><path d="M16 17H8"></path><path d="M10 9H8"></path></svg>
+            
+            <div class="rule-item-letter">
+                <div class="rule-letter">3.</div>
+                <div class="rule-content">
+                    <strong>ALL SUBMISSIONS MUST BE COMPLETE</strong>
+                    <p>Incomplete entries (missing documents, data, or certification) may be disqualified</p>
+                </div>
             </div>
-            <h2 class="card-title">Terms and Conditions</h2>
+            
+            <div class="rule-item-letter">
+                <div class="rule-letter">4.</div>
+                <div class="rule-content">
+                    <strong>SUPPORTING EVIDENCE IS REQUIRED</strong>
+                    <p>Data, case studies, certification records, audits, performance metrics, reports, and visual documentation must be included</p>
+                </div>
+            </div>
+            
+            <div class="rule-item-letter">
+                <div class="rule-letter">5.</div>
+                <div class="rule-content">
+                    <strong>FEES ARE NON-REFUNDABLE</strong>
+                    <p>Once submitted, entries go directly into the evaluation pool</p>
+                </div>
+            </div>
+            
+            <div class="rule-item-letter">
+                <div class="rule-letter">6.</div>
+                <div class="rule-content">
+                    <strong>ORGANIZERS MAY REQUEST ADDITIONAL VERIFICATION</strong>
+                    <p>This includes site checks, interviews, audits, or certification validation.</p>
+                </div>
+            </div>
+            
+            <div class="rule-item-letter">
+                <div class="rule-letter">7.</div>
+                <div class="rule-content">
+                    <strong>DEADLINES MUST BE ADHERED TO</strong>
+                    <p>Late entries may incur additional charges or be excluded from judging.</p>
+                </div>
+            </div>
         </div>
-        <p class="card-content">
-            By submitting an entry, you agree to abide by all terms and conditions, including the judging process and winner recognition guidelines.
-        </p>
+        
+        <div class="rules-footer">
+            <p>These rules are established to ensure a transparent, credible and internationally recognized award process</p>
+        </div>
     </div>
-    </div>
+</div>
 
 </div>
 

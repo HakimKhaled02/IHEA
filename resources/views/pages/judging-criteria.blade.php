@@ -20,9 +20,17 @@
     
     body {
         font-family: 'Montserrat', sans-serif;
-        background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
+        background: #000000 !important;
         min-height: 100vh;
         overflow-x: hidden;
+    }
+    
+    html {
+        background: #000000 !important;
+    }
+    
+    .main-content-simple {
+        background: #000000 !important;
     }
     
     .full-width-section {
@@ -93,53 +101,70 @@
         text-overflow: ellipsis;
     }
     
+    .criteria-section {
+        width: 100%;
+        padding: 2rem 0;
+        background: #000000;
+        position: relative;
+    }
+    
     .criteria-container {
-        max-width: 1200px;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 4rem 2rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        padding: 2rem 2rem;
         position: relative;
     }
     
     .criteria-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 3rem;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
         position: relative;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-        overflow: hidden;
+        margin-bottom: 0;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
     }
     
-    .criteria-card:hover {
-        transform: translateY(-12px);
-        border-color: rgba(212, 175, 55, 0.4);
-        box-shadow: 0 25px 80px rgba(212, 175, 55, 0.3);
+    .criteria-card:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
     }
     
     .card-header {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: 1rem 0;
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.3s ease;
+    }
+    
+    .card-header:hover {
+        opacity: 0.9;
+    }
+    
+    .card-header-content {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex: 1;
+    }
+    
+    .card-toggle-icon {
+        color: var(--halal-gold);
+        font-size: 1.2rem;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+    }
+    
+    .criteria-card.active .card-toggle-icon {
+        transform: rotate(180deg);
     }
     
     .card-number {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 900;
-        color: var(--halal-gold);
-        flex-shrink: 0;
+        display: none;
     }
     
     .card-title-group {
@@ -148,19 +173,32 @@
     
     .card-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 800;
+        font-size: 1rem;
+        font-weight: 600;
         color: #ffffff;
-        line-height: 1.2;
-        margin-bottom: 0.5rem;
+        line-height: 1.4;
+        margin: 0 0 0.15rem 0;
     }
     
     .card-subtitle {
         color: var(--halal-gold);
         font-weight: 500;
-        font-size: 0.875rem;
+        font-size: 0.75rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
+        margin: 0;
+    }
+    
+    .card-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, padding 0.4s ease;
+        padding: 0;
+    }
+    
+    .criteria-card.active .card-content {
+        max-height: 2000px;
+        padding: 0.75rem 0 1rem 0;
     }
     
     .card-content {
@@ -177,29 +215,44 @@
     .criteria-item {
         display: flex;
         align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-        padding: 1rem;
-        background: rgba(255, 255, 255, 0.02);
-        border-radius: 12px;
-        transition: all 0.3s ease;
+        gap: 0.75rem;
+        margin-bottom: 0.5rem;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        transition: none;
+    }
+    
+    .criteria-item:last-child {
+        margin-bottom: 0;
     }
     
     .criteria-item:hover {
-        background: rgba(255, 255, 255, 0.04);
-        transform: translateX(8px);
+        background: transparent;
+        transform: none;
     }
     
     .criteria-icon {
         color: var(--halal-gold);
-        font-size: 1.2rem;
-        margin-top: 0.25rem;
+        font-size: 0.875rem;
+        margin-top: 0.15rem;
         flex-shrink: 0;
+        min-width: 0.875rem;
     }
     
     .criteria-text {
         flex: 1;
-        color: rgba(255, 255, 255, 0.9);
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+    
+    .card-toggle-icon {
+        color: var(--halal-gold);
+        font-size: 1rem;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
     }
     
     /* Scroll Animations */
@@ -294,159 +347,181 @@
                 JUDGING CRITERIA
             </h1>
             <p class="hero-subtitle scroll-animate fade-in-up delay-2">
-                The awards evaluate performance using a comprehensive multi-dimensional scoring system tailored to Halal ethics, industry excellence, and global impact
+                The Awards evaluate performance using a comprehensive multi-dimensional scoring system tailored to Halal ethics, industry excellence, and global impact, below is the structured judging rubric:
             </p>
         </div>
     </div>
 </div>
 
 <!-- Criteria Section -->
+<div class="criteria-section">
 <div class="criteria-container">
     
     <!-- Halal Integrity & Compliance -->
     <div class="criteria-card scroll-animate fade-in-up delay-1">
-        <div class="card-header">
-            <div class="card-number">01</div>
-            <div class="card-title-group">
-                <h2 class="card-title">HALAL INTEGRITY & COMPLIANCE</h2>
-                <p class="card-subtitle">WEIGHT: 25%</p>
+        <div class="card-header" onclick="toggleCriteria(this)">
+            <div class="card-header-content">
+                <div class="card-title-group">
+                    <h2 class="card-title">HALAL INTEGRITY & COMPLIANCE</h2>
+                    <p class="card-subtitle">WEIGHT: 25%</p>
+                </div>
             </div>
+            <i class="fas fa-chevron-down card-toggle-icon"></i>
         </div>
-        <ul class="criteria-list">
-            <li class="criteria-item">
-                <i class="fas fa-check-circle criteria-icon"></i>
-                <span class="criteria-text">Alignment with recognized Halal standards</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-check-circle criteria-icon"></i>
-                <span class="criteria-text">Transparency in certification and supply chain</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-check-circle criteria-icon"></i>
-                <span class="criteria-text">Ethical and Shariah-compliant practices</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-check-circle criteria-icon"></i>
-                <span class="criteria-text">Traceability & risk management</span>
-            </li>
-        </ul>
+        <div class="card-content">
+            <ul class="criteria-list">
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Alignment with recognized Halal standards</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Transparency in certification and supply chain</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Ethical and Shariah-compliant practices</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Traceability & risk management</span>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- Innovation & Transformation -->
     <div class="criteria-card scroll-animate fade-in-up delay-2">
-        <div class="card-header">
-            <div class="card-number">02</div>
-            <div class="card-title-group">
-                <h2 class="card-title">INNOVATION & TRANSFORMATION</h2>
-                <p class="card-subtitle">WEIGHT: 20%</p>
+        <div class="card-header" onclick="toggleCriteria(this)">
+            <div class="card-header-content">
+                <div class="card-title-group">
+                    <h2 class="card-title">INNOVATION & TRANSFORMATION</h2>
+                    <p class="card-subtitle">WEIGHT: 20%</p>
+                </div>
             </div>
+            <i class="fas fa-chevron-down card-toggle-icon"></i>
         </div>
-        <ul class="criteria-list">
-            <li class="criteria-item">
-                <i class="fas fa-lightbulb criteria-icon"></i>
-                <span class="criteria-text">Introduction of new technologies, processes, or business models</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-palette criteria-icon"></i>
-                <span class="criteria-text">Creativity in solving industry challenges</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-users criteria-icon"></i>
-                <span class="criteria-text">Enhancements to user or stakeholder experience</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-rocket criteria-icon"></i>
-                <span class="criteria-text">Pioneering approaches in Halal markets</span>
-            </li>
-        </ul>
+        <div class="card-content">
+            <ul class="criteria-list">
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Introduction of new technologies, processes, or business models</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Creativity in solving industry challenges</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Enhancements to user or stakeholder experience</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Pioneering approaches in Halal markets</span>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- Market Performance & Impact -->
     <div class="criteria-card scroll-animate fade-in-up delay-3">
-        <div class="card-header">
-            <div class="card-number">03</div>
-            <div class="card-title-group">
-                <h2 class="card-title">MARKET PERFORMANCE & IMPACT</h2>
-                <p class="card-subtitle">WEIGHT: 20%</p>
+        <div class="card-header" onclick="toggleCriteria(this)">
+            <div class="card-header-content">
+                <div class="card-title-group">
+                    <h2 class="card-title">MARKET PERFORMANCE & IMPACT</h2>
+                    <p class="card-subtitle">WEIGHT: 20%</p>
+                </div>
             </div>
+            <i class="fas fa-chevron-down card-toggle-icon"></i>
         </div>
-        <ul class="criteria-list">
-            <li class="criteria-item">
-                <i class="fas fa-chart-line criteria-icon"></i>
-                <span class="criteria-text">Measurable business outcomes</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-dollar-sign criteria-icon"></i>
-                <span class="criteria-text">Revenue or export growth</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-globe criteria-icon"></i>
-                <span class="criteria-text">Market expansion or penetration</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-trophy criteria-icon"></i>
-                <span class="criteria-text">Contribution to industry competitiveness</span>
-            </li>
-        </ul>
+        <div class="card-content">
+            <ul class="criteria-list">
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Measurable business outcomes</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Revenue or export growth</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Market expansion or penetration</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Contribution to industry competitiveness</span>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- Sustainability & ESG Contribution -->
     <div class="criteria-card scroll-animate fade-in-up delay-4">
-        <div class="card-header">
-            <div class="card-number">04</div>
-            <div class="card-title-group">
-                <h2 class="card-title">SUSTAINABILITY & ESG CONTRIBUTION</h2>
-                <p class="card-subtitle">WEIGHT: 15%</p>
+        <div class="card-header" onclick="toggleCriteria(this)">
+            <div class="card-header-content">
+                <div class="card-title-group">
+                    <h2 class="card-title">SUSTAINABILITY & ESG CONTRIBUTION</h2>
+                    <p class="card-subtitle">WEIGHT: 15%</p>
+                </div>
             </div>
+            <i class="fas fa-chevron-down card-toggle-icon"></i>
         </div>
-        <ul class="criteria-list">
-            <li class="criteria-item">
-                <i class="fas fa-leaf criteria-icon"></i>
-                <span class="criteria-text">Environmental stewardship</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-hands-helping criteria-icon"></i>
-                <span class="criteria-text">Social impact and community development</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-balance-scale criteria-icon"></i>
-                <span class="criteria-text">Responsible governance practices</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-infinity criteria-icon"></i>
-                <span class="criteria-text">Long-term positive outcomes</span>
-            </li>
-        </ul>
+        <div class="card-content">
+            <ul class="criteria-list">
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Environmental stewardship</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Social impact and community development</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Responsible governance practices</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Long-term positive outcomes</span>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <!-- Strategic Execution & Effectiveness -->
     <div class="criteria-card scroll-animate fade-in-up delay-5">
-        <div class="card-header">
-            <div class="card-number">05</div>
-            <div class="card-title-group">
-                <h2 class="card-title">STRATEGIC EXECUTION & EFFECTIVENESS</h2>
-                <p class="card-subtitle">WEIGHT: 20%</p>
+        <div class="card-header" onclick="toggleCriteria(this)">
+            <div class="card-header-content">
+                <div class="card-title-group">
+                    <h2 class="card-title">STRATEGIC EXECUTION & EFFECTIVENESS</h2>
+                    <p class="card-subtitle">WEIGHT: 20%</p>
+                </div>
             </div>
+            <i class="fas fa-chevron-down card-toggle-icon"></i>
         </div>
-        <ul class="criteria-list">
-            <li class="criteria-item">
-                <i class="fas fa-bullseye criteria-icon"></i>
-                <span class="criteria-text">Clarity of objectives</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-chess criteria-icon"></i>
-                <span class="criteria-text">Strength of strategy</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-cogs criteria-icon"></i>
-                <span class="criteria-text">Quality of implementation</span>
-            </li>
-            <li class="criteria-item">
-                <i class="fas fa-flag-checkered criteria-icon"></i>
-                <span class="criteria-text">Evidence of success against goals</span>
-            </li>
-        </ul>
+        <div class="card-content">
+            <ul class="criteria-list">
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Clarity of objectives</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Strength of strategy</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Quality of implementation</span>
+                </li>
+                <li class="criteria-item">
+                    <i class="fas fa-check-circle criteria-icon"></i>
+                    <span class="criteria-text">Evidence of success against goals</span>
+                </li>
+            </ul>
+        </div>
     </div>
+</div>
 
 </div>
 
@@ -483,5 +558,25 @@
             });
         }
     });
+    
+    // Toggle criteria accordion
+    function toggleCriteria(header) {
+        const card = header.closest('.criteria-card');
+        const isActive = card.classList.contains('active');
+        
+        // Close all other cards (optional - remove if you want multiple open)
+        document.querySelectorAll('.criteria-card').forEach(otherCard => {
+            if (otherCard !== card) {
+                otherCard.classList.remove('active');
+            }
+        });
+        
+        // Toggle current card
+        if (isActive) {
+            card.classList.remove('active');
+        } else {
+            card.classList.add('active');
+        }
+    }
 </script>
 @endsection

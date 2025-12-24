@@ -20,9 +20,17 @@
     
     body {
         font-family: 'Montserrat', sans-serif;
-        background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
+        background: #000000 !important;
         min-height: 100vh;
         overflow-x: hidden;
+    }
+    
+    html {
+        background: #000000 !important;
+    }
+    
+    .main-content-simple {
+        background: #000000 !important;
     }
     
     .full-width-section {
@@ -98,53 +106,37 @@
         text-overflow: ellipsis;
     }
     
+    .framework-section {
+        width: 100%;
+        padding: 4rem 0;
+        background: #000000;
+        position: relative;
+    }
+    
     .framework-container {
-        max-width: 1200px;
+        max-width: 1400px;
         margin: 0 auto;
-        padding: 4rem 2rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        padding: 3rem 2rem;
         position: relative;
     }
     
     .framework-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 3rem;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
         position: relative;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-        overflow: hidden;
-    }
-    
-    .framework-card:hover {
-        transform: translateY(-12px);
-        border-color: rgba(212, 175, 55, 0.4);
-        box-shadow: 0 25px 80px rgba(212, 175, 55, 0.3);
     }
     
     .card-header {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .card-number {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 900;
-        color: var(--halal-gold);
-        flex-shrink: 0;
+        display: none;
     }
     
     .card-title-group {
@@ -153,53 +145,52 @@
     
     .card-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 800;
+        font-size: 1.375rem;
+        font-weight: 600;
         color: #ffffff;
         line-height: 1.2;
-        margin-bottom: 0.5rem;
+        margin: 0 0 0.5rem 0;
+        border-bottom: 2px solid rgba(212, 175, 55, 0.6);
+        padding-bottom: 0.5rem;
+        display: inline-block;
     }
     
     .card-subtitle {
-        color: var(--halal-gold);
-        font-weight: 500;
-        font-size: 0.875rem;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
+        display: none;
     }
     
     .stage-container {
         display: grid;
+        grid-template-columns: 1fr 2px 1fr;
         gap: 2rem;
+        align-items: start;
+    }
+    
+    .stage-column {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    
+    .stage-divider {
+        width: 2px;
+        background: rgba(212, 175, 55, 0.3);
+        height: 100%;
+        align-self: stretch;
     }
     
     .stage-item {
         display: flex;
-        gap: 2rem;
-        padding: 2rem;
-        background: rgba(255, 255, 255, 0.02);
-        border-radius: 15px;
-        transition: all 0.3s ease;
-    }
-    
-    .stage-item:hover {
-        background: rgba(255, 255, 255, 0.04);
-        transform: translateX(8px);
+        gap: 1.5rem;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        transition: none;
     }
     
     .stage-number {
-        width: 80px;
-        height: 80px;
-        background: linear-gradient(135deg, var(--halal-green), #047857);
-        color: white;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2rem;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        flex-shrink: 0;
+        display: none;
     }
     
     .stage-content {
@@ -208,23 +199,25 @@
     
     .stage-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: 1.25rem;
-        font-weight: 700;
+        font-size: 1.125rem;
+        font-weight: 600;
         color: #ffffff;
-        margin-bottom: 0.5rem;
+        margin: 0 0 0.75rem 0;
     }
     
     .stage-description {
-        color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 1.5rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 1rem;
+        font-size: 0.9375rem;
+        line-height: 1.6;
     }
     
     .verification-list {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        padding: 1.5rem;
-        border-radius: 12px;
-        border-left: 4px solid rgba(212, 175, 55, 0.5);
+        background: transparent;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        border-left: none;
     }
     
     .verification-item {
@@ -232,7 +225,7 @@
         align-items: flex-start;
         gap: 1rem;
         margin-bottom: 1rem;
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(255, 255, 255, 0.85);
     }
     
     .verification-item:last-child {
@@ -244,6 +237,7 @@
         font-size: 1.2rem;
         margin-top: 0.25rem;
         flex-shrink: 0;
+        min-width: 1.2rem;
     }
     
     .verification-item strong {
@@ -267,33 +261,43 @@
     .note {
         font-style: italic;
         color: var(--halal-gold);
-        background: rgba(212, 175, 55, 0.1);
-        padding: 0.75rem;
-        border-radius: 8px;
+        background: transparent;
+        padding: 0.75rem 0;
+        border-radius: 0;
         border-left: 3px solid rgba(212, 175, 55, 0.5);
         margin-top: 1rem;
+        padding-left: 1rem;
+        font-size: 0.9375rem;
     }
     
     .judge-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
+        gap: 0.5rem;
+    }
+    
+    h4.text-white {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 1rem 0;
     }
     
     .judge-item {
         display: flex;
         align-items: center;
-        padding: 1rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        transition: all 0.3s ease;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        transition: none;
     }
     
     .judge-item:hover {
-        background: rgba(212, 175, 55, 0.1);
-        border-color: rgba(212, 175, 55, 0.3);
-        transform: translateX(8px);
+        background: transparent;
+        border: none;
+        transform: none;
+        box-shadow: none;
     }
     
     .judge-item i {
@@ -301,10 +305,12 @@
         font-size: 1.2rem;
         margin-right: 0.75rem;
         flex-shrink: 0;
+        min-width: 1.2rem;
     }
     
     .judge-item span {
-        color: rgba(255, 255, 255, 0.9);
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9375rem;
     }
     
     .framework-list {
@@ -316,16 +322,19 @@
         display: flex;
         align-items: flex-start;
         gap: 1rem;
-        margin-bottom: 1.5rem;
-        padding: 1rem;
-        background: rgba(255, 255, 255, 0.02);
-        border-radius: 12px;
-        transition: all 0.3s ease;
+        margin-bottom: 1rem;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        transition: none;
     }
     
     .framework-item:hover {
-        background: rgba(255, 255, 255, 0.04);
-        transform: translateX(8px);
+        background: transparent;
+        border: none;
+        transform: none;
+        box-shadow: none;
     }
     
     .framework-icon {
@@ -333,56 +342,90 @@
         font-size: 1.2rem;
         margin-top: 0.25rem;
         flex-shrink: 0;
+        min-width: 1.2rem;
     }
     
     .framework-text {
         flex: 1;
-        color: rgba(255, 255, 255, 0.9);
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9375rem;
+        line-height: 1.6;
     }
     
     .validation-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .mt-8 {
         margin-top: 2rem;
+    }
+    
+    .mb-4 {
+        margin-bottom: 1rem;
+    }
+    
+    .mt-1 {
+        margin-top: 0.5rem;
     }
     
     .validation-item {
         display: flex;
         align-items: center;
-        padding: 1rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        transition: all 0.3s ease;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        transition: none;
     }
     
     .validation-item:hover {
-        background: rgba(212, 175, 55, 0.1);
-        border-color: rgba(212, 175, 55, 0.3);
+        background: transparent;
+        border: none;
+        box-shadow: none;
     }
     
     .validation-item i {
         color: var(--halal-gold);
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-right: 0.75rem;
         flex-shrink: 0;
+        min-width: 1.2rem;
     }
     
     .validation-item span {
-        color: rgba(255, 255, 255, 0.9);
-        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 400;
+        font-size: 0.9375rem;
     }
     
     .confidential-notice {
         display: flex;
-        align-items: center;
-        background: linear-gradient(135deg, rgba(5, 150, 105, 0.1), rgba(6, 78, 59, 0.1));
+        align-items: flex-start;
+        background: transparent;
         color: white;
-        padding: 1.5rem;
-        border-radius: 12px;
-        border: 1px solid rgba(5, 150, 105, 0.3);
-        margin-top: 2rem;
+        padding: 1rem 0;
+        border-radius: 0;
+        border: none;
+        border-left: 3px solid rgba(212, 175, 55, 0.5);
+        margin-top: 1.5rem;
+        padding-left: 1rem;
+    }
+    
+    .confidential-notice strong {
+        color: var(--halal-gold);
+        font-weight: 600;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+    
+    .confidential-notice p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin: 0;
     }
     
     .confidential-notice i {
@@ -414,13 +457,19 @@
     .scroll-animate.delay-5 { transition-delay: 0.5s; }
     
     /* Responsive Design */
+    @media (max-width: 1024px) {
+        .framework-container {
+            padding: 2rem 1.5rem;
+        }
+    }
+    
     @media (max-width: 768px) {
         .framework-container {
             padding: 2rem 1rem;
         }
         
         .framework-card {
-            padding: 2rem;
+            padding-bottom: 1.5rem;
         }
         
         .hero-full {
@@ -428,9 +477,17 @@
             padding: 2rem 1rem;
         }
         
+        .stage-container {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .stage-divider {
+            display: none;
+        }
+        
         .stage-item {
             flex-direction: column;
-            text-align: center;
         }
         
         .judge-grid {
@@ -500,288 +557,126 @@
 </div>
 
 <!-- Framework Section -->
+<div class="framework-section">
 <div class="framework-container">
     
     <!-- Multi-Stage Evaluation Process -->
     <div class="framework-card scroll-animate fade-in-up delay-1">
         <div class="card-header">
-            <div class="card-number">01</div>
             <div class="card-title-group">
                 <h2 class="card-title">MULTI-STAGE EVALUATION PROCESS</h2>
-                <p class="card-subtitle">Comprehensive Assessment Framework</p>
             </div>
         </div>
         <div class="stage-container">
-            <!-- Stage 1 -->
-            <div class="stage-item">
-                <div class="stage-number">1</div>
-                <div class="stage-content">
-                    <h3 class="stage-title">Initial Screening</h3>
-                    <p class="stage-description">Compliance verification and eligibility assessment</p>
-                    <div class="verification-list">
-                        <div class="verification-item">
-                            <i class="fas fa-check-circle"></i>
-                            <div>
-                                <strong>Documentation Review</strong>
-                                <ul class="sub-list">
-                                    <li>Halal certification validity</li>
-                                    <li>Business registration</li>
-                                    <li>Financial statements</li>
-                                </ul>
+            <!-- Left Column: Stages 1-2 -->
+            <div class="stage-column">
+                <!-- Stage 1 -->
+                <div class="stage-item">
+                    <div class="stage-content">
+                        <h3 class="stage-title">STAGE 1: TECHNICAL VERIFICATION</h3>
+                        <p class="stage-description">All submissions undergo initial screening to verify:</p>
+                        <div class="verification-list">
+                            <div class="verification-item">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>ELIGIBILITY</strong>
+                                    <ul class="sub-list">
+                                        <li>Documentation completeness</li>
+                                        <li>Valid Halal certification (where applicable)</li>
+                                        <li>Authenticity & compliance</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="verification-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <strong>Compliance Check</strong>
-                        </div>
+                        <p class="note">Only qualified entries proceed to Stage 2.</p>
                     </div>
-                    <p class="note">Only complete submissions proceed to evaluation</p>
                 </div>
-            </div>
 
-            <!-- Stage 2 -->
-            <div class="stage-item">
-                <div class="stage-number">2</div>
-                <div class="stage-content">
-                    <h3 class="stage-title">Detailed Evaluation</h3>
-                    <p class="stage-description">Comprehensive scoring against criteria</p>
-                    <div class="verification-list">
-                        <div class="verification-item">
-                            <i class="fas fa-clipboard-check"></i>
-                            <div>
-                                <strong>Criteria Assessment</strong>
-                                <ul class="sub-list">
-                                    <li>Halal integrity & compliance</li>
-                                    <li>Innovation & transformation</li>
-                                    <li>Market performance & impact</li>
-                                    <li>Sustainability & ESG</li>
-                                    <li>Strategic execution</li>
-                                </ul>
+                <!-- Stage 2 -->
+                <div class="stage-item">
+                    <div class="stage-content">
+                        <h3 class="stage-title">STAGE 2: EXPERT PANEL ASSESSMENT</h3>
+                        <p class="stage-description">Panels of independent judges evaluate submissions based on structured scoring criteria</p>
+                        <div class="verification-list">
+                            <div class="verification-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <strong>JUDGES CONSIST OF:</strong>
+                                    <ul class="sub-list">
+                                        <li>Halal certification experts</li>
+                                        <li>Industry specialists</li>
+                                        <li>Academics & researchers</li>
+                                        <li>Government representatives</li>
+                                        <li>International Halal leaders</li>
+                                        <li>Trade & supply chain experts</li>
+                                        <li>ESG & sustainability advisors</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="verification-item">
-                            <i class="fas fa-chart-bar"></i>
-                            <strong>Scoring & Ranking</strong>
-                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Stage 3 -->
-            <div class="stage-item">
-                <div class="stage-number">3</div>
-                <div class="stage-content">
-                    <h3 class="stage-title">Final Review</h3>
-                    <p class="stage-description">Expert panel validation and selection</p>
-                    <div class="verification-list">
-                        <div class="verification-item">
-                            <i class="fas fa-users"></i>
-                            <div>
-                                <strong>Panel Review</strong>
-                                <ul class="sub-list">
-                                    <li>Expert evaluation</li>
-                                    <li>Cross-validation</li>
-                                    <li>Consensus building</li>
-                                </ul>
+            <!-- Center Divider -->
+            <div class="stage-divider"></div>
+
+            <!-- Right Column: Stages 3-5 -->
+            <div class="stage-column">
+                <!-- Stage 3 -->
+                <div class="stage-item">
+                    <div class="stage-content">
+                        <h3 class="stage-title">STAGE 3: JURY DELIBERATION & CONSENSUS MEETING</h3>
+                        <p class="stage-description">Top-scoring entries are reviewed by a senior jury panel</p>
+                        <div class="verification-list">
+                            <div class="verification-item">
+                                <i class="fas fa-gavel"></i>
+                                <div>
+                                    <strong>THIS ENSURES:</strong>
+                                    <ul class="sub-list">
+                                        <li>Balanced evaluation</li>
+                                        <li>Removal of bias</li>
+                                        <li>Holistic consideration of each entry's merit</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                        <div class="verification-item">
-                            <i class="fas fa-trophy"></i>
-                            <strong>Winner Selection</strong>
+                    </div>
+                </div>
+
+                <!-- Stage 4 -->
+                <div class="stage-item">
+                    <div class="stage-content">
+                        <h3 class="stage-title">STAGE 4: VALIDATION & AUDIT (IF REQUIRED)</h3>
+                        <p class="stage-description">Certain categories may require:</p>
+                        <div class="verification-list">
+                            <div class="verification-item">
+                                <i class="fas fa-search"></i>
+                                <div>
+                                    <ul class="sub-list">
+                                        <li>Site visit</li>
+                                        <li>Certification verification</li>
+                                        <li>Supply chain audit</li>
+                                        <li>Additional documentation</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
+                        <p class="note">This protects the integrity of the awards</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 
-    <!-- Judging Standards -->
-    <div class="framework-card scroll-animate fade-in-up delay-2">
-        <div class="card-header">
-            <div class="card-number">A</div>
-            <div class="card-title-group">
-                <h2 class="card-title">JUDGING STANDARDS</h2>
-                <p class="card-subtitle">International Best Practices</p>
-            </div>
-        </div>
-        <ul class="framework-list">
-            <li class="framework-item">
-                <i class="fas fa-certificate framework-icon"></i>
-                <span class="framework-text">ISO 9001 Quality Management Standards</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-globe framework-icon"></i>
-                <span class="framework-text">Global Halal Certification Requirements</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-award framework-icon"></i>
-                <span class="framework-text">International Award Association Guidelines</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-leaf framework-icon"></i>
-                <span class="framework-text">ESG (Environmental, Social, Governance) Framework</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-bullseye framework-icon"></i>
-                <span class="framework-text">UN Sustainable Development Goals Alignment</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-chart-line framework-icon"></i>
-                <span class="framework-text">Industry-Specific Benchmarks</span>
-            </li>
-        </ul>
-    </div>
-
-    <!-- Judging Panel Composition -->
-    <div class="framework-card scroll-animate fade-in-up delay-3">
-        <div class="card-header">
-            <div class="card-number">B</div>
-            <div class="card-title-group">
-                <h2 class="card-title">JUDGING PANEL COMPOSITION</h2>
-                <p class="card-subtitle">Diverse Expertise & Perspectives</p>
-            </div>
-        </div>
-        <div class="space-y-6">
-            <div>
-                <h4 class="text-white font-semibold mb-3">Industry Experts</h4>
-                <div class="judge-grid">
-                    <div class="judge-item">
-                        <i class="fas fa-user-tie"></i>
-                        <span>Halal Industry Leaders</span>
-                    </div>
-                    <div class="judge-item">
-                        <i class="fas fa-microscope"></i>
-                        <span>Technical Specialists</span>
-                    </div>
-                    <div class="judge-item">
-                        <i class="fas fa-chart-line"></i>
-                        <span>Business Analysts</span>
-                    </div>
-                    <div class="judge-item">
-                        <i class="fas fa-leaf"></i>
-                        <span>Sustainability Experts</span>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <h4 class="text-white font-semibold mb-3">Academic & Regulatory</h4>
-                <div class="judge-grid">
-                    <div class="judge-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>Academic Scholars</span>
-                    </div>
-                    <div class="judge-item">
-                        <i class="fas fa-balance-scale"></i>
-                        <span>Regulatory Authorities</span>
-                    </div>
-                    <div class="judge-item">
-                        <i class="fas fa-certificate"></i>
-                        <span>Certification Bodies</span>
-                    </div>
-                    <div class="judge-item">
-                        <i class="fas fa-globe"></i>
-                        <span>International Advisors</span>
+                <!-- Stage 5 -->
+                <div class="stage-item">
+                    <div class="stage-content">
+                        <h3 class="stage-title">STAGE 5: FINAL SELECTION & CONFIDENTIAL RESULTS</h3>
+                        <p class="stage-description">The final winners are endorsed by the Jury Board and remain confidential until the Awards Gala</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Evaluation Process -->
-    <div class="framework-card scroll-animate fade-in-up delay-4">
-        <div class="card-header">
-            <div class="card-number">C</div>
-            <div class="card-title-group">
-                <h2 class="card-title">EVALUATION PROCESS</h2>
-                <p class="card-subtitle">Transparent & Methodical Assessment</p>
-            </div>
-        </div>
-        <ul class="framework-list">
-            <li class="framework-item">
-                <i class="fas fa-eye-slash framework-icon"></i>
-                <span class="framework-text">Blind evaluation process to ensure impartiality</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-users framework-icon"></i>
-                <span class="framework-text">Multiple reviewers per entry</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-clipboard-list framework-icon"></i>
-                <span class="framework-text">Standardized scoring rubric</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-handshake framework-icon"></i>
-                <span class="framework-text">Consensus-based final decisions</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-file-alt framework-icon"></i>
-                <span class="framework-text">Audit trail for all evaluations</span>
-            </li>
-        </ul>
-        
-        <div class="mt-8">
-            <h4 class="text-white font-semibold mb-4">Validation Measures</h4>
-            <div class="validation-grid">
-                <div class="validation-item">
-                    <i class="fas fa-check-double"></i>
-                    <span>Peer Review</span>
-                </div>
-                <div class="validation-item">
-                    <i class="fas fa-sync-alt"></i>
-                    <span>Cross-Check</span>
-                </div>
-                <div class="validation-item">
-                    <i class="fas fa-file-contract"></i>
-                    <span>Documentation</span>
-                </div>
-                <div class="validation-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Confidentiality</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Ensuring Fairness -->
-    <div class="framework-card scroll-animate fade-in-up delay-5">
-        <div class="card-header">
-            <div class="card-number">D</div>
-            <div class="card-title-group">
-                <h2 class="card-title">ENSURING FAIRNESS & INTEGRITY</h2>
-                <p class="card-subtitle">Commitment to Excellence</p>
-            </div>
-        </div>
-        <ul class="framework-list">
-            <li class="framework-item">
-                <i class="fas fa-ban framework-icon"></i>
-                <span class="framework-text">Conflict of interest declarations</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-user-secret framework-icon"></i>
-                <span class="framework-text">Anonymous submission review</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-random framework-icon"></i>
-                <span class="framework-text">Random assignment of reviewers</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-chart-pie framework-icon"></i>
-                <span class="framework-text">Statistical validation of scores</span>
-            </li>
-            <li class="framework-item">
-                <i class="fas fa-comments framework-icon"></i>
-                <span class="framework-text">Appeal process for disputes</span>
-            </li>
-        </ul>
-        
-        <div class="confidential-notice">
-            <i class="fas fa-lock"></i>
-            <div>
-                <strong>Strict Confidentiality</strong>
-                <p class="mt-1">All submissions and evaluations remain confidential until official announcement</p>
-            </div>
-        </div>
-    </div>
+</div>
 
 </div>
 

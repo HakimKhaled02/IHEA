@@ -96,146 +96,180 @@
         margin: 0 auto 3rem;
     }
     
-    .steps-container {
-        max-width: 1100px;
-        margin: 2.5rem auto;
-        padding: 2.5rem 2rem;
+    .steps-section {
+        width: 100%;
         position: relative;
-        background: #000000;
+        padding: 3rem 0 1rem 0;
+        background-image: url('{{ asset("assets/mission2.jpg") }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        border-bottom: none;
+    }
+    
+    .steps-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 0;
+    }
+    
+    .steps-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        position: relative;
+        z-index: 1;
+    }
+    
+    .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 2rem;
     }
     
     .step-card {
-        background: #ffffff;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+        border: 1px solid rgba(212, 175, 55, 0.4);
+        border-radius: 12px;
+        padding: 1.75rem;
         position: relative;
-        padding: 1.75rem 2rem;
-        margin-bottom: 0;
-        display: flex;
-        align-items: center;
-        gap: 2rem;
         transition: all 0.3s ease;
-        border: 2px solid #ffffff;
-        clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 50% 100%, 0 calc(100% - 20px));
-    }
-    
-    .step-card:not(:first-child) {
-        clip-path: polygon(0 20px, 50% 0, 100% 20px, 100% calc(100% - 20px), 50% 100%, 0 calc(100% - 20px));
-        margin-top: -20px;
-    }
-    
-    .step-card:last-child {
-        clip-path: polygon(0 20px, 50% 0, 100% 20px, 100% 100%, 0 100%);
-        margin-bottom: 0;
-    }
-    
-    .step-card:nth-child(odd) {
-        background: #ffffff;
-        border-color: #ffffff;
-    }
-    
-    .step-card:nth-child(even) {
-        background: #000000;
-        border-color: #ffffff;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        display: flex;
+        flex-direction: column;
+        min-height: 280px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     }
     
     .step-card:hover {
-        transform: scale(1.01);
-        box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
+        transform: translateY(-8px);
+        border-color: rgba(212, 175, 55, 0.7);
+        box-shadow: 0 12px 35px rgba(212, 175, 55, 0.4);
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
     }
     
-    .step-content-wrapper {
-        flex: 1;
+    .step-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--halal-gold), #f4d03f, var(--halal-gold));
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .step-card::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at top right, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+        border-radius: 12px;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .step-card:hover::after {
+        opacity: 1;
+    }
+    
+    .step-header {
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+    }
+    
+    .step-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 20px;
+        height: 20px;
+        font-size: 1.2rem;
+        color: var(--halal-gold);
+        font-weight: 700;
+        flex-shrink: 0;
+        line-height: 1;
+    }
+    
+    .step-icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+        margin-top: 0.1rem;
+    }
+    
+    .step-icon-wrapper svg {
+        width: 1.2rem;
+        height: 1.2rem;
+        stroke: var(--halal-gold);
+        stroke-width: 2;
+        fill: none;
+    }
+    
+    .step-icon-wrapper i {
+        font-size: 1.2rem;
+        color: var(--halal-gold);
     }
     
     .step-content-text {
         flex: 1;
-        color: #000000;
-        font-size: 0.9rem;
-        line-height: 1.6;
-    }
-    
-    .step-card:nth-child(even) .step-content-text {
-        color: #ffffff;
-    }
-    
-    .step-number-wrapper {
         display: flex;
-        align-items: center;
-        gap: 1rem;
-        flex-shrink: 0;
-    }
-    
-    .step-icon-plain {
-        font-size: 1.75rem;
-        color: #d4af37;
-        flex-shrink: 0;
-    }
-    
-    .step-number-large {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 3rem;
-        font-weight: 300;
-        color: #000000;
-        line-height: 1;
-        letter-spacing: -0.05em;
-    }
-    
-    .step-card:nth-child(even) .step-number-large {
-        color: #ffffff;
-    }
-    
-    .step-card:nth-child(odd) .step-content-wrapper {
-        flex-direction: row;
-    }
-    
-    .step-card:nth-child(even) .step-content-wrapper {
-        flex-direction: row-reverse;
-    }
-    
-    .step-card:nth-child(odd) .step-number-wrapper {
-        order: 2;
-    }
-    
-    .step-card:nth-child(even) .step-number-wrapper {
-        order: 0;
+        flex-direction: column;
     }
     
     .step-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: clamp(1.1rem, 2vw, 1.3rem);
+        font-size: 1rem;
         font-weight: 700;
-        color: #d4af37;
+        color: var(--halal-gold);
         line-height: 1.3;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }
     
     .step-description {
-        color: #666666;
+        color: rgba(255, 255, 255, 0.85);
         font-size: 0.85rem;
         line-height: 1.6;
-    }
-    
-    .step-card:nth-child(even) .step-description {
-        color: rgba(255, 255, 255, 0.85);
+        margin-bottom: 0;
+        flex: 1;
     }
     
     .step-details {
         list-style: none;
-        margin: 1rem 0 0 0;
+        margin: 0.75rem 0 0 0;
         padding: 0;
     }
     
     .step-item {
         display: flex;
         align-items: flex-start;
-        gap: 0.5rem;
+        gap: 0.6rem;
         margin-bottom: 0.5rem;
         padding: 0;
         transition: all 0.2s ease;
+    }
+    
+    .step-item:last-child {
+        margin-bottom: 0;
     }
     
     .step-item:hover {
@@ -243,32 +277,37 @@
     }
     
     .step-icon {
-        color: #d4af37;
-        font-size: 0.75rem;
-        margin-top: 0.25rem;
+        color: var(--halal-gold);
+        font-size: 0.5rem;
+        margin-top: 0.35rem;
         flex-shrink: 0;
     }
     
     .step-text {
         flex: 1;
-        color: #000000;
+        color: rgba(255, 255, 255, 0.8);
         font-size: 0.8rem;
         line-height: 1.5;
     }
     
-    .step-card:nth-child(even) .step-text {
-        color: rgba(255, 255, 255, 0.9);
-    }
-    
     .step-text strong {
-        color: #d4af37;
+        color: var(--halal-gold);
         font-weight: 700;
     }
     
     .cta-section {
         text-align: center;
-        margin-top: 2.5rem;
-        padding: 2rem;
+        margin-top: 1rem;
+        padding: 0.5rem 2rem 0 2rem;
+        border-top: none;
+    }
+    
+    .steps-container {
+        border-bottom: none;
+    }
+    
+    .steps-grid {
+        border-bottom: none;
     }
     
     .cta-button {
@@ -320,49 +359,62 @@
     }
     
     /* Responsive Design */
+    @media (max-width: 1024px) {
+        .steps-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
     @media (max-width: 768px) {
         .steps-container {
-            padding: 2rem 1.5rem;
+            padding: 1.5rem 1rem;
             margin: 2rem auto;
         }
         
-        .step-card {
-            padding: 1.5rem 1.25rem;
-            flex-direction: column;
+        .steps-grid {
+            grid-template-columns: 1fr;
             gap: 1.25rem;
-            clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), 50% 100%, 0 calc(100% - 20px));
         }
         
-        .step-card:not(:first-child) {
-            clip-path: polygon(0 20px, 50% 0, 100% 20px, 100% calc(100% - 20px), 50% 100%, 0 calc(100% - 20px));
-            margin-top: -20px;
+        .step-card {
+            padding: 1.5rem;
+            min-height: auto;
         }
         
-        .step-card:last-child {
-            clip-path: polygon(0 20px, 50% 0, 100% 20px, 100% 100%, 0 100%);
-        }
-        
-        .step-card:nth-child(odd) .step-content-wrapper,
-        .step-card:nth-child(even) .step-content-wrapper {
-            flex-direction: column;
+        .step-header {
             gap: 1rem;
         }
         
-        .step-number-wrapper {
-            order: 0 !important;
-            justify-content: center;
+        .step-number {
+            font-size: 1.1rem;
+            min-width: 18px;
+            height: 18px;
         }
         
-        .step-icon-plain {
-            font-size: 1.5rem;
+        .step-icon-wrapper {
+            min-width: 18px;
+            height: 18px;
         }
         
-        .step-number-large {
-            font-size: 2.5rem;
+        .step-icon-wrapper svg {
+            width: 1rem;
+            height: 1rem;
         }
         
-        .step-content-text {
-            text-align: center;
+        .step-icon-wrapper i {
+            font-size: 1rem;
+        }
+        
+        .step-title {
+            font-size: 0.95rem;
+        }
+        
+        .step-description {
+            font-size: 0.85rem;
+        }
+        
+        .step-text {
+            font-size: 0.8rem;
         }
         
         .hero-full {
@@ -433,133 +485,137 @@
 </div>
 
 <!-- Steps Section -->
-<div class="steps-container">
+<div class="steps-section">
+    <div class="steps-container">
+        <div class="steps-grid">
     
     <!-- Step 1 -->
     <div class="step-card">
-        <div class="step-content-wrapper">
-            <div class="step-content-text">
-                <h2 class="step-title">SELECT CATEGORY</h2>
-                <p class="step-description">Participants choose the most relevant award category based on their achievement.</p>
+        <div class="step-header">
+            <div class="step-number">1</div>
+            <div class="step-icon-wrapper">
+                <i class="fas fa-list-check"></i>
             </div>
-            <div class="step-number-wrapper">
-                <i class="fas fa-list-check step-icon-plain"></i>
-                <div class="step-number-large">STEP 1</div>
-            </div>
+        </div>
+        <div class="step-content-text">
+            <h2 class="step-title">SELECT CATEGORY</h2>
+            <p class="step-description">Participants choose the most relevant award category based on their achievement.</p>
         </div>
     </div>
 
     <!-- Step 2 -->
     <div class="step-card">
-        <div class="step-content-wrapper">
-            <div class="step-content-text">
-                <h2 class="step-title">REGISTER ONLINE</h2>
-                <p class="step-description">Complete the online registration form on the official Awards website.</p>
+        <div class="step-header">
+            <div class="step-number">2</div>
+            <div class="step-icon-wrapper">
+                <i class="fas fa-user-plus"></i>
             </div>
-            <div class="step-number-wrapper">
-                <i class="fas fa-user-plus step-icon-plain"></i>
-                <div class="step-number-large">STEP 2</div>
-            </div>
+        </div>
+        <div class="step-content-text">
+            <h2 class="step-title">REGISTER ONLINE</h2>
+            <p class="step-description">Complete the online registration form on the official Awards website.</p>
         </div>
     </div>
 
     <!-- Step 3 -->
     <div class="step-card">
-        <div class="step-content-wrapper">
-            <div class="step-content-text">
-                <h2 class="step-title">PREPARE SUBMISSION DOCUMENTS</h2>
-                <p class="step-description">Each entry must include:</p>
-                <ul class="step-details">
-                    <li class="step-item">
-                        <i class="fas fa-circle step-icon" style="font-size: 0.4rem;"></i>
-                        <span class="step-text">Executive summary</span>
-                    </li>
-                    <li class="step-item">
-                        <i class="fas fa-circle step-icon" style="font-size: 0.4rem;"></i>
-                        <span class="step-text">Achievement narrative</span>
-                    </li>
-                    <li class="step-item">
-                        <i class="fas fa-circle step-icon" style="font-size: 0.4rem;"></i>
-                        <span class="step-text">Evidence of results</span>
-                    </li>
-                    <li class="step-item">
-                        <i class="fas fa-circle step-icon" style="font-size: 0.4rem;"></i>
-                        <span class="step-text">Halal certification documentation (if applicable)</span>
-                    </li>
-                    <li class="step-item">
-                        <i class="fas fa-circle step-icon" style="font-size: 0.4rem;"></i>
-                        <span class="step-text">Supporting media, visuals or data</span>
-                    </li>
-                </ul>
+        <div class="step-header">
+            <div class="step-number">3</div>
+            <div class="step-icon-wrapper">
+                <i class="fas fa-folder-open"></i>
             </div>
-            <div class="step-number-wrapper">
-                <i class="fas fa-folder-open step-icon-plain"></i>
-                <div class="step-number-large">STEP 3</div>
-            </div>
+        </div>
+        <div class="step-content-text">
+            <h2 class="step-title">PREPARE SUBMISSION DOCUMENTS</h2>
+            <p class="step-description">Each entry must include:</p>
+            <ul class="step-details">
+                <li class="step-item">
+                    <i class="fas fa-circle step-icon"></i>
+                    <span class="step-text">Executive summary</span>
+                </li>
+                <li class="step-item">
+                    <i class="fas fa-circle step-icon"></i>
+                    <span class="step-text">Achievement narrative</span>
+                </li>
+                <li class="step-item">
+                    <i class="fas fa-circle step-icon"></i>
+                    <span class="step-text">Evidence of results</span>
+                </li>
+                <li class="step-item">
+                    <i class="fas fa-circle step-icon"></i>
+                    <span class="step-text">Halal certification documentation (if applicable)</span>
+                </li>
+                <li class="step-item">
+                    <i class="fas fa-circle step-icon"></i>
+                    <span class="step-text">Supporting media, visuals or data</span>
+                </li>
+            </ul>
         </div>
     </div>
 
     <!-- Step 4 -->
     <div class="step-card">
-        <div class="step-content-wrapper">
-            <div class="step-content-text">
-                <h2 class="step-title">UPLOAD SUBMISSION</h2>
-                <p class="step-description">Participants submit entry materials through the Awards submission portal.</p>
+        <div class="step-header">
+            <div class="step-number">4</div>
+            <div class="step-icon-wrapper">
+                <i class="fas fa-upload"></i>
             </div>
-            <div class="step-number-wrapper">
-                <i class="fas fa-upload step-icon-plain"></i>
-                <div class="step-number-large">STEP 4</div>
-            </div>
+        </div>
+        <div class="step-content-text">
+            <h2 class="step-title">UPLOAD SUBMISSION</h2>
+            <p class="step-description">Participants submit entry materials through the Awards submission portal.</p>
         </div>
     </div>
 
     <!-- Step 5 -->
     <div class="step-card">
-        <div class="step-content-wrapper">
-            <div class="step-content-text">
-                <h2 class="step-title">PAYMENT OF ENTRY FEES</h2>
-                <p class="step-description">Applicable fees must be settled to confirm entry submission.</p>
+        <div class="step-header">
+            <div class="step-number">5</div>
+            <div class="step-icon-wrapper">
+                <i class="fas fa-credit-card"></i>
             </div>
-            <div class="step-number-wrapper">
-                <i class="fas fa-credit-card step-icon-plain"></i>
-                <div class="step-number-large">STEP 5</div>
-            </div>
+        </div>
+        <div class="step-content-text">
+            <h2 class="step-title">PAYMENT OF ENTRY FEES</h2>
+            <p class="step-description">Applicable fees must be settled to confirm entry submission.</p>
         </div>
     </div>
 
     <!-- Step 6 -->
     <div class="step-card">
-        <div class="step-content-wrapper">
-            <div class="step-content-text">
-                <h2 class="step-title">CONFIRMATION</h2>
-                <p class="step-description">Upon successful submission, participants will receive:</p>
-                <ul class="step-details">
-                    <li class="step-item">
-                        <i class="fas fa-circle step-icon" style="font-size: 0.4rem;"></i>
-                        <span class="step-text"><strong>A.</strong> Submission ID</span>
-                    </li>
-                    <li class="step-item">
-                        <i class="fas fa-circle step-icon" style="font-size: 0.4rem;"></i>
-                        <span class="step-text"><strong>B.</strong> Verification request (if needed)</span>
-                    </li>
-                    <li class="step-item">
-                        <i class="fas fa-circle step-icon" style="font-size: 0.4rem;"></i>
-                        <span class="step-text"><strong>C.</strong> Timeline updates</span>
-                    </li>
-                </ul>
-            </div>
-            <div class="step-number-wrapper">
-                <i class="fas fa-check-circle step-icon-plain"></i>
-                <div class="step-number-large">STEP 6</div>
+        <div class="step-header">
+            <div class="step-number">6</div>
+            <div class="step-icon-wrapper">
+                <i class="fas fa-check-circle"></i>
             </div>
         </div>
+        <div class="step-content-text">
+            <h2 class="step-title">CONFIRMATION</h2>
+            <p class="step-description">Upon successful submission, participants will receive:</p>
+            <ul class="step-details">
+                <li class="step-item">
+                    <i class="fas fa-circle step-icon"></i>
+                    <span class="step-text">Submission ID</span>
+                </li>
+                <li class="step-item">
+                    <i class="fas fa-circle step-icon"></i>
+                    <span class="step-text">Verification request (if needed)</span>
+                </li>
+                <li class="step-item">
+                    <i class="fas fa-circle step-icon"></i>
+                    <span class="step-text">Timeline updates</span>
+                </li>
+            </ul>
+        </div>
     </div>
+    
+        </div>
 
-    <!-- CTA Section -->
-    <div class="cta-section">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCURjiSDPnTe07wafiEtYrgO1YSytYcXkjtI2sKrfEnoZ-mg/viewform" target="_blank" class="cta-button">Join Now</a>
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCURjiSDPnTe07wafiEtYrgO1YSytYcXkjtI2sKrfEnoZ-mg/viewform" target="_blank" class="cta-button">Join Now</a>
+        </div>
     </div>
-
 </div>
 
 <script>

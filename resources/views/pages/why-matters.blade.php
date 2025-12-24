@@ -215,24 +215,20 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-top-content">
-                                <div class="card-icon-badge">
-                                    <div class="icon-container">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                                            <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                                            <path d="M4 22h16"></path>
-                                            <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
-                                            <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
-                                            <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <h3 class="card-title">UNMATCHED GLOBAL RECOGNITION</h3>
-                            </div>
+                    <div class="card-image-section" style="background-image: url('https://images.unsplash.com/photo-1511578314322-379afb476865?w=800&q=80');">
+                        <div class="card-glassmorphism-container">
+                            <h3 class="card-title">UNMATCHED GLOBAL RECOGNITION</h3>
                             <p class="card-subtitle">Click to learn more</p>
+                            <div class="card-icon-badge-small">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                                    <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                                    <path d="M4 22h16"></path>
+                                    <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                                    <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                                    <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -247,20 +243,16 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-top-content">
-                                <div class="card-icon-badge">
-                                    <div class="icon-container">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <circle cx="12" cy="12" r="10"></circle>
-                                            <polyline points="9 12 11 14 15 10"></polyline>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <h3 class="card-title">A BENCHMARK FOR HALAL EXCELLENCE</h3>
-                            </div>
+                    <div class="card-image-section" style="background-image: url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80');">
+                        <div class="card-glassmorphism-container">
+                            <h3 class="card-title">A BENCHMARK FOR HALAL EXCELLENCE</h3>
                             <p class="card-subtitle">Click to learn more</p>
+                            <div class="card-icon-badge-small">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="9 12 11 14 15 10"></polyline>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -283,21 +275,17 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-top-content">
-                                <div class="card-icon-badge">
-                                    <div class="icon-container">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14"></path>
-                                            <path d="M7 18h1.5a2 2 0 0 0 2-2v-1.5c0-.6.4-1.5 1-1.5h2c.6 0 1 .9 1 1.5V16a2 2 0 0 0 2 2H17"></path>
-                                            <path d="M13 12h2a2 2 0 1 1 0 4h-3c-.6 0-1.1-.2-1.4-.6L3 10"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <h3 class="card-title">STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
-                            </div>
+                    <div class="card-image-section" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=800&q=80');">
+                        <div class="card-glassmorphism-container">
+                            <h3 class="card-title">STRENGTHEN TRUST WITH CONSUMERS & PARTNERS</h3>
                             <p class="card-subtitle">Click to learn more</p>
+                            <div class="card-icon-badge-small">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M11 12h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 14"></path>
+                                    <path d="M7 18h1.5a2 2 0 0 0 2-2v-1.5c0-.6.4-1.5 1-1.5h2c.6 0 1 .9 1 1.5V16a2 2 0 0 0 2 2H17"></path>
+                                    <path d="M13 12h2a2 2 0 1 1 0 4h-3c-.6 0-1.1-.2-1.4-.6L3 10"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -320,20 +308,16 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-top-content">
-                                <div class="card-icon-badge">
-                                    <div class="icon-container">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
-                                            <line x1="4" y1="22" x2="4" y2="15"></line>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <h3 class="card-title">COMPETITIVE DIFFERENTIATION</h3>
-                            </div>
+                    <div class="card-image-section" style="background-image: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?w=800&q=80');">
+                        <div class="card-glassmorphism-container">
+                            <h3 class="card-title">COMPETITIVE DIFFERENTIATION</h3>
                             <p class="card-subtitle">Click to learn more</p>
+                            <div class="card-icon-badge-small">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                                    <line x1="4" y1="22" x2="4" y2="15"></line>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -354,22 +338,18 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-top-content">
-                                <div class="card-icon-badge">
-                                    <div class="icon-container">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0"></path>
-                                            <circle cx="12" cy="8" r="2"></circle>
-                                            <path d="M8.835 14H5a1 1 0 0 0-.9.7l-2 6c-.1.3 0 .6.2.8l.8.8c.2.2.5.3.7.2l2.1-.6"></path>
-                                            <path d="M15.165 14H19a1 1 0 0 1 .9.7l2 6c.1.3 0 .6-.2.8l-.8.8c-.2.2-.5.3-.7.2l-2.1-.6"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <h3 class="card-title">GAIN ACCESS TO GLOBAL MARKETS</h3>
-                            </div>
+                    <div class="card-image-section" style="background-image: url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&q=80');">
+                        <div class="card-glassmorphism-container">
+                            <h3 class="card-title">GAIN ACCESS TO GLOBAL MARKETS</h3>
                             <p class="card-subtitle">Click to learn more</p>
+                            <div class="card-icon-badge-small">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M18 8c0 4.5-6 9-6 9s-6-4.5-6-9a6 6 0 0 1 12 0"></path>
+                                    <circle cx="12" cy="8" r="2"></circle>
+                                    <path d="M8.835 14H5a1 1 0 0 0-.9.7l-2 6c-.1.3 0 .6.2.8l.8.8c.2.2.5.3.7.2l2.1-.6"></path>
+                                    <path d="M15.165 14H19a1 1 0 0 1 .9.7l2 6c.1.3 0 .6-.2.8l-.8.8c-.2.2-.5.3-.7.2l-2.1-.6"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -391,21 +371,17 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-top-content">
-                                <div class="card-icon-badge">
-                                    <div class="icon-container">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <line x1="12" y1="20" x2="12" y2="10"></line>
-                                            <line x1="18" y1="20" x2="18" y2="4"></line>
-                                            <line x1="6" y1="20" x2="6" y2="16"></line>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <h3 class="card-title">ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
-                            </div>
+                    <div class="card-image-section" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80');">
+                        <div class="card-glassmorphism-container">
+                            <h3 class="card-title">ATTRACT INVESTORS & FUNDING OPPORTUNITIES</h3>
                             <p class="card-subtitle">Click to learn more</p>
+                            <div class="card-icon-badge-small">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="12" y1="20" x2="12" y2="10"></line>
+                                    <line x1="18" y1="20" x2="18" y2="4"></line>
+                                    <line x1="6" y1="20" x2="6" y2="16"></line>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -426,22 +402,18 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-top-content">
-                                <div class="card-icon-badge">
-                                    <div class="icon-container">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                            <circle cx="9" cy="7" r="4"></circle>
-                                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <h3 class="card-title">TALENT ATTRACTION & EMPLOYER BRANDING</h3>
-                            </div>
+                    <div class="card-image-section" style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80');">
+                        <div class="card-glassmorphism-container">
+                            <h3 class="card-title">TALENT ATTRACTION & EMPLOYER BRANDING</h3>
                             <p class="card-subtitle">Click to learn more</p>
+                            <div class="card-icon-badge-small">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -462,22 +434,18 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage1.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-top-content">
-                                <div class="card-icon-badge">
-                                    <div class="icon-container">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
-                                            <path d="M18 14h-8"></path>
-                                            <path d="M15 18h-5"></path>
-                                            <path d="M10 6h8v4h-8V6Z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <h3 class="card-title">MEDIA VISIBILITY & BRAND ELEVATION</h3>
-                            </div>
+                    <div class="card-image-section" style="background-image: url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80');">
+                        <div class="card-glassmorphism-container">
+                            <h3 class="card-title">MEDIA VISIBILITY & BRAND ELEVATION</h3>
                             <p class="card-subtitle">Click to learn more</p>
+                            <div class="card-icon-badge-small">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                                    <path d="M18 14h-8"></path>
+                                    <path d="M15 18h-5"></path>
+                                    <path d="M10 6h8v4h-8V6Z"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -499,19 +467,15 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <div class="card-image" style="background-image: url('{{ asset('assets/aboutpage.jpg') }}');">
-                        <div class="card-overlay">
-                            <div class="card-top-content">
-                                <div class="card-icon-badge">
-                                    <div class="icon-container">
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <h3 class="card-title">LEGACY & LONG-TERM VALUE</h3>
-                            </div>
+                    <div class="card-image-section" style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&q=80');">
+                        <div class="card-glassmorphism-container">
+                            <h3 class="card-title">LEGACY & LONG-TERM VALUE</h3>
                             <p class="card-subtitle">Click to learn more</p>
+                            <div class="card-icon-badge-small">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -537,14 +501,14 @@
 .why-cards-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    gap: 1.25rem;
     margin-top: 2rem;
 }
 
 .flip-card {
     background-color: transparent;
     width: 100%;
-    height: 300px;
+    height: 320px;
     perspective: 1000px;
     cursor: pointer;
 }
@@ -574,109 +538,97 @@
 }
 
 .flip-card-front {
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(5, 150, 105, 0.1));
+    background: transparent;
     border: 1px solid rgba(212, 175, 55, 0.3);
+    display: flex;
+    flex-direction: column;
 }
 
 .flip-card-back {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.95);
     border: 1px solid rgba(212, 175, 55, 0.3);
     color: #ffffff;
     transform: rotateY(180deg);
-    padding: 1rem;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
-    text-align: center;
+    text-align: left;
+    border-radius: 15px;
 }
 
-.card-image {
+.card-image-section {
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.card-overlay {
+.card-glassmorphism-container {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.5rem;
-}
-
-.card-top-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0.5rem;
-}
-
-.card-icon-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-    position: relative;
-}
-
-.flip-card:hover .card-icon-badge {
-    transform: translateY(-3px);
-}
-
-.icon-container {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
-    border: 2px solid var(--halal-gold);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 0 0 15px 15px;
+    box-sizing: border-box;
+    margin: 0;
+    transform: translateX(0);
+}
+
+.card-icon-badge-small {
+    position: absolute;
+    bottom: 1.25rem;
+    right: 1.25rem;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+    z-index: 2;
+    margin: 0;
 }
 
-.card-icon-badge svg {
-    width: 2.2rem;
-    height: 2.2rem;
+.card-icon-badge-small svg {
+    width: 1.3rem;
+    height: 1.3rem;
     stroke: var(--halal-gold);
-    transition: all 0.3s ease;
-    position: relative;
-    display: inline-block;
-    opacity: 0.95;
+    stroke-width: 2;
+    fill: none;
 }
 
-.flip-card:hover .icon-container {
-    background: rgba(0, 0, 0, 0.8);
-    border-color: var(--halal-gold);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
-    transform: scale(1.05);
+.flip-card:hover .card-icon-badge-small svg {
+    transform: scale(1.1);
+    stroke: #f4d03f;
 }
 
-.flip-card:hover .card-icon-badge svg {
-    opacity: 1;
-    transform: scale(1.05);
-}
 
 .card-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
     font-weight: 700;
     color: #ffffff;
     margin: 0;
-    text-align: center;
+    text-align: left;
     line-height: 1.3;
+    letter-spacing: 0.3px;
+    padding-right: 2.5rem;
 }
 
 .card-top-content .card-title {
@@ -684,85 +636,85 @@
 }
 
 .card-subtitle {
-    color: #ffffff;
-    font-size: 0.95rem;
+    color: var(--halal-gold);
+    font-size: 0.75rem;
     font-weight: 600;
     margin: 0;
-    padding: 0.75rem 0 1rem 0;
-    width: 100%;
-    text-align: center;
-    letter-spacing: 1px;
+    text-align: left;
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
     position: relative;
     transition: all 0.3s ease;
+    padding-right: 2.5rem;
+    padding-bottom: 0.75rem;
 }
 
 .card-subtitle::after {
     content: '';
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
+    left: 0;
+    width: 60px;
     height: 2px;
-    background: linear-gradient(to right, transparent, var(--halal-gold), transparent);
-    border-radius: 2px;
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+    background: var(--halal-gold);
+    transition: all 0.3s ease;
 }
 
 .flip-card:hover .card-subtitle {
-    color: var(--halal-gold);
-    text-shadow: 0 2px 10px rgba(212, 175, 55, 0.8);
+    color: #f4d03f;
 }
 
 .flip-card:hover .card-subtitle::after {
-    width: 120px;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+    background: #f4d03f;
+    width: 80px;
 }
 
 .card-title-back {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--halal-gold);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     line-height: 1.2;
-    text-align: center;
+    text-align: left;
     padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
 }
 
 .card-description {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.4;
-    margin-bottom: 0.5rem;
-    font-size: 0.75rem;
-    text-align: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.7rem;
+    text-align: left;
     padding: 0;
 }
 
 .card-list {
     list-style: none;
     padding: 0;
-    margin: 0.25rem 0 0.5rem 0;
-    text-align: center;
+    margin: 0.5rem 0 0.5rem 0;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    gap: 0.35rem;
 }
 
 .card-list li {
     position: relative;
     padding: 0;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     line-height: 1.3;
-    text-align: center;
+    text-align: left;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     gap: 0.5rem;
+    padding-left: 0;
 }
 
 .card-list li:before {
@@ -794,7 +746,56 @@
     }
     
     .flip-card {
-        height: 350px;
+        height: 360px;
+    }
+    
+    .flip-card-back {
+        padding: 1rem;
+    }
+    
+    .card-title-back {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-description {
+        font-size: 0.65rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+    }
+    
+    .card-list {
+        margin: 0.4rem 0 0.4rem 0;
+        gap: 0.3rem;
+    }
+    
+    .card-list li {
+        font-size: 0.62rem;
+        line-height: 1.2;
+    }
+    
+    .card-glassmorphism-container {
+        padding: 1rem;
+    }
+    
+    .card-title {
+        font-size: 0.85rem;
+        padding-right: 2rem;
+    }
+    
+    .card-subtitle {
+        font-size: 0.7rem;
+        padding-right: 2rem;
+    }
+    
+    .card-icon-badge-small {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    .card-icon-badge-small svg {
+        width: 1.1rem;
+        height: 1.1rem;
     }
 }
 </style>

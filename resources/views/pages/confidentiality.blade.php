@@ -20,9 +20,17 @@
     
     body {
         font-family: 'Montserrat', sans-serif;
-        background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
+        background: #000000 !important;
         min-height: 100vh;
         overflow-x: hidden;
+    }
+    
+    html {
+        background: #000000 !important;
+    }
+    
+    .main-content-simple {
+        background: #000000 !important;
     }
     
     .full-width-section {
@@ -88,53 +96,60 @@
         margin: 0 auto 3rem;
     }
     
+    .confidentiality-section {
+        width: 100%;
+        padding: 4rem 0;
+        background-image: url('{{ asset("assets/mission2.jpg") }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        position: relative;
+    }
+    
+    .confidentiality-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.85);
+        z-index: 0;
+    }
+    
     .confidentiality-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 4rem 2rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 2rem;
+        padding: 3rem 2rem;
         position: relative;
+        z-index: 1;
     }
     
     .confidentiality-card {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 20px;
-        padding: 3rem;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
         position: relative;
-        transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
-        overflow: hidden;
+        margin-bottom: 3rem;
+        border-left: 4px solid var(--halal-gold);
+        padding-left: 2rem;
     }
     
-    .confidentiality-card:hover {
-        transform: translateY(-12px);
-        border-color: rgba(212, 175, 55, 0.4);
-        box-shadow: 0 25px 80px rgba(212, 175, 55, 0.3);
+    .confidentiality-card:last-child {
+        margin-bottom: 0;
     }
     
     .card-header {
         display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
     }
     
     .card-number {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(212, 175, 55, 0.1));
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        border-radius: 15px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.5rem;
-        font-weight: 900;
-        color: var(--halal-gold);
-        flex-shrink: 0;
+        display: none;
     }
     
     .card-title-group {
@@ -143,11 +158,14 @@
     
     .card-title {
         font-family: 'Montserrat', sans-serif;
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        font-weight: 800;
+        font-size: 1.5rem;
+        font-weight: 700;
         color: #ffffff;
-        line-height: 1.2;
-        margin-bottom: 0.5rem;
+        line-height: 1.3;
+        margin: 0 0 0.5rem 0;
+        border-bottom: 2px solid rgba(212, 175, 55, 0.6);
+        padding-bottom: 0.5rem;
+        display: inline-block;
     }
     
     .card-subtitle {
@@ -156,144 +174,248 @@
         font-size: 0.875rem;
         letter-spacing: 0.1em;
         text-transform: uppercase;
+        margin-top: 0.5rem;
     }
     
-    .principle-grid {
+    .principles-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
-        margin-top: 2rem;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        margin-top: 1.5rem;
+        position: relative;
+    }
+    
+    .principles-column {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .principles-column:first-child {
+        padding-right: 1.25rem;
+    }
+    
+    .principles-column:last-child {
+        padding-left: 1.25rem;
+    }
+    
+    .principle-section {
+        margin-bottom: 0;
+    }
+    
+    .principle-section:last-child {
+        margin-bottom: 0;
+    }
+    
+    .principle-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 0.75rem 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .principle-letter {
+        color: var(--halal-gold);
+        font-weight: 700;
+        min-width: 1.5rem;
+        flex-shrink: 0;
+        text-align: right;
+    }
+    
+    .principle-intro {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9375rem;
+        margin: 0 0 0.75rem 0;
+        padding-left: 2rem;
+    }
+    
+    .principle-text {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin: 0;
+        padding-left: 2rem;
+    }
+    
+    .principle-list {
+        list-style: none;
+        margin: 0;
+        padding-left: 2rem;
     }
     
     .principle-item {
         display: flex;
-        align-items: center;
-        padding: 1.5rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 15px;
-        transition: all 0.3s ease;
+        align-items: flex-start;
+        gap: 0.75rem;
+        margin-bottom: 0.5rem;
+        padding: 0;
+        background: transparent;
+        border: none;
+        transition: none;
+    }
+    
+    .principle-item:last-child {
+        margin-bottom: 0;
     }
     
     .principle-item:hover {
-        background: rgba(212, 175, 55, 0.1);
-        border-color: rgba(212, 175, 55, 0.3);
-        transform: translateX(8px);
+        background: transparent;
+        transform: none;
     }
     
     .principle-item i {
         color: var(--halal-gold);
-        font-size: 1.5rem;
-        margin-right: 1rem;
+        font-size: 0.875rem;
+        margin-top: 0.2rem;
         flex-shrink: 0;
+        min-width: 0.875rem;
     }
     
     .principle-item span {
-        color: rgba(255, 255, 255, 0.9);
-        font-weight: 500;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 400;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+    }
+    
+    .conduct-section {
+        margin-top: 1.5rem;
+    }
+    
+    .conduct-section-title {
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 1.125rem;
+        margin-bottom: 1rem;
+        font-family: 'Montserrat', sans-serif;
     }
     
     .conduct-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 2rem;
     }
     
     .conduct-item {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 15px;
-        padding: 2rem;
-        transition: all 0.3s ease;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+        transition: none;
     }
     
     .conduct-item:hover {
-        background: rgba(212, 175, 55, 0.1);
-        border-color: rgba(212, 175, 55, 0.3);
-        transform: translateY(-4px);
+        background: transparent;
+        transform: none;
     }
     
     .conduct-item h4 {
-        color: white;
+        color: var(--halal-gold);
         font-weight: 600;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
         display: flex;
         align-items: center;
-        gap: 0.75rem;
+        gap: 0.5rem;
         font-family: 'Montserrat', sans-serif;
+        font-size: 1rem;
     }
     
     .conduct-item h4 i {
         color: var(--halal-gold);
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
     .conduct-item p {
         color: rgba(255, 255, 255, 0.8);
         line-height: 1.6;
         margin: 0;
+        font-size: 0.875rem;
     }
     
     .confidentiality-list {
         list-style: none;
-        margin: 2rem 0;
+        margin: 1.5rem 0 0 0;
     }
     
     .confidentiality-item {
         display: flex;
         align-items: flex-start;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
-        padding: 1rem;
-        background: rgba(255, 255, 255, 0.02);
-        border-radius: 12px;
-        transition: all 0.3s ease;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding: 0;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        transition: none;
+    }
+    
+    .confidentiality-item:last-child {
+        margin-bottom: 0;
     }
     
     .confidentiality-item:hover {
-        background: rgba(255, 255, 255, 0.04);
-        transform: translateX(8px);
+        background: transparent;
+        transform: none;
     }
     
     .confidentiality-icon {
         color: var(--halal-gold);
-        font-size: 1.2rem;
-        margin-top: 0.25rem;
+        font-size: 1rem;
+        margin-top: 0.15rem;
         flex-shrink: 0;
+        min-width: 1rem;
     }
     
     .confidentiality-text {
         flex: 1;
-        color: rgba(255, 255, 255, 0.9);
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 0.9375rem;
+        line-height: 1.6;
     }
     
     .enforcement-notice {
-        background: linear-gradient(135deg, rgba(5, 150, 105, 0.1), rgba(6, 78, 59, 0.1));
-        border: 1px solid rgba(5, 150, 105, 0.3);
-        border-radius: 15px;
-        padding: 2.5rem;
-        text-align: center;
+        background: transparent;
+        border: 2px solid rgba(212, 175, 55, 0.3);
+        border-left: 4px solid var(--halal-gold);
+        border-radius: 0;
+        padding: 1.5rem;
+        text-align: left;
         color: white;
         margin-top: 2rem;
     }
     
     .enforcement-notice i {
-        font-size: 3rem;
+        font-size: 1.5rem;
         color: var(--halal-gold);
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
+        display: block;
     }
     
     .enforcement-notice h4 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
+        font-size: 1.125rem;
+        font-weight: 600;
+        margin-bottom: 0.75rem;
         font-family: 'Montserrat', sans-serif;
+        color: var(--halal-gold);
     }
     
     .enforcement-notice p {
+        color: rgba(255, 255, 255, 0.85);
+        line-height: 1.6;
+        font-size: 0.9375rem;
+        margin: 0;
+    }
+    
+    .card-content {
         color: rgba(255, 255, 255, 0.8);
         line-height: 1.6;
-        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-size: 0.9375rem;
     }
     
     /* Scroll Animations */
@@ -317,13 +439,32 @@
     .scroll-animate.delay-4 { transition-delay: 0.4s; }
     
     /* Responsive Design */
+    @media (max-width: 1024px) {
+        .principles-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .principles-column:first-child {
+            padding-right: 0;
+        }
+        
+        .principles-column:last-child {
+            padding-left: 0;
+        }
+        
+        .conduct-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+    
     @media (max-width: 768px) {
         .confidentiality-container {
             padding: 2rem 1rem;
         }
         
         .confidentiality-card {
-            padding: 2rem;
+            padding-left: 1rem;
+            border-left-width: 3px;
         }
         
         .hero-full {
@@ -331,8 +472,13 @@
             padding: 2rem 1rem;
         }
         
-        .principle-grid {
+        .principles-grid {
             grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .principles-column {
+            gap: 1.5rem;
         }
         
         .conduct-grid {
@@ -402,44 +548,100 @@
 </div>
 
 <!-- Confidentiality Section -->
+<div class="confidentiality-section">
 <div class="confidentiality-container">
     
     <!-- Confidentiality Principles -->
     <div class="confidentiality-card scroll-animate fade-in-up delay-1">
         <div class="card-header">
-            <div class="card-number">A</div>
             <div class="card-title-group">
                 <h2 class="card-title">CONFIDENTIALITY PRINCIPLES</h2>
-                <p class="card-subtitle">Protecting Information Integrity</p>
             </div>
         </div>
-        <p class="card-content" style="color: rgba(255, 255, 255, 0.8); line-height: 1.6; margin-bottom: 2rem;">
-            All participants, judges, and organizers must adhere to:
-        </p>
-        <div class="principle-grid">
-            <div class="principle-item">
-                <i class="fas fa-lock"></i>
-                <span>Non-disclosure of submission details</span>
+        
+        <div class="principles-grid">
+            <!-- Left Column -->
+            <div class="principles-column">
+                <!-- 1. All Entries Are Treated as Confidential -->
+                <div class="principle-section">
+                    <h3 class="principle-title">
+                        <span class="principle-letter">1.</span>
+                        ALL ENTRIES ARE TREATED AS CONFIDENTIAL
+                    </h3>
+                    <p class="principle-intro">Information submitted will be:</p>
+                    <ul class="principle-list">
+                        <li class="principle-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Used solely for judging purposes</span>
+                        </li>
+                        <li class="principle-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Protected from unauthorized sharing</span>
+                        </li>
+                        <li class="principle-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Securely stored</span>
+                        </li>
+                        <li class="principle-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>No details will be publicly disclosed without written consent.</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 2. Judges Must Sign Confidentiality Agreements -->
+                <div class="principle-section">
+                    <h3 class="principle-title">
+                        <span class="principle-letter">2.</span>
+                        JUDGES MUST SIGN CONFIDENTIALITY AGREEMENTS
+                    </h3>
+                    <p class="principle-intro">All jurors are legally bound to:</p>
+                    <ul class="principle-list">
+                        <li class="principle-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Maintain confidentiality</span>
+                        </li>
+                        <li class="principle-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Refrain from discussing submissions</span>
+                        </li>
+                        <li class="principle-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Avoid retaining copies of materials</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="principle-item">
-                <i class="fas fa-user-secret"></i>
-                <span>Protection of sensitive business information</span>
-            </div>
-            <div class="principle-item">
-                <i class="fas fa-eye-slash"></i>
-                <span>Anonymous evaluation process</span>
-            </div>
-            <div class="principle-item">
-                <i class="fas fa-shield-alt"></i>
-                <span>Secure data handling protocols</span>
-            </div>
-            <div class="principle-item">
-                <i class="fas fa-file-contract"></i>
-                <span>Legal confidentiality agreements</span>
-            </div>
-            <div class="principle-item">
-                <i class="fas fa-database"></i>
-                <span>Encrypted storage systems</span>
+            
+            <!-- Right Column -->
+            <div class="principles-column">
+                <!-- 3. Conflict of Interest Policy -->
+                <div class="principle-section">
+                    <h3 class="principle-title">
+                        <span class="principle-letter">3.</span>
+                        CONFLICT OF INTEREST POLICY
+                    </h3>
+                    <p class="principle-intro">Judges are required to:</p>
+                    <ul class="principle-list">
+                        <li class="principle-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Declare any affiliation with an entrant</span>
+                        </li>
+                        <li class="principle-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Decline to evaluate entries where conflict exists</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- 4. Intellectual Property Protection -->
+                <div class="principle-section">
+                    <h3 class="principle-title">
+                        <span class="principle-letter">4.</span>
+                        INTELLECTUAL PROPERTY PROTECTION
+                    </h3>
+                    <p class="principle-text">All proprietary content remains the property of the submitting organization</p>
+                </div>
             </div>
         </div>
     </div>
@@ -447,89 +649,31 @@
     <!-- Code of Conduct -->
     <div class="confidentiality-card scroll-animate fade-in-up delay-2">
         <div class="card-header">
-            <div class="card-number">B</div>
             <div class="card-title-group">
                 <h2 class="card-title">CODE OF CONDUCT</h2>
-                <p class="card-subtitle">Professional Standards & Ethics</p>
             </div>
         </div>
-        <div class="space-y-6">
-            <div>
-                <h4 class="text-white font-semibold mb-3" style="font-size: 1.25rem;">For Participants</h4>
-                <div class="conduct-grid">
-                    <div class="conduct-item">
-                        <h4><i class="fas fa-certificate"></i>Authenticity</h4>
-                        <p>Submit only accurate and verifiable information</p>
-                    </div>
-                    <div class="conduct-item">
-                        <h4><i class="fas fa-handshake"></i>Professionalism</h4>
-                        <p>Maintain respectful communication throughout</p>
-                    </div>
-                    <div class="conduct-item">
-                        <h4><i class="fas fa-balance-scale"></i>Fair Play</h4>
-                        <p>Accept decisions with grace and dignity</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div>
-                <h4 class="text-white font-semibold mb-3" style="font-size: 1.25rem;">For Judges</h4>
-                <div class="conduct-grid">
-                    <div class="conduct-item">
-                        <h4><i class="fas fa-ban"></i>Impartiality</h4>
-                        <p>Evaluate based solely on merit and criteria</p>
-                    </div>
-                    <div class="conduct-item">
-                        <h4><i class="fas fa-eye"></i>Objectivity</h4>
-                        <p>Remove personal bias from evaluation</p>
-                    </div>
-                    <div class="conduct-item">
-                        <h4><i class="fas fa-comments"></i>Confidentiality</h4>
-                        <p>Never discuss evaluations with others</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Enforcement -->
-    <div class="confidentiality-card scroll-animate fade-in-up delay-3">
-        <div class="card-header">
-            <div class="card-number">C</div>
-            <div class="card-title-group">
-                <h2 class="card-title">ENFORCEMENT & COMPLIANCE</h2>
-                <p class="card-subtitle">Ensuring Standards Are Met</p>
-            </div>
-        </div>
+        <p class="card-content">Entrants must uphold:</p>
         <ul class="confidentiality-list">
             <li class="confidentiality-item">
-                <i class="fas fa-clipboard-check confidentiality-icon"></i>
-                <span class="confidentiality-text">Regular audits of confidentiality protocols</span>
+                <i class="fas fa-check-circle confidentiality-icon"></i>
+                <span class="confidentiality-text">Honesty in reporting achievements</span>
             </li>
             <li class="confidentiality-item">
-                <i class="fas fa-user-shield confidentiality-icon"></i>
-                <span class="confidentiality-text">Independent compliance monitoring</span>
+                <i class="fas fa-check-circle confidentiality-icon"></i>
+                <span class="confidentiality-text">Transparency in halal practices</span>
             </li>
             <li class="confidentiality-item">
-                <i class="fas fa-flag confidentiality-icon"></i>
-                <span class="confidentiality-text">Clear reporting mechanisms for violations</span>
+                <i class="fas fa-check-circle confidentiality-icon"></i>
+                <span class="confidentiality-text">Ethical behavior</span>
             </li>
             <li class="confidentiality-item">
-                <i class="fas fa-search confidentiality-icon"></i>
-                <span class="confidentiality-text">Swift investigation of breaches</span>
-            </li>
-            <li class="confidentiality-item">
-                <i class="fas fa-gavel confidentiality-icon"></i>
-                <span class="confidentiality-text">Consistent application of penalties</span>
+                <i class="fas fa-check-circle confidentiality-icon"></i>
+                <span class="confidentiality-text">Accurate representation of results</span>
             </li>
         </ul>
-        
-        <div class="enforcement-notice">
-            <i class="fas fa-exclamation-triangle"></i>
-            <h4>Strict Enforcement</h4>
-            <p>Violation of confidentiality agreements or code of conduct may result in immediate disqualification and potential legal action</p>
-        </div>
     </div>
+</div>
 
 </div>
 
