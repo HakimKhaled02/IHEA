@@ -15,7 +15,7 @@
         
         <!-- Top Navigation Buttons (Desktop) -->
         <div class="top-nav-buttons">
-            <a href="#" class="btn btn-secondary btn-large btn-view">
+            <a href="{{ asset('assets/IHEA 2026.pdf') }}" download class="btn btn-secondary btn-large btn-view">
                 <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                     <polyline points="7 10 12 15 17 10"></polyline>
@@ -39,7 +39,7 @@
                 <i class="fas fa-chevron-down dropdown-icon"></i>
             </button>
             <div class="dropdown-menu" id="dropdownMenu">
-                <a href="#" class="dropdown-item">
+                <a href="{{ asset('assets/IHEA 2026.pdf') }}" download class="dropdown-item">
                     <svg class="btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                         <polyline points="7 10 12 15 17 10"></polyline>

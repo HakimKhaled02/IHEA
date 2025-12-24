@@ -366,6 +366,85 @@
             <p>Honouring institutions or individuals advancing Halal research, standards, academia, or policy innovation.</p>
         </div>
     </div>
+    
+    <!-- Special Honours Section -->
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid rgba(212, 175, 55, 0.3);">
+        <h2 style="text-align: center; font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">
+            SPECIAL HONOURS
+        </h2>
+        <p style="text-align: center; font-size: 1.2rem; color: rgba(255, 255, 255, 0.8); margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Award categories given to exceptional individuals and organizations making long-standing contributions to the Halal industry.
+        </p>
+        
+        <div class="categories-list">
+            <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg> Halal Industry Leadership Lifetime Achievement Award</h3>
+                <p></p>
+            </div>
+            
+            <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg> Global Halal Visionary Award</h3>
+                <p></p>
+            </div>
+            
+            <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path><path d="M9 12l2 2 4-4"></path></svg> Halal Woman Leader of the Year</h3>
+                <p></p>
+            </div>
+            
+            <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg> Young Halal Innovator Award</h3>
+                <p></p>
+            </div>
+        </div>
+        
+        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 12px;">
+            <h3 style="font-size: 1.2rem; font-weight: 600; color: #d4af37; margin-bottom: 1rem; text-align: center;">Category Design Principles</h3>
+            <p style="text-align: center; color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">
+                All categories are designed around the following principles:
+            </p>
+            <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.75rem;">
+                <li style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255, 255, 255, 0.8);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                        <path d="M9 11l3 3L22 4"></path>
+                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                    </svg>
+                    Halal compliance & integrity
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255, 255, 255, 0.8);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                        <path d="M9 11l3 3L22 4"></path>
+                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                    </svg>
+                    Sustainable and ethical practices
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255, 255, 255, 0.8);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                        <path d="M9 11l3 3L22 4"></path>
+                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                    </svg>
+                    Innovation & strategic impact
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255, 255, 255, 0.8);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                        <path d="M9 11l3 3L22 4"></path>
+                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                    </svg>
+                    Measurable outcomes & market contribution
+                </li>
+                <li style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255, 255, 255, 0.8);">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                        <path d="M9 11l3 3L22 4"></path>
+                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                    </svg>
+                    Demonstrable leadership within the Halal ecosystem
+                </li>
+            </ul>
+            <p style="text-align: center; color: rgba(212, 175, 55, 0.8); margin-top: 1.5rem; font-size: 0.9rem; font-style: italic;">
+                These categories can be expanded or customized to align with sponsor interests, government partnerships, or emerging Halal markets.
+            </p>
+        </div>
+    </div>
 </div>
 @endsection
 
