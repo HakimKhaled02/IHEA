@@ -136,8 +136,6 @@
         padding: 0;
         position: relative;
         margin-bottom: 3rem;
-        border-left: 4px solid var(--halal-gold);
-        padding-left: 2rem;
     }
     
     .confidentiality-card:last-child {
@@ -183,23 +181,39 @@
     .principles-grid {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
         gap: 2rem;
         margin-top: 1.5rem;
         position: relative;
+        align-items: start;
     }
     
     .principles-column {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
+        display: contents;
     }
     
-    .principles-column:first-child {
-        padding-right: 1.25rem;
+    .principles-column .principle-section {
+        width: 100%;
     }
     
-    .principles-column:last-child {
-        padding-left: 1.25rem;
+    .principles-column:first-child .principle-section:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .principles-column:first-child .principle-section:last-child {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    
+    .principles-column:last-child .principle-section:first-child {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .principles-column:last-child .principle-section:last-child {
+        grid-column: 2;
+        grid-row: 2;
     }
     
     .principle-section {
@@ -233,7 +247,6 @@
         color: rgba(255, 255, 255, 0.8);
         font-size: 0.9375rem;
         margin: 0 0 0.75rem 0;
-        padding-left: 2rem;
     }
     
     .principle-text {
@@ -241,13 +254,12 @@
         font-size: 0.9375rem;
         line-height: 1.6;
         margin: 0;
-        padding-left: 2rem;
     }
     
     .principle-list {
         list-style: none;
         margin: 0;
-        padding-left: 2rem;
+        padding-left: 0;
     }
     
     .principle-item {
@@ -382,36 +394,146 @@
     }
     
     .enforcement-notice {
-        background: transparent;
-        border: 2px solid rgba(212, 175, 55, 0.3);
-        border-left: 4px solid var(--halal-gold);
-        border-radius: 0;
-        padding: 1.5rem;
+        background: #ffffff;
+        border: 2px solid #d4af37;
+        border-radius: 6px;
+        padding: 1rem 1.5rem;
         text-align: left;
-        color: white;
+        color: #1a1a1a;
         margin-top: 2rem;
+        position: relative;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12), 
+                    0 0 0 1px rgba(212, 175, 55, 0.2) inset,
+                    0 1px 3px rgba(0, 0, 0, 0.08);
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .enforcement-notice::before {
+        content: '';
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        height: 4px;
+        background: linear-gradient(90deg, 
+            #d4af37 0%, 
+            #f4d03f 50%, 
+            #d4af37 100%);
+        border-radius: 6px 6px 0 0;
+    }
+    
+    .enforcement-notice::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            repeating-linear-gradient(
+                0deg,
+                transparent,
+                transparent 2px,
+                rgba(212, 175, 55, 0.03) 2px,
+                rgba(212, 175, 55, 0.03) 4px
+            );
+        pointer-events: none;
+        border-radius: 6px;
+    }
+    
+    .notice-header-container {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid #d4af37;
+    }
+    
+    .notice-icon-wrapper {
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, #d4af37 0%, #f4d03f 100%);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 3px 8px rgba(212, 175, 55, 0.3);
+        flex-shrink: 0;
     }
     
     .enforcement-notice i {
-        font-size: 1.5rem;
-        color: var(--halal-gold);
-        margin-bottom: 0.75rem;
-        display: block;
+        font-size: 1.25rem;
+        color: #ffffff;
+        margin: 0;
     }
     
     .enforcement-notice h4 {
         font-size: 1.125rem;
-        font-weight: 600;
-        margin-bottom: 0.75rem;
+        font-weight: 800;
+        margin: 0;
         font-family: 'Montserrat', sans-serif;
-        color: var(--halal-gold);
+        color: #1a1a1a;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        flex: 1;
+    }
+    
+    .enforcement-notice .notice-intro {
+        color: #4a4a4a;
+        line-height: 1.4;
+        font-size: 0.875rem;
+        margin: 0 0 0.625rem 0;
+        font-weight: 600;
+        font-style: italic;
     }
     
     .enforcement-notice p {
-        color: rgba(255, 255, 255, 0.85);
-        line-height: 1.6;
-        font-size: 0.9375rem;
+        color: #4a4a4a;
+        line-height: 1.5;
+        font-size: 0.875rem;
         margin: 0;
+        font-weight: 500;
+    }
+    
+    .enforcement-notice .confidentiality-list {
+        margin: 0;
+        padding-left: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    
+    .enforcement-notice .confidentiality-item {
+        background: #f9f9f9;
+        border-left: 2px solid #d4af37;
+        padding: 0.5rem 0.875rem;
+        margin-bottom: 0;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+    
+    .enforcement-notice .confidentiality-item:last-child {
+        margin-bottom: 0;
+    }
+    
+    .enforcement-notice .confidentiality-item:hover {
+        background: #f5f5f5;
+        border-left-color: #f4d03f;
+        transform: translateX(3px);
+    }
+    
+    .enforcement-notice .confidentiality-text {
+        color: #1a1a1a;
+        font-weight: 500;
+        font-size: 0.875rem;
+    }
+    
+    .enforcement-notice .confidentiality-icon {
+        color: #d4af37;
+        font-size: 0.875rem;
     }
     
     .card-content {
@@ -447,13 +569,6 @@
             grid-template-columns: 1fr;
         }
         
-        .principles-column:first-child {
-            padding-right: 0;
-        }
-        
-        .principles-column:last-child {
-            padding-left: 0;
-        }
         
         .conduct-grid {
             grid-template-columns: 1fr;
@@ -466,8 +581,7 @@
         }
         
         .confidentiality-card {
-            padding-left: 1rem;
-            border-left-width: 3px;
+            padding-left: 0;
         }
         
         .hero-full {
@@ -630,7 +744,7 @@
         </div>
         
         <div class="principles-grid">
-            <!-- Left Column -->
+            <!-- Left Column: Sections 1 and 2 -->
             <div class="principles-column">
                 <!-- 1. All Entries Are Treated as Confidential -->
                 <div class="principle-section">
@@ -683,7 +797,7 @@
                 </div>
             </div>
             
-            <!-- Right Column -->
+            <!-- Right Column: Sections 3 and 4 -->
             <div class="principles-column">
                 <!-- 3. Conflict of Interest Policy -->
                 <div class="principle-section">
@@ -717,13 +831,16 @@
     </div>
 
     <!-- Code of Conduct -->
-    <div class="confidentiality-card scroll-animate fade-in-up delay-2">
-        <div class="card-header">
-            <div class="card-title-group">
-                <h2 class="card-title">CODE OF CONDUCT</h2>
+    <div class="enforcement-notice scroll-animate fade-in-up delay-2">
+        <div class="notice-header-container">
+            <div class="notice-icon-wrapper">
+                <i class="fas fa-shield-alt"></i>
             </div>
+            <h4>CODE OF CONDUCT</h4>
         </div>
-        <p class="card-content">Entrants must uphold:</p>
+        
+        <p class="notice-intro">Entrants must uphold:</p>
+        
         <ul class="confidentiality-list">
             <li class="confidentiality-item">
                 <i class="fas fa-check-circle confidentiality-icon"></i>
@@ -743,7 +860,6 @@
             </li>
         </ul>
     </div>
-</div>
 
 </div>
 

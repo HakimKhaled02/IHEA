@@ -68,7 +68,7 @@
                 <h1 class="hero-title">
                     INTERNATIONAL HALAL ECONOMIC<br>AWARD (IHEA) 2026
                 </h1>
-                <p class="hero-subtitle">5 Feb 2026 (Thu)  |  7.30 pm - 11.00pm  |  Tenera Hotel & Suites, Bangi</p>
+                <p class="hero-subtitle">5 Feb 2026 (Thu)  |  7.30 pm - 11.00pm  |  Tenera Hotel & Suites, Bandar Baru Bangi, Selangor</p>
             </div>
             
             <!-- Center Boxes -->
@@ -574,7 +574,7 @@
     }
     
     .package-card.elite {
-        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 25%, #3a3a3a 50%, #2d2d2d 75%, #1a1a1a 100%);
+        background: linear-gradient(135deg, #5a5a5a 0%, #6d6d6d 25%, #7a7a7a 50%, #6d6d6d 75%, #5a5a5a 100%);
         box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7), 
                     0 0 60px rgba(0, 0, 0, 0.4),
                     inset 0 2px 4px rgba(255, 255, 255, 0.15),
@@ -1060,6 +1060,16 @@
             padding: 0.75rem 1.5rem;
             font-size: 0.8rem;
             margin-top: 0.75rem;
+        }
+        
+        .hero-subtitle {
+            font-size: 0.75rem !important;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .hero-subtitle {
+            font-size: 0.7rem !important;
         }
     }
 </style>

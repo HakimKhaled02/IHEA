@@ -237,10 +237,36 @@
     
     .principles-box {
         padding: 1.5rem;
-        background: rgba(0, 0, 0, 0.4);
-        border: 1px solid rgba(212, 175, 55, 0.2);
-        border-radius: 12px;
+        background: rgba(0, 0, 0, 0.6);
+        border: 2px solid rgba(212, 175, 55, 0.4);
+        border-left: 4px solid #d4af37;
+        border-radius: 16px;
         height: 100%;
+        position: relative;
+        overflow: hidden;
+        backdrop-filter: blur(10px);
+        transition: all 0.3s ease;
+    }
+    
+    .principles-box::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, 
+            transparent 0%, 
+            rgba(212, 175, 55, 0.8) 50%, 
+            transparent 100%);
+    }
+    
+    .principles-box:hover {
+        background: rgba(0, 0, 0, 0.8);
+        border-color: rgba(212, 175, 55, 0.7);
+        border-left-color: #d4af37;
+        transform: translateY(-4px);
+        box-shadow: 0 20px 60px rgba(212, 175, 55, 0.4);
     }
     
     .principles-list {
@@ -526,22 +552,22 @@
             <!-- Left Side: Special Honours Awards -->
             <div class="honours-left">
                 <div class="honours-list">
-                    <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                    <div class="category-item">
                         <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg> Halal Industry Leadership Lifetime Achievement Award</h3>
                         <p></p>
                     </div>
                     
-                    <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                    <div class="category-item">
                         <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg> Global Halal Visionary Award</h3>
                         <p></p>
                     </div>
                     
-                    <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                    <div class="category-item">
                         <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path><path d="M9 12l2 2 4-4"></path></svg> Halal Woman Leader of the Year</h3>
                         <p></p>
                     </div>
                     
-                    <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                    <div class="category-item">
                         <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg> Young Halal Innovator Award</h3>
                         <p></p>
                     </div>
