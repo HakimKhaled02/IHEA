@@ -49,6 +49,8 @@
         max-width: 1000px;
         position: relative;
         z-index: 3;
+        width: 100%;
+        padding: 0 1rem;
     }
     
     .hero-badge {
@@ -64,6 +66,7 @@
         text-transform: uppercase;
         margin-bottom: 2rem;
         backdrop-filter: blur(10px);
+        word-wrap: break-word;
     }
     
     .hero-title {
@@ -80,17 +83,12 @@
     }
     
     .hero-subtitle {
-        font-size: clamp(1rem, 1.8vw, 1.4rem);
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
         color: rgba(255, 255, 255, 0.8);
-        line-height: 1.5;
+        line-height: 1.6;
         font-weight: 400;
-        max-width: 900px;
+        max-width: 800px;
         margin: 0 auto 3rem;
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-        text-overflow: ellipsis;
     }
     
     .why-matters-section {
@@ -112,7 +110,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.85);
+        background: rgba(0, 0, 0, 0.6);
         z-index: 0;
         pointer-events: none;
     }
@@ -549,13 +547,14 @@
     border: 1px solid rgba(212, 175, 55, 0.3);
     color: #ffffff;
     transform: rotateY(180deg);
-    padding: 1.25rem;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     overflow: hidden;
     text-align: left;
     border-radius: 15px;
+    box-sizing: border-box;
 }
 
 .card-image-section {
@@ -671,10 +670,10 @@
 
 .card-title-back {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 700;
     color: var(--halal-gold);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     line-height: 1.2;
     text-align: left;
     padding: 0;
@@ -684,9 +683,9 @@
 
 .card-description {
     color: rgba(255, 255, 255, 0.9);
-    line-height: 1.4;
-    margin-bottom: 0.75rem;
-    font-size: 0.7rem;
+    line-height: 1.35;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
     text-align: left;
     padding: 0;
 }
@@ -694,12 +693,12 @@
 .card-list {
     list-style: none;
     padding: 0;
-    margin: 0.5rem 0 0.5rem 0;
+    margin: 0.35rem 0 0.35rem 0;
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.35rem;
+    gap: 0.25rem;
 }
 
 .card-list li {
@@ -707,7 +706,7 @@
     padding: 0;
     margin-bottom: 0;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 0.68rem;
+    font-size: 0.85rem;
     line-height: 1.3;
     text-align: left;
     display: flex;
@@ -731,9 +730,52 @@
 }
 
 @media (max-width: 768px) {
+    .hero-content {
+        padding: 0 1rem;
+    }
+    
+    .hero-badge {
+        padding: 0.625rem 1rem;
+        font-size: 0.65rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.05em;
+        line-height: 1.3;
+        max-width: 90%;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    
     .hero-full {
-        min-height: 70vh;
-        padding: 2rem 1rem;
+        min-height: 100vh;
+        padding: 4rem 1.5rem 3rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        padding: 0;
+    }
+    
+    .hero-badge {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.7rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.08em;
+        max-width: 95%;
+    }
+    
+    .hero-title {
+        font-size: clamp(2.25rem, 6vw, 3.5rem);
+        margin-bottom: 1.25rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+        max-width: 100%;
     }
     
     .why-matters-section {
@@ -742,50 +784,50 @@
     
     .why-cards-grid {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: 1.25rem;
     }
     
     .flip-card {
-        height: 360px;
+        height: 300px;
     }
     
     .flip-card-back {
-        padding: 1rem;
+        padding: 0.875rem;
     }
     
     .card-title-back {
-        font-size: 0.75rem;
-        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+        margin-bottom: 0.4rem;
     }
     
     .card-description {
-        font-size: 0.65rem;
-        margin-bottom: 0.5rem;
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
         line-height: 1.3;
     }
     
     .card-list {
-        margin: 0.4rem 0 0.4rem 0;
-        gap: 0.3rem;
+        margin: 0.3rem 0 0.3rem 0;
+        gap: 0.2rem;
     }
     
     .card-list li {
-        font-size: 0.62rem;
+        font-size: 0.75rem;
         line-height: 1.2;
     }
     
     .card-glassmorphism-container {
-        padding: 1rem;
+        padding: 0.875rem;
     }
     
     .card-title {
-        font-size: 0.85rem;
-        padding-right: 2rem;
+        font-size: 0.8rem;
+        padding-right: 1.5rem;
     }
     
     .card-subtitle {
-        font-size: 0.7rem;
-        padding-right: 2rem;
+        font-size: 0.65rem;
+        padding-right: 1.5rem;
     }
     
     .card-icon-badge-small {
@@ -796,6 +838,56 @@
     .card-icon-badge-small svg {
         width: 1.1rem;
         height: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        padding: 0 0.75rem;
+    }
+    
+    .hero-badge {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.6rem;
+        margin-bottom: 1.25rem;
+        letter-spacing: 0.03em;
+        line-height: 1.3;
+        max-width: 95%;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    
+    .hero-full {
+        min-height: 100vh;
+        padding: 3.5rem 1rem 2.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        padding: 0;
+    }
+    
+    .hero-badge {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.65rem;
+        margin-bottom: 1.25rem;
+        letter-spacing: 0.05em;
+        max-width: 95%;
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+        margin: 0 auto 1.5rem;
+        line-height: 1.6;
+        max-width: 100%;
     }
 }
 </style>

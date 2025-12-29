@@ -939,13 +939,127 @@
     
     /* Responsive Design */
     @media (max-width: 768px) {
+        .fees-section {
+            padding: 1rem 0;
+            min-height: auto;
+        }
+        
+        .fees-section > div {
+            padding: 1rem 1rem !important;
+        }
+        
+        .fees-section-header {
+            margin-bottom: 1.25rem;
+            padding: 0.75rem 0;
+        }
+        
+        .fees-main-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+        }
+        
+        .fees-sub-title {
+            font-size: 0.875rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .fees-gold-line {
+            width: 150px;
+            margin-bottom: 1rem;
+        }
+        
+        .fees-intro-text {
+            font-size: 0.8rem;
+            line-height: 1.5;
+            margin-bottom: 0.7rem;
+        }
+        
         .packages-container {
             grid-template-columns: 1fr;
-            gap: 1.5rem;
+            gap: 1.25rem;
         }
         
         .package-card {
-            padding: 1.5rem;
+            padding: 1.25rem;
+        }
+        
+        .package-card-header {
+            padding: 1rem 1.25rem 0.75rem;
+        }
+        
+        .package-card-body {
+            padding: 0 1.25rem 1rem;
+        }
+        
+        .package-title-full {
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .package-category {
+            font-size: 0.6rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .package-price {
+            font-size: 1.6rem;
+            margin: 0.25rem 0 0;
+        }
+        
+        .package-price .currency {
+            font-size: 0.9rem;
+        }
+        
+        .package-quote {
+            font-size: 0.65rem;
+            margin-top: 0.3rem;
+        }
+        
+        .package-description {
+            font-size: 0.75rem;
+            line-height: 1.4;
+            margin-bottom: 0.625rem;
+        }
+        
+        .package-benefits-title {
+            font-size: 0.75rem;
+            margin-bottom: 0.625rem;
+        }
+        
+        .benefit-item {
+            margin-bottom: 0.5rem;
+            gap: 0.5rem;
+        }
+        
+        .benefit-icon {
+            min-width: 16px;
+            height: 16px;
+            margin-top: 0.05rem;
+        }
+        
+        .benefit-icon svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .benefit-text {
+            font-size: 0.7rem;
+            line-height: 1.35;
+        }
+        
+        .benefit-text strong {
+            font-size: 0.72rem;
+            margin-bottom: 0.15rem;
+        }
+        
+        .benefits-list {
+            margin-bottom: 1rem;
+        }
+        
+        .cta-button {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.8rem;
+            margin-top: 0.75rem;
         }
     }
 </style>

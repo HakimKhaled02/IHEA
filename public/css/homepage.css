@@ -188,7 +188,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 0;
 }
 
@@ -350,7 +350,8 @@
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .scroll-indicator {
-        display: none;
+        display: flex;
+        bottom: 1rem;
     }
     
     .scroll-text {
@@ -709,10 +710,10 @@
 .dropdown-toggle {
     width: 50px;
     height: 50px;
-    background: rgba(26, 31, 58, 0.9);
-    border: 2px solid var(--ihec-teal);
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #d4af37;
     border-radius: 8px;
-    color: var(--ihec-text-primary);
+    color: #ffffff;
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -723,21 +724,21 @@
 }
 
 .dropdown-toggle:hover {
-    background: rgba(26, 31, 58, 0.95);
-    border-color: var(--ihec-teal);
-    box-shadow: 0 4px 12px rgba(0, 168, 150, 0.3);
+    background: rgba(0, 0, 0, 0.95);
+    border-color: #d4af37;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
     transform: translateY(-2px);
 }
 
 .dropdown-toggle.active {
-    background: rgba(0, 168, 150, 0.2);
-    border-color: var(--ihec-teal);
+    background: rgba(212, 175, 55, 0.2);
+    border-color: #d4af37;
 }
 
 .dropdown-icon {
     font-size: 1.25rem;
     transition: transform 0.3s ease;
-    color: var(--ihec-teal);
+    color: #d4af37;
 }
 
 .dropdown-toggle.active .dropdown-icon {
@@ -748,8 +749,8 @@
     position: absolute;
     top: calc(100% + 0.5rem);
     right: 0;
-    background: rgba(26, 31, 58, 0.95);
-    border: 2px solid var(--ihec-teal);
+    background: rgba(0, 0, 0, 0.95);
+    border: 2px solid #d4af37;
     border-radius: 8px;
     min-width: 220px;
     opacity: 0;
@@ -772,10 +773,10 @@
     align-items: center;
     gap: 0.75rem;
     padding: 0.875rem 1.25rem;
-    color: var(--ihec-text-primary);
+    color: #ffffff;
     text-decoration: none;
     transition: all 0.2s ease;
-    border-bottom: 1px solid rgba(0, 168, 150, 0.1);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
 }
 
 .dropdown-item:last-child {
@@ -783,13 +784,13 @@
 }
 
 .dropdown-item:hover {
-    background: rgba(0, 168, 150, 0.15);
+    background: rgba(212, 175, 55, 0.15);
     padding-left: 1.5rem;
 }
 
 .dropdown-item .btn-icon {
     font-size: 1rem;
-    color: var(--ihec-teal);
+    color: #d4af37;
     font-weight: 900;
     min-width: 20px;
     display: inline-flex;

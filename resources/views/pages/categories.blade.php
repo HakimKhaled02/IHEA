@@ -30,19 +30,20 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 4rem 2rem;
+        position: relative;
         background: #000000;
         border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        position: relative;
         overflow: hidden;
     }
     
     .hero-content {
         text-align: center;
-        z-index: 2;
+        max-width: 1000px;
         position: relative;
-        padding: 2rem;
-        max-width: 1400px;
-        margin: 0 auto;
+        z-index: 3;
+        width: 100%;
+        padding: 0 1rem;
     }
     
     .hero-title {
@@ -61,14 +62,12 @@
     }
     
     .hero-subtitle {
-        font-size: clamp(1.2rem, 3vw, 1.8rem);
-        font-weight: 300;
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
         color: rgba(255, 255, 255, 0.8);
-        margin-bottom: 3rem;
-        line-height: 1.4;
+        line-height: 1.6;
+        font-weight: 400;
         max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 0 auto 3rem;
     }
     
     .hero-badge {
@@ -84,6 +83,8 @@
         color: rgba(212, 175, 55, 0.9);
         animation: borderGlow 3s ease-in-out infinite;
         transition: all 0.3s ease;
+        word-wrap: break-word;
+        backdrop-filter: blur(10px);
     }
     
     .hero-badge:hover {
@@ -116,7 +117,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.85);
+        background: rgba(0, 0, 0, 0.5);
         z-index: 0;
         pointer-events: none;
     }
@@ -203,7 +204,87 @@
         font-size: 0.875rem;
     }
     
+    /* Combined Section Layout */
+    .combined-section-container {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 2rem;
+        align-items: start;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    .honours-left {
+        flex: 1;
+    }
+    
+    .honours-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .section-divider {
+        width: 2px;
+        background: linear-gradient(180deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+        height: 100%;
+        min-height: 400px;
+    }
+    
+    .principles-right {
+        flex: 1;
+    }
+    
+    .principles-box {
+        padding: 1.5rem;
+        background: rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba(212, 175, 55, 0.2);
+        border-radius: 12px;
+        height: 100%;
+    }
+    
+    .principles-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .principles-list li {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.875rem;
+        line-height: 1.5;
+    }
+    
+    .principles-list li svg {
+        flex-shrink: 0;
+        margin-top: 0.2rem;
+    }
+    
     @media (max-width: 1024px) {
+        .combined-section-container {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        
+        .section-divider {
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+            min-height: 2px;
+        }
+        
+        .honours-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
         .categories-list {
             grid-template-columns: repeat(2, 1fr);
         }
@@ -215,17 +296,80 @@
             gap: 1.5rem;
         }
         
+        .honours-list {
+            grid-template-columns: 1fr;
+        }
+        
         .hero-full {
-            min-height: 70vh;
-            padding: 2rem 1rem;
+            min-height: 100vh;
+            padding: 4rem 1.5rem 3rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            padding: 0;
+        }
+        
+        .hero-badge {
+            padding: 0.75rem 1.5rem;
+            font-size: 0.7rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.08em;
+            max-width: 95%;
+            word-wrap: break-word;
+            text-align: center;
         }
         
         .hero-title {
-            font-size: clamp(2rem, 8vw, 3rem);
+            font-size: clamp(2.25rem, 6vw, 3.5rem);
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
         }
         
         .hero-subtitle {
-            font-size: clamp(1rem, 4vw, 1.4rem);
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            margin: 0 auto 2rem;
+            line-height: 1.6;
+            max-width: 100%;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .hero-full {
+            min-height: 100vh;
+            padding: 3.5rem 1rem 2.5rem 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-content {
+            padding: 0;
+        }
+        
+        .hero-badge {
+            padding: 0.625rem 1.25rem;
+            font-size: 0.65rem;
+            margin-bottom: 1.25rem;
+            letter-spacing: 0.05em;
+            max-width: 95%;
+            word-wrap: break-word;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-size: clamp(2rem, 6vw, 3rem);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+            margin: 0 auto 1.5rem;
+            line-height: 1.6;
+            max-width: 100%;
         }
     }
 </style>
@@ -253,6 +397,7 @@
                 z-index: 1;
                 opacity: 1;
                 filter: blur(1px);
+                pointer-events: none;
             "
             onerror="console.error('Video failed to load'); this.style.display='none';"
             onloadstart="console.log('Video loading started...');"
@@ -271,7 +416,8 @@
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.45);
-            z-index: -1;
+            z-index: 2;
+            pointer-events: none;
         "></div>
         
         <div class="hero-content">
@@ -376,73 +522,84 @@
             Award categories given to exceptional individuals and organizations making long-standing contributions to the Halal industry.
         </p>
         
-        <div class="categories-list">
-            <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
-                <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg> Halal Industry Leadership Lifetime Achievement Award</h3>
-                <p></p>
+        <div class="combined-section-container">
+            <!-- Left Side: Special Honours Awards -->
+            <div class="honours-left">
+                <div class="honours-list">
+                    <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                        <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg> Halal Industry Leadership Lifetime Achievement Award</h3>
+                        <p></p>
+                    </div>
+                    
+                    <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                        <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg> Global Halal Visionary Award</h3>
+                        <p></p>
+                    </div>
+                    
+                    <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                        <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path><path d="M9 12l2 2 4-4"></path></svg> Halal Woman Leader of the Year</h3>
+                        <p></p>
+                    </div>
+                    
+                    <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
+                        <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg> Young Halal Innovator Award</h3>
+                        <p></p>
+                    </div>
+                </div>
             </div>
             
-            <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
-                <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg> Global Halal Visionary Award</h3>
-                <p></p>
-            </div>
+            <!-- Center Divider -->
+            <div class="section-divider"></div>
             
-            <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
-                <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"></path><path d="M9 12l2 2 4-4"></path></svg> Halal Woman Leader of the Year</h3>
-                <p></p>
+            <!-- Right Side: Category Design Principles -->
+            <div class="principles-right">
+                <div class="principles-box">
+                    <h3 style="font-size: 1.2rem; font-weight: 600; color: #d4af37; margin-bottom: 1rem; text-align: left;">Category Design Principles</h3>
+                    <p style="text-align: left; color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">
+                        All categories are designed around the following principles:
+                    </p>
+                    <ul class="principles-list">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                            </svg>
+                            Halal compliance & integrity
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                            </svg>
+                            Sustainable and ethical practices
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                            </svg>
+                            Innovation & strategic impact
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                            </svg>
+                            Measurable outcomes & market contribution
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
+                                <path d="M9 11l3 3L22 4"></path>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                            </svg>
+                            Demonstrable leadership within the Halal ecosystem
+                        </li>
+                    </ul>
+                    <p style="text-align: left; color: rgba(212, 175, 55, 0.8); margin-top: 1.5rem; font-size: 0.9rem; font-style: italic;">
+                        These categories can be expanded or customized to align with sponsor interests, government partnerships, or emerging Halal markets.
+                    </p>
+                </div>
             </div>
-            
-            <div class="category-item" style="background: rgba(212, 175, 55, 0.1); border-color: rgba(212, 175, 55, 0.6);">
-                <h3><svg class="category-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg> Young Halal Innovator Award</h3>
-                <p></p>
-            </div>
-        </div>
-        
-        <div style="margin-top: 2rem; padding: 1.5rem; background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(212, 175, 55, 0.2); border-radius: 12px;">
-            <h3 style="font-size: 1.2rem; font-weight: 600; color: #d4af37; margin-bottom: 1rem; text-align: center;">Category Design Principles</h3>
-            <p style="text-align: center; color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem;">
-                All categories are designed around the following principles:
-            </p>
-            <ul style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 0.75rem;">
-                <li style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255, 255, 255, 0.8);">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
-                        <path d="M9 11l3 3L22 4"></path>
-                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
-                    </svg>
-                    Halal compliance & integrity
-                </li>
-                <li style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255, 255, 255, 0.8);">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
-                        <path d="M9 11l3 3L22 4"></path>
-                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
-                    </svg>
-                    Sustainable and ethical practices
-                </li>
-                <li style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255, 255, 255, 0.8);">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
-                        <path d="M9 11l3 3L22 4"></path>
-                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
-                    </svg>
-                    Innovation & strategic impact
-                </li>
-                <li style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255, 255, 255, 0.8);">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
-                        <path d="M9 11l3 3L22 4"></path>
-                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
-                    </svg>
-                    Measurable outcomes & market contribution
-                </li>
-                <li style="display: flex; align-items: center; gap: 0.5rem; color: rgba(255, 255, 255, 0.8);">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#d4af37" stroke-width="2">
-                        <path d="M9 11l3 3L22 4"></path>
-                        <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
-                    </svg>
-                    Demonstrable leadership within the Halal ecosystem
-                </li>
-            </ul>
-            <p style="text-align: center; color: rgba(212, 175, 55, 0.8); margin-top: 1.5rem; font-size: 0.9rem; font-style: italic;">
-                These categories can be expanded or customized to align with sponsor interests, government partnerships, or emerging Halal markets.
-            </p>
         </div>
     </div>
 </div>

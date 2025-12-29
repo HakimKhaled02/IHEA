@@ -49,6 +49,8 @@
         max-width: 1000px;
         position: relative;
         z-index: 3;
+        width: 100%;
+        padding: 0 1rem;
     }
     
     .hero-badge {
@@ -64,6 +66,7 @@
         text-transform: uppercase;
         margin-bottom: 2rem;
         backdrop-filter: blur(10px);
+        word-wrap: break-word;
     }
     
     .hero-title {
@@ -80,11 +83,11 @@
     }
     
     .hero-subtitle {
-        font-size: clamp(1rem, 1.8vw, 1.4rem);
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
         color: rgba(255, 255, 255, 0.8);
-        line-height: 1.5;
+        line-height: 1.6;
         font-weight: 400;
-        max-width: 900px;
+        max-width: 800px;
         margin: 0 auto 3rem;
     }
     
@@ -578,8 +581,38 @@
 
 @media (max-width: 768px) {
     .hero-full {
-        min-height: 70vh;
-        padding: 2rem 1rem;
+        min-height: 100vh;
+        padding: 4rem 1.5rem 3rem 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        padding: 0;
+    }
+    
+    .hero-badge {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.7rem;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.08em;
+        max-width: 95%;
+        word-wrap: break-word;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: clamp(2.25rem, 6vw, 3.5rem);
+        margin-bottom: 1.25rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 2.5vw, 1.4rem);
+        margin: 0 auto 2rem;
+        line-height: 1.6;
+        max-width: 100%;
     }
     
     .winner-recognition-section {
@@ -642,6 +675,43 @@
     .card-icon-badge-small svg {
         width: 1.1rem;
         height: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-full {
+        min-height: 100vh;
+        padding: 3.5rem 1rem 2.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .hero-content {
+        padding: 0;
+    }
+    
+    .hero-badge {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.65rem;
+        margin-bottom: 1.25rem;
+        letter-spacing: 0.05em;
+        max-width: 95%;
+        word-wrap: break-word;
+        text-align: center;
+    }
+    
+    .hero-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+        margin: 0 auto 1.5rem;
+        line-height: 1.6;
+        max-width: 100%;
     }
 }
 </style>
