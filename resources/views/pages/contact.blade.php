@@ -3,142 +3,91 @@
 @section('title', 'Contact Us')
 
 @push('styles')
+<link rel="stylesheet" href="{{ asset('css/mission-page.css') }}">
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
-    
-    * {
+    .contact-page {
+        width: 100%;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-    }
-    
-    body {
-        font-family: 'Montserrat', sans-serif;
-        background: linear-gradient(135deg, #0a0a0a 0%, #064e3b 50%, #0a0a0a 100%);
-        color: #ffffff;
-        overflow-x: hidden;
-    }
-    
-    .full-width-section {
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-        position: relative;
-    }
-    
-    .hero-full {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
         background: #000000;
-        border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         position: relative;
-        overflow: hidden;
-        z-index: 2;
     }
     
-    .hero-content {
+    .contact-content-wrapper {
+        width: 100%;
+        padding: 4rem 2rem;
+        position: relative;
+        z-index: 1;
+        background: #000000;
+    }
+    
+    .contact-content-wrapper::before {
+        display: none;
+    }
+    
+    .contact-content-wrapper > * {
+        position: relative;
+        z-index: 1;
+    }
+    
+    .contact-content-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .contact-info {
         text-align: center;
-        max-width: 1000px;
-        position: relative;
-        z-index: 3;
-    }
-    
-    .hero-title {
-        font-family: 'Montserrat', sans-serif;
-        font-size: clamp(2.5rem, 6vw, 5rem);
-        font-weight: 800;
-        line-height: 1.1;
-        margin-bottom: 1.5rem;
-        background: linear-gradient(135deg, #d4af37, #f4e4bc, #d4af37);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        filter: drop-shadow(0 4px 8px rgba(212, 175, 55, 0.4));
-        text-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
-        letter-spacing: -0.05em;
-    }
-    
-    .hero-subtitle {
-        font-size: clamp(1.2rem, 3vw, 1.8rem);
-        font-weight: 300;
-        color: rgba(255, 255, 255, 0.8);
         margin-bottom: 3rem;
-        line-height: 1.4;
+    }
+    
+    .section-heading {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #D4AF37;
+        margin: 0 0 1rem 0;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    
+    .contact-main-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #D4AF37;
+        margin: 0 0 1.5rem 0;
+        line-height: 1.2;
+    }
+    
+    .contact-description {
+        font-size: 1rem;
+        line-height: 1.8;
+        color: #ffffff;
+        margin: 0 0 3rem 0;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
     }
     
-    .hero-badge {
-        display: inline-block;
-        background: rgba(212, 175, 55, 0.1);
-        border: 1px solid rgba(212, 175, 55, 0.3);
-        padding: 1rem 3rem;
-        border-radius: 50px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-        color: rgba(212, 175, 55, 0.9);
-        animation: borderGlow 3s ease-in-out infinite;
-        transition: all 0.3s ease;
-    }
-    
-    .hero-badge:hover {
-        background: rgba(212, 175, 55, 0.2);
-        transform: translateY(-2px);
-    }
-    
-    @keyframes borderGlow {
-        0%, 100% { border-color: rgba(212, 175, 55, 0.3); }
-        50% { border-color: rgba(212, 175, 55, 0.6); }
-    }
-    
-    .contact-container {
-        max-width: 1400px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
-    }
-    
-    .contact-info {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
-    
-    .contact-info h2 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: clamp(2rem, 4vw, 2.5rem);
-        font-weight: 700;
-        color: #ffffff;
-        margin-bottom: 1rem;
-    }
-    
-    .contact-info > p {
-        font-size: 1.2rem;
-        color: rgba(255, 255, 255, 0.8);
-        max-width: 600px;
-        margin: 0 auto;
-    }
-    
     .contact-details {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 2rem;
-        margin-top: 3rem;
+        margin-top: 2rem;
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .contact-item {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 1.5rem;
         padding: 2.5rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(212, 175, 55, 0.5);
         border-radius: 16px;
         transition: all 0.3s ease;
         position: relative;
-        overflow: hidden;
     }
     
     .contact-item::before {
@@ -155,36 +104,46 @@
     }
     
     .contact-item:hover {
-        background: rgba(255, 255, 255, 0.04);
-        border-color: rgba(212, 175, 55, 0.4);
+        background: rgba(0, 0, 0, 0.8);
+        border-color: rgba(212, 175, 55, 0.7);
         transform: translateY(-4px);
-        box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2);
+        box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
     }
     
     .contact-icon {
-        font-size: 2.5rem;
-        color: rgba(212, 175, 55, 0.9);
-        width: 60px;
-        text-align: center;
+        font-size: 1.5rem;
+        color: #D4AF37;
+        min-width: 2rem;
         flex-shrink: 0;
+        line-height: 1.2;
+        margin-top: 0.25rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .contact-text {
+        flex: 1;
     }
     
     .contact-text h3 {
-        margin: 0 0 0.75rem 0;
-        font-size: 1.3rem;
-        color: #ffffff;
+        font-size: 1.125rem;
         font-weight: 600;
+        color: #ffffff;
+        margin: 0 0 0.75rem 0;
+        line-height: 1.4;
     }
     
     .contact-link {
         color: rgba(212, 175, 55, 0.9);
         text-decoration: none;
-        font-size: 1.1rem;
+        font-size: 0.9375rem;
         font-weight: 500;
         transition: all 0.3s ease;
         display: inline-flex;
         align-items: center;
         gap: 0.75rem;
+        line-height: 1.7;
     }
     
     .contact-link:hover {
@@ -205,118 +164,174 @@
     }
     
     @media (max-width: 768px) {
+        .contact-content-wrapper {
+            padding: 3rem 1.5rem;
+        }
+        
         .contact-details {
             grid-template-columns: 1fr;
             gap: 1.5rem;
-        }
-        
-        .hero-full {
-            min-height: 70vh;
-            padding: 2rem 1rem;
-        }
-        
-        .hero-title {
-            font-size: clamp(2rem, 8vw, 3rem);
-        }
-        
-        .hero-subtitle {
-            font-size: clamp(1rem, 4vw, 1.4rem);
+            max-width: 100%;
         }
         
         .contact-item {
             padding: 2rem;
+        }
+        
+        .contact-main-title {
+            font-size: 1.75rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .contact-content-wrapper {
+            padding: 2rem 1rem;
+        }
+        
+        .contact-details {
+            gap: 1.25rem;
+        }
+        
+        .contact-item {
+            padding: 1.5rem;
+        }
+        
+        .contact-main-title {
+            font-size: 1.5rem;
+        }
+        
+        .contact-text h3 {
+            font-size: 1rem;
+        }
+        
+        .contact-link {
+            font-size: 0.875rem;
         }
     }
 </style>
 @endpush
 
 @section('content')
-<!-- Full Width Hero Section -->
-<div class="full-width-section">
-    <div class="hero-full">
-        <!-- Video Background -->
-        <video 
-            class="hero-video" 
-            autoplay 
-            loop 
-            muted 
-            playsinline
-            preload="auto"
-            style="
+<div class="contact-page">
+    <!-- Hero Section -->
+    <div class="full-width-section">
+        <div class="hero-full">
+            <!-- Video Background -->
+            <video 
+                class="hero-video" 
+                autoplay 
+                loop 
+                muted 
+                playsinline
+                preload="auto"
+                style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 1;
+                    opacity: 1;
+                    filter: blur(1px);
+                    pointer-events: none;
+                "
+                onerror="console.error('Video failed to load'); this.style.display='none';"
+                onloadstart="console.log('Video loading started...');"
+                oncanplay="console.log('Video can play'); this.play().catch(e => console.error('Autoplay blocked:', e));"
+                onloadeddata="console.log('Video data loaded');"
+            >
+                <source src="{{ asset('assets/halal-waves-bg.mp4') }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <!-- Video Overlay for Text Readability -->
+            <div class="video-overlay" style="
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 100%;
                 height: 100%;
-                object-fit: cover;
-                z-index: 1;
-                opacity: 1;
-                filter: blur(1px);
+                background: rgba(0, 0, 0, 0.45);
+                z-index: 2;
                 pointer-events: none;
-            "
-            onerror="console.error('Video failed to load'); this.style.display='none';"
-            onloadstart="console.log('Video loading started...');"
-            oncanplay="console.log('Video can play'); this.play().catch(e => console.error('Autoplay blocked:', e));"
-            onloadeddata="console.log('Video data loaded');"
-        >
-            <source src="{{ asset('assets/halal-waves-bg.mp4') }}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        
-        <!-- Video Overlay for Text Readability -->
-        <div class="video-overlay" style="
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.45);
-            z-index: 2;
-            pointer-events: none;
-        "></div>
-        
-        <div class="hero-content">
-            <div class="hero-badge">
-                International Halal Economic Awards 2026
+            "></div>
+            
+            <div class="hero-content">
+                <div class="hero-badge scroll-animate fade-in-up">
+                    INTERNATIONAL HALAL ECONOMIC AWARD 2026
+                </div>
+                <h1 class="hero-title scroll-animate fade-in-up delay-1">
+                    CONTACT US
+                </h1>
+                <p class="hero-subtitle scroll-animate fade-in-up delay-2">
+                    Get in touch with us for any inquiries about the International Halal Economic Award 2026
+                </p>
             </div>
-            <h1 class="hero-title">
-                Contact Us
-            </h1>
-            <p class="hero-subtitle">
-                Get in touch with us for any inquiries about the International Halal Economic Award 2026
-            </p>
         </div>
     </div>
-</div>
-
-<!-- Contact Content -->
-<div class="contact-container">
-    <div class="contact-info">
-        <h2>Get in Touch</h2>
-        <p>We're here to help answer any questions you may have about the awards program.</p>
-        
-        <div class="contact-details">
-            <div class="contact-item">
-                <i class="fas fa-phone-alt contact-icon"></i>
-                <div class="contact-text">
-                    <h3>Phone / WhatsApp</h3>
-                    <a href="https://wa.me/601155549299?text=I%20would%20like%20to%20know%20more%20info%20on%20how%20to%20join%20this%20IHEA%202026." class="contact-link whatsapp-link" target="_blank">
-                        <i class="fab fa-whatsapp"></i> +60 11-5554 9299
-                    </a>
-                </div>
-            </div>
-            
-            <div class="contact-item">
-                <i class="fas fa-envelope contact-icon"></i>
-                <div class="contact-text">
-                    <h3>Email</h3>
-                    <a href="mailto:ihec@islamic-economy.org" class="contact-link">
-                        ihec@islamic-economy.org
-                    </a>
+    
+    <!-- Content Section -->
+    <div class="contact-content-wrapper">
+        <div class="contact-content-grid">
+            <div class="contact-info">
+                <p class="section-heading scroll-animate fade-in-up">Get in Touch</p>
+                <h2 class="contact-main-title scroll-animate fade-in-up delay-1">CONTACT US</h2>
+                <p class="contact-description scroll-animate fade-in-up delay-2">
+                    We're here to help answer any questions you may have about the awards program.
+                </p>
+                
+                <div class="contact-details">
+                    <div class="contact-item scroll-animate fade-in-up delay-3">
+                        <i class="fas fa-phone-alt contact-icon"></i>
+                        <div class="contact-text">
+                            <h3>Phone / WhatsApp</h3>
+                            <a href="https://wa.me/601155549299?text=I%20would%20like%20to%20know%20more%20info%20on%20how%20to%20join%20this%20IHEA%202026." class="contact-link whatsapp-link" target="_blank">
+                                <i class="fab fa-whatsapp"></i> +60 11-5554 9299
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item scroll-animate fade-in-up delay-4">
+                        <i class="fas fa-envelope contact-icon"></i>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <a href="mailto:ihec@islamic-economy.org" class="contact-link">
+                                ihec@islamic-economy.org
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    // Scroll Animation with Intersection Observer
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const scrollObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-animated');
+                scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Initialize animations when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+        const animatedElements = document.querySelectorAll('.scroll-animate');
+        animatedElements.forEach(el => {
+            scrollObserver.observe(el);
+        });
+    });
+</script>
+@endpush
 

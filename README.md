@@ -1,22 +1,19 @@
-# Award Management System
+# International Halal Economic Award (IHEA) 2026
 
-A beautiful and modern award management system built with Laravel, PHP, MySQL, and CSS.
+A beautiful and modern informational website for the International Halal Economic Award 2026, built with Laravel, PHP, and CSS.
 
 ## Features
 
-- 🏆 View all awards in a beautiful grid layout
-- ➕ Create new awards
-- ✏️ Edit existing awards
-- 👁️ View award details
-- 🗑️ Delete awards
+- 🏆 Informational pages about the award ceremony
+- 📄 Multiple information sections (Mission, Categories, Eligibility, etc.)
 - 📱 Fully responsive design
 - 🎨 Modern and clean UI
+- ⚡ Static website - no database required
 
 ## Requirements
 
 - PHP >= 8.1
 - Composer
-- MySQL
 - Laravel 10.x
 
 ## Installation
@@ -32,75 +29,47 @@ A beautiful and modern award management system built with Laravel, PHP, MySQL, a
    php artisan key:generate
    ```
 
-3. **Configure database in `.env`:**
-   ```env
-   DB_CONNECTION=mysql
-   DB_HOST=127.0.0.1
-   DB_PORT=3306
-   DB_DATABASE=award_db
-   DB_USERNAME=your_username
-   DB_PASSWORD=your_password
-   ```
-
-4. **Run migrations:**
-   ```bash
-   php artisan migrate
-   ```
-
-5. **Start the development server:**
+3. **Start the development server:**
    ```bash
    php artisan serve
    ```
 
-6. **Visit the application:**
+4. **Visit the application:**
    Open your browser and navigate to `http://localhost:8000`
 
-## Database Structure
+## Available Pages
 
-The `awards` table includes:
-- `id` - Primary key
-- `title` - Award title
-- `description` - Award description
-- `category` - Award category
-- `recipient` - Award recipient name
-- `date` - Award date
-- `image` - Image URL (optional)
-- `status` - Award status (active/inactive)
-- `created_at` - Creation timestamp
-- `updated_at` - Update timestamp
-
-## Usage
-
-1. Navigate to the awards page
-2. Click "Add Award" to create a new award
-3. Fill in the award details
-4. View, edit, or delete awards as needed
+- Homepage
+- About
+- Mission
+- Why Matters
+- Categories
+- Eligibility
+- How to Enter
+- Submission Rules
+- Judging Framework
+- Judging Criteria
+- Confidentiality
+- Winner Recognition
+- FAQ
+- Fees & Packages
+- Contact
 
 ## Project Structure
 
 ```
 award-ihec/
 ├── app/
-│   ├── Http/
-│   │   └── Controllers/
-│   │       └── AwardController.php
-│   └── Models/
-│       └── Award.php
-├── database/
-│   └── migrations/
-│       └── 2024_01_01_000001_create_awards_table.php
+│   └── Http/
+│       └── Controllers/
 ├── public/
 │   └── css/
-│       └── app.css
+│       └── homepage.css
 ├── resources/
 │   └── views/
+│       ├── home.blade.php
 │       ├── layouts/
-│       │   └── app.blade.php
-│       └── awards/
-│           ├── index.blade.php
-│           ├── create.blade.php
-│           ├── edit.blade.php
-│           └── show.blade.php
+│       └── pages/
 └── routes/
     └── web.php
 ```

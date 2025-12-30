@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\AwardController;
 use Illuminate\Support\Facades\Route;
 
 // Homepage
@@ -64,9 +63,6 @@ Route::get('/fees-packages', function () {
 Route::get('/contact', function () {
     return view('pages.contact');
 })->name('contact');
-
-// Awards Management (Admin)
-Route::resource('awards', AwardController::class);
 
 Route::view('winner-faqs-awards', 'winnerFAQsAwards.winnerFAQsAward')
     ->name('winnerFAQsAwards.index');
