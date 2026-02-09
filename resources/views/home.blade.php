@@ -77,8 +77,12 @@
                     <h3 class="box-title">HOW TO JOIN ?</h3>
                 </a>
                 <div class="center-boxes-bottom">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeCURjiSDPnTe07wafiEtYrgO1YSytYcXkjtI2sKrfEnoZ-mg/viewform" target="_blank" class="center-box">
-                        <h3 class="box-title">REGISTER</h3>
+                    <a href="https://drive.google.com/file/d/1yffYceC_RTLl2B53a_q5liIH7oeW_ZLg/view?usp=drive_link" target="_blank" class="center-box" id="download-magazine-btn">
+                        <h3 class="box-title">DOWNLOAD MAGAZINE</h3>
+                    </a>
+                    
+                    <a href="https://drive.google.com/drive/folders/1HMgEkFmaaFO9S8RoFMoikQSyQ-Irv5pI?usp=drive_link" target="_blank" class="center-box" id="past-event-photos-btn">
+                        <h3 class="box-title">PAST EVENT PHOTOS</h3>
                     </a>
                     
                     <a href="{{ route('contact') }}" class="center-box">
@@ -157,7 +161,12 @@
         </div>
     </div>
     
-    <!-- Evening Gala Section -->
+    {{-- 
+    Evening Gala Section - Commented out for current event
+    Uncomment this section when needed for future events
+    This section displays the timeline and schedule for the Evening Gala & Global Recognition event
+    --}}
+    {{-- 
     <div class="gala-section">
         <div class="gala-container">
             <div class="gala-header">
@@ -245,6 +254,7 @@
             </div>
         </div>
     </div>
+    --}}
     
     <!-- Award Fees Section -->
     <div class="fees-section">
